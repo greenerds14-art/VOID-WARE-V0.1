@@ -7,25 +7,26 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 19 | Scripts: 6 | Modules: 0 | Tags: 0
+-- Instances: 29 | Scripts: 12 | Modules: 0 | Tags: 0
 local G2L = {};
 
--- StarterGui.ScreenGui
+-- StarterGui.VOID WARE
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[VOID WARE]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
 
 
--- StarterGui.ScreenGui.Frame
+-- StarterGui.VOID WARE.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 2;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Size"] = UDim2.new(0, 352, 0, 270);
-G2L["2"]["Position"] = UDim2.new(0.4024, 23, 0.29036, 10);
+G2L["2"]["Position"] = UDim2.new(0.4024, 297, 0.29036, 21);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(186, 13, 254);
 
 
--- StarterGui.ScreenGui.Frame.script name
+-- StarterGui.VOID WARE.Frame.script name
 G2L["3"] = Instance.new("TextLabel", G2L["2"]);
 G2L["3"]["BorderSizePixel"] = 0;
 G2L["3"]["TextSize"] = 20;
@@ -35,19 +36,20 @@ G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]],
 G2L["3"]["TextColor3"] = Color3.fromRGB(131, 5, 255);
 G2L["3"]["Size"] = UDim2.new(0, 352, 0, 50);
 G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["Text"] = [[VOID WARE BY: VOID_WARE]];
+G2L["3"]["Text"] = [[VOID WARE V1 BY: VOID_WARE]];
 G2L["3"]["Name"] = [[script name]];
 
 
--- StarterGui.ScreenGui.Frame.UIDragDetector
+-- StarterGui.VOID WARE.Frame.UIDragDetector
 G2L["4"] = Instance.new("UIDragDetector", G2L["2"]);
-G2L["4"]["DragUDim2"] = UDim2.new(0, 120, 0, -37);
+G2L["4"]["DragUDim2"] = UDim2.new(0, 336, 0, -84);
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame
+-- StarterGui.VOID WARE.Frame.ScrollingFrame
 G2L["5"] = Instance.new("ScrollingFrame", G2L["2"]);
 G2L["5"]["Active"] = true;
 G2L["5"]["BorderSizePixel"] = 2;
+G2L["5"]["CanvasPosition"] = Vector2.new(0, 100);
 G2L["5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["5"]["Size"] = UDim2.new(0, 352, 0, 220);
 G2L["5"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
@@ -56,7 +58,7 @@ G2L["5"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
 G2L["5"]["ScrollBarThickness"] = 0;
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.TP TO PERSON
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.TP TO PERSON
 G2L["6"] = Instance.new("TextButton", G2L["5"]);
 G2L["6"]["BorderSizePixel"] = 2;
 G2L["6"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
@@ -71,12 +73,12 @@ G2L["6"]["Name"] = [[TP TO PERSON]];
 G2L["6"]["Position"] = UDim2.new(0.32572, 0, 0.8174, 0);
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.TP TO PERSON.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.TP TO PERSON.LocalScript
 G2L["7"] = Instance.new("LocalScript", G2L["6"]);
 
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.reset
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.reset
 G2L["8"] = Instance.new("TextButton", G2L["5"]);
 G2L["8"]["BorderSizePixel"] = 2;
 G2L["8"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
@@ -91,14 +93,13 @@ G2L["8"]["Name"] = [[reset]];
 G2L["8"]["Position"] = UDim2.new(0.32523, 0, 0.26887, 0);
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.reset.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.reset.LocalScript
 G2L["9"] = Instance.new("LocalScript", G2L["8"]);
 
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.TextBox1
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.TextBox1
 G2L["a"] = Instance.new("TextBox", G2L["5"]);
-G2L["a"]["CursorPosition"] = -1;
 G2L["a"]["Name"] = [[TextBox1]];
 G2L["a"]["BorderSizePixel"] = 2;
 G2L["a"]["TextSize"] = 14;
@@ -111,7 +112,7 @@ G2L["a"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
 G2L["a"]["Text"] = [[]];
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.Teleport to spawn
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Teleport to spawn
 G2L["b"] = Instance.new("TextButton", G2L["5"]);
 G2L["b"]["BorderSizePixel"] = 2;
 G2L["b"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
@@ -126,12 +127,12 @@ G2L["b"]["Name"] = [[Teleport to spawn]];
 G2L["b"]["Position"] = UDim2.new(0.32807, 0, 0.44294, 0);
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.Teleport to spawn.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Teleport to spawn.LocalScript
 G2L["c"] = Instance.new("LocalScript", G2L["b"]);
 
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.R tp
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.R tp
 G2L["d"] = Instance.new("TextButton", G2L["5"]);
 G2L["d"]["BorderSizePixel"] = 2;
 G2L["d"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
@@ -146,12 +147,12 @@ G2L["d"]["Name"] = [[R tp]];
 G2L["d"]["Position"] = UDim2.new(0.32807, 0, 0.63924, 0);
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.R tp.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.R tp.LocalScript
 G2L["e"] = Instance.new("LocalScript", G2L["d"]);
 
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.fling
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.fling
 G2L["f"] = Instance.new("TextButton", G2L["5"]);
 G2L["f"]["BorderSizePixel"] = 2;
 G2L["f"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
@@ -166,14 +167,13 @@ G2L["f"]["Name"] = [[fling]];
 G2L["f"]["Position"] = UDim2.new(0.32807, 0, 0.06332, 0);
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.fling.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.fling.LocalScript
 G2L["10"] = Instance.new("LocalScript", G2L["f"]);
 
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.TextBox2
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.TextBox2
 G2L["11"] = Instance.new("TextBox", G2L["5"]);
-G2L["11"]["CursorPosition"] = -1;
 G2L["11"]["Name"] = [[TextBox2]];
 G2L["11"]["BorderSizePixel"] = 2;
 G2L["11"]["TextSize"] = 14;
@@ -186,17 +186,105 @@ G2L["11"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
 G2L["11"]["Text"] = [[]];
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU
 G2L["12"] = Instance.new("IntValue", G2L["5"]);
 G2L["12"]["Name"] = [[FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU]];
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
 G2L["13"] = Instance.new("LocalScript", G2L["12"]);
 
 
 
--- StarterGui.ScreenGui.Frame.ScrollingFrame.TP TO PERSON.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+G2L["14"] = Instance.new("LocalScript", G2L["12"]);
+
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+G2L["15"] = Instance.new("LocalScript", G2L["12"]);
+
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+G2L["16"] = Instance.new("LocalScript", G2L["12"]);
+
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+G2L["17"] = Instance.new("LocalScript", G2L["12"]);
+
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Fly
+G2L["18"] = Instance.new("TextButton", G2L["5"]);
+G2L["18"]["BorderSizePixel"] = 2;
+G2L["18"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["18"]["TextSize"] = 14;
+G2L["18"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["18"]["Size"] = UDim2.new(0, 121, 0, 30);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["18"]["Text"] = [[Fly]];
+G2L["18"]["Name"] = [[Fly]];
+G2L["18"]["Position"] = UDim2.new(0.32523, 0, 0.15776, 0);
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Fly.LocalScript
+G2L["19"] = Instance.new("LocalScript", G2L["18"]);
+
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Fly Status
+G2L["1a"] = Instance.new("TextLabel", G2L["5"]);
+G2L["1a"]["BorderSizePixel"] = 2;
+G2L["1a"]["TextSize"] = 14;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1a"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["1a"]["Size"] = UDim2.new(0, 89, 0, 31);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["1a"]["Text"] = [[OFF]];
+G2L["1a"]["Name"] = [[Fly Status]];
+G2L["1a"]["Position"] = UDim2.new(0.69602, 0, 0.15741, 0);
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Auto pick up toys
+G2L["1b"] = Instance.new("TextButton", G2L["5"]);
+G2L["1b"]["BorderSizePixel"] = 2;
+G2L["1b"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["1b"]["TextSize"] = 14;
+G2L["1b"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["1b"]["Size"] = UDim2.new(0, 121, 0, 30);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["1b"]["Text"] = [[Tool pick up]];
+G2L["1b"]["Name"] = [[Auto pick up toys]];
+G2L["1b"]["Position"] = UDim2.new(0.32807, 0, 0.35961, 0);
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Auto pick up toys.LocalScript
+G2L["1c"] = Instance.new("LocalScript", G2L["1b"]);
+
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Tool Status
+G2L["1d"] = Instance.new("TextLabel", G2L["5"]);
+G2L["1d"]["BorderSizePixel"] = 2;
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1d"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["1d"]["Size"] = UDim2.new(0, 89, 0, 31);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["1d"]["Text"] = [[OFF]];
+G2L["1d"]["Name"] = [[Tool Status]];
+G2L["1d"]["Position"] = UDim2.new(0.69602, 0, 0.35926, 0);
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.TP TO PERSON.LocalScript
 local function C_7()
 local script = G2L["7"];
 	local button = script.Parent
@@ -215,7 +303,7 @@ local script = G2L["7"];
 	end)
 end;
 task.spawn(C_7);
--- StarterGui.ScreenGui.Frame.ScrollingFrame.reset.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.reset.LocalScript
 local function C_9()
 local script = G2L["9"];
 	local button = script.Parent
@@ -229,7 +317,7 @@ local script = G2L["9"];
 	end)
 end;
 task.spawn(C_9);
--- StarterGui.ScreenGui.Frame.ScrollingFrame.Teleport to spawn.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Teleport to spawn.LocalScript
 local function C_c()
 local script = G2L["c"];
 	local button = script.Parent
@@ -244,7 +332,7 @@ local script = G2L["c"];
 	end)
 end;
 task.spawn(C_c);
--- StarterGui.ScreenGui.Frame.ScrollingFrame.R tp.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.R tp.LocalScript
 local function C_e()
 local script = G2L["e"];
 	local button = script.Parent
@@ -261,7 +349,7 @@ local script = G2L["e"];
 	end)
 end;
 task.spawn(C_e);
--- StarterGui.ScreenGui.Frame.ScrollingFrame.fling.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.fling.LocalScript
 local function C_10()
 local script = G2L["10"];
 	local button = script.Parent
@@ -287,13 +375,13 @@ local script = G2L["10"];
 			local flingz = math.random(1 , 999)
 			flingtime = flingtime + 1
 			character.PrimaryPart.Position = tptothatplayer.PrimaryPart.Position
-			character.PrimaryPart.Rotation = Vector3.new(flingx,flingy,flingz)
-			character.PrimaryPart.Velocity = Vector3.new(velobypassfuckyouroblox,velobypassfuckyouroblox, velobypassfuckyouroblox)
+			character.PrimaryPart.Orientation = Vector3.new(flingx,flingy,flingz)
+			character.PrimaryPart.AssemblyLinearVelocity = Vector3.new(0,velobypassfuckyouroblox, 0)
 		end
 	end)
 end;
 task.spawn(C_10);
--- StarterGui.ScreenGui.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
 local function C_13()
 local script = G2L["13"];
 	while true do
@@ -302,5 +390,267 @@ local script = G2L["13"];
 	end
 end;
 task.spawn(C_13);
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+local function C_14()
+local script = G2L["14"];
+	while true do
+		task.wait()
+		script.Parent.Value += 999999999999999
+	end
+end;
+task.spawn(C_14);
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+local function C_15()
+local script = G2L["15"];
+	while true do
+		task.wait()
+		script.Parent.Value += 999999999999999
+	end
+end;
+task.spawn(C_15);
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+local function C_16()
+local script = G2L["16"];
+	while true do
+		task.wait()
+		script.Parent.Value += 999999999999999
+	end
+end;
+task.spawn(C_16);
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+local function C_17()
+local script = G2L["17"];
+	while true do
+		task.wait()
+		script.Parent.Value += 999999999999999
+	end
+end;
+task.spawn(C_17);
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Fly.LocalScript
+local function C_19()
+local script = G2L["19"];
+	local button = script.Parent
+	
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	local flying = false
+	
+	local moveForward = false
+	local moveBack = false
+	local moveLeft = false
+	local moveRight = false
+	local moveUp = false
+	local moveDown = false
+	
+	local speed = 50
+	
+	local character
+	local humanoid
+	local rootPart
+	
+	local function getCharacterParts()
+		character = player.Character or player.CharacterAdded:Wait()
+		humanoid = character:WaitForChild("Humanoid")
+		rootPart = character:WaitForChild("HumanoidRootPart")
+	
+		-- Make sure the client owns the character's physics.
+		-- Player characters normally have client network ownership.
+		pcall(function()
+			rootPart:SetNetworkOwner(player)
+		end)
+	
+		return character, humanoid, rootPart
+	end
+	
+	getCharacterParts()
+	
+	player.CharacterAdded:Connect(function()
+		task.wait(0.1)
+		getCharacterParts()
+	
+		if flying then
+			humanoid.PlatformStand = true
+		end
+	end)
+	
+	local function stopFlying()
+		flying = false
+	
+		getCharacterParts()
+	
+		moveForward = false
+		moveBack = false
+		moveLeft = false
+		moveRight = false
+		moveUp = false
+		moveDown = false
+	
+		humanoid.PlatformStand = false
+	
+		-- Stop the flying velocity.
+		rootPart.AssemblyLinearVelocity = Vector3.zero
+	end
+	
+	local function startFlying()
+		flying = true
+	
+		getCharacterParts()
+	
+		humanoid.PlatformStand = true
+	
+		-- Remove existing velocity when starting.
+		rootPart.AssemblyLinearVelocity = Vector3.zero
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		if not flying then
+			startFlying()
+	
+			script.Parent.Parent["Fly Status"].Text = "ON"
+		else
+			stopFlying()
+	
+			script.Parent.Parent["Fly Status"].Text = "OFF"
+		end
+	end)
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed or not flying then
+			return
+		end
+	
+		if input.KeyCode == Enum.KeyCode.W then
+			moveForward = true
+	
+		elseif input.KeyCode == Enum.KeyCode.S then
+			moveBack = true
+	
+		elseif input.KeyCode == Enum.KeyCode.A then
+			moveLeft = true
+	
+		elseif input.KeyCode == Enum.KeyCode.D then
+			moveRight = true
+	
+		elseif input.KeyCode == Enum.KeyCode.Space then
+			moveUp = true
+	
+		elseif input.KeyCode == Enum.KeyCode.Q then
+			moveDown = true
+		end
+	end)
+	
+	UserInputService.InputEnded:Connect(function(input)
+		if input.KeyCode == Enum.KeyCode.W then
+			moveForward = false
+	
+		elseif input.KeyCode == Enum.KeyCode.S then
+			moveBack = false
+	
+		elseif input.KeyCode == Enum.KeyCode.A then
+			moveLeft = false
+	
+		elseif input.KeyCode == Enum.KeyCode.D then
+			moveRight = false
+	
+		elseif input.KeyCode == Enum.KeyCode.Space then
+			moveUp = false
+	
+		elseif input.KeyCode == Enum.KeyCode.Q then
+			moveDown = false
+		end
+	end)
+	
+	RunService.RenderStepped:Connect(function()
+		if not flying then
+			return
+		end
+	
+		if not character or not character.Parent then
+			getCharacterParts()
+			return
+		end
+	
+		local camera = workspace.CurrentCamera
+	
+		local moveVector = Vector3.zero
+	
+		local lookVector = camera.CFrame.LookVector
+		local rightVector = camera.CFrame.RightVector
+	
+		if moveForward then
+			moveVector += lookVector
+		end
+	
+		if moveBack then
+			moveVector -= lookVector
+		end
+	
+		if moveRight then
+			moveVector += rightVector
+		end
+	
+		if moveLeft then
+			moveVector -= rightVector
+		end
+	
+		if moveUp then
+			moveVector += Vector3.new(0, 1, 0)
+		end
+	
+		if moveDown then
+			moveVector -= Vector3.new(0, 1, 0)
+		end
+	
+		if moveVector.Magnitude > 0 then
+			moveVector = moveVector.Unit * speed
+		end
+	
+		-- Physics-based movement.
+		-- Because the player's character is client-owned,
+		-- the resulting physics state can replicate to other players.
+		rootPart.AssemblyLinearVelocity = moveVector
+	end)
+end;
+task.spawn(C_19);
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Auto pick up toys.LocalScript
+local function C_1c()
+local script = G2L["1c"];
+	local button = script.Parent
+	local keyboard = game:GetService("UserInputService")
+	local Toolpickup = false
+	local pickingup = false
+	
+	button.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+		local pripart = character.PrimaryPart
+		Toolpickup = not Toolpickup
+		if not Toolpickup then
+	         task.wait()
+			script.Parent.Parent["Tool Status"].Text = "ON"
+			pickingup = true
+			while pickingup do
+				local tools = workspace:GetChildren()
+			    if #tools > 0 then
+					for _, tool in ipairs(tools) do
+						if tool:IsA("Tool") then
+							pripart.Position = tool.Handle.Position
+						end
+					end
+				end
+				task.wait(0.1)
+			end
+		else
+			script.Parent.Parent["Tool Status"].Text = "OFF"
+			pickingup = false
+		end
+	end)
+end;
+task.spawn(C_1c);
 
 return G2L["1"], require;
