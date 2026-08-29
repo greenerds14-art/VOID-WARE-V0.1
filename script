@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 29 | Scripts: 12 | Modules: 0 | Tags: 0
+-- Instances: 40 | Scripts: 17 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VOID WARE
@@ -22,7 +22,7 @@ G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 2;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Size"] = UDim2.new(0, 352, 0, 270);
-G2L["2"]["Position"] = UDim2.new(0.4024, 297, 0.29036, 21);
+G2L["2"]["Position"] = UDim2.new(0.4024, -248, 0.29036, -13);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(186, 13, 254);
 
 
@@ -42,14 +42,13 @@ G2L["3"]["Name"] = [[script name]];
 
 -- StarterGui.VOID WARE.Frame.UIDragDetector
 G2L["4"] = Instance.new("UIDragDetector", G2L["2"]);
-G2L["4"]["DragUDim2"] = UDim2.new(0, 336, 0, -84);
+G2L["4"]["DragUDim2"] = UDim2.new(0, -545, 0, -34);
 
 
 -- StarterGui.VOID WARE.Frame.ScrollingFrame
 G2L["5"] = Instance.new("ScrollingFrame", G2L["2"]);
 G2L["5"]["Active"] = true;
 G2L["5"]["BorderSizePixel"] = 2;
-G2L["5"]["CanvasPosition"] = Vector2.new(0, 100);
 G2L["5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["5"]["Size"] = UDim2.new(0, 352, 0, 220);
 G2L["5"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
@@ -282,6 +281,121 @@ G2L["1d"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
 G2L["1d"]["Text"] = [[OFF]];
 G2L["1d"]["Name"] = [[Tool Status]];
 G2L["1d"]["Position"] = UDim2.new(0.69602, 0, 0.35926, 0);
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.LocalScript
+G2L["1e"] = Instance.new("LocalScript", G2L["5"]);
+
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Rejoin
+G2L["1f"] = Instance.new("TextButton", G2L["5"]);
+G2L["1f"]["BorderSizePixel"] = 2;
+G2L["1f"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["1f"]["TextSize"] = 14;
+G2L["1f"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["1f"]["Size"] = UDim2.new(0, 121, 0, 30);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["1f"]["Text"] = [[Rejoin]];
+G2L["1f"]["Name"] = [[Rejoin]];
+G2L["1f"]["Position"] = UDim2.new(0.32807, 0, 0.5448, 0);
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Rejoin.LocalScript
+G2L["20"] = Instance.new("LocalScript", G2L["1f"]);
+
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Cubes
+G2L["21"] = Instance.new("TextButton", G2L["5"]);
+G2L["21"]["BorderSizePixel"] = 2;
+G2L["21"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["21"]["TextSize"] = 14;
+G2L["21"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["21"]["Size"] = UDim2.new(0, 121, 0, 30);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["21"]["Text"] = [[HIGHLIGHT CUBES]];
+G2L["21"]["Name"] = [[Cubes]];
+G2L["21"]["Position"] = UDim2.new(0.32523, 0, 0.72998, 0);
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Cubes.LocalScript
+G2L["22"] = Instance.new("LocalScript", G2L["21"]);
+
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.TextBox3
+G2L["23"] = Instance.new("TextBox", G2L["5"]);
+G2L["23"]["CursorPosition"] = -1;
+G2L["23"]["Name"] = [[TextBox3]];
+G2L["23"]["BorderSizePixel"] = 2;
+G2L["23"]["TextSize"] = 14;
+G2L["23"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["Size"] = UDim2.new(0, 89, 0, 31);
+G2L["23"]["Position"] = UDim2.new(0.69602, 0, 0.72963, 0);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["23"]["Text"] = [[]];
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Grief Person
+G2L["24"] = Instance.new("TextButton", G2L["5"]);
+G2L["24"]["BorderSizePixel"] = 2;
+G2L["24"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["24"]["TextSize"] = 14;
+G2L["24"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["24"]["Size"] = UDim2.new(0, 121, 0, 30);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["24"]["Text"] = [[GRIEF]];
+G2L["24"]["Name"] = [[Grief Person]];
+G2L["24"]["Position"] = UDim2.new(0.32572, 0, 0.90629, 0);
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Grief Person.LocalScript
+G2L["25"] = Instance.new("LocalScript", G2L["24"]);
+
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.TextBox4
+G2L["26"] = Instance.new("TextBox", G2L["5"]);
+G2L["26"]["CursorPosition"] = -1;
+G2L["26"]["Name"] = [[TextBox4]];
+G2L["26"]["BorderSizePixel"] = 2;
+G2L["26"]["TextSize"] = 14;
+G2L["26"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["26"]["Size"] = UDim2.new(0, 89, 0, 31);
+G2L["26"]["Position"] = UDim2.new(0.69602, 0, 0.9037, 0);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["26"]["Text"] = [[]];
+
+
+-- StarterGui.VOID WARE.Frame.Close gui
+G2L["27"] = Instance.new("TextButton", G2L["2"]);
+G2L["27"]["BorderSizePixel"] = 2;
+G2L["27"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["27"]["TextSize"] = 14;
+G2L["27"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["27"]["Size"] = UDim2.new(0, 26, 0, 27);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["27"]["Text"] = [[X]];
+G2L["27"]["Name"] = [[Close gui]];
+G2L["27"]["Position"] = UDim2.new(-0.00147, 0, 0.23369, 0);
+
+
+-- StarterGui.VOID WARE.Frame.Close gui.LocalScript
+G2L["28"] = Instance.new("LocalScript", G2L["27"]);
+
 
 
 -- StarterGui.VOID WARE.Frame.ScrollingFrame.TP TO PERSON.LocalScript
@@ -652,5 +766,95 @@ local script = G2L["1c"];
 	end)
 end;
 task.spawn(C_1c);
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.LocalScript
+local function C_1e()
+local script = G2L["1e"];
+	
+end;
+task.spawn(C_1e);
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Rejoin.LocalScript
+local function C_20()
+local script = G2L["20"];
+	local TeleportService = game:GetService("TeleportService")
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		TeleportService:Teleport(game.PlaceId, player)
+	end)
+end;
+task.spawn(C_20);
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Cubes.LocalScript
+local function C_22()
+local script = G2L["22"];
+	local button = script.Parent
+	local keyboard = game:GetService("UserInputService")
+	
+	button.MouseButton1Click:Connect(function()
+		local Player = script.Parent.Parent.TextBox3.Text
+		local playersblocks = game.Workspace.Bricks:WaitForChild(Player)
+		for _, part in pairs(playersblocks:GetChildren()) do
+			local highlight = Instance.new('Highlight')
+			highlight.Parent = part
+		end
+		task.wait(1)
+		for _, part in pairs(playersblocks:GetChildren()) do
+	        local highlight = part:FindFirstChildOfClass("Highlight")
+			highlight:Destroy()
+		end
+	end)
+end;
+task.spawn(C_22);
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Grief Person.LocalScript
+local function C_25()
+local script = G2L["25"];
+	local button = script.Parent
+	local keyboard = game:GetService("UserInputService")
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	local Griefing = false
+	
+	button.MouseButton1Click:Connect(function()
+		Griefing = true
+		local max = 0
+		local Player = script.Parent.Parent.TextBox4.Text
+		local playersblocks = game.Workspace.Bricks:WaitForChild(Player)
+		local Dtool = game.Players.LocalPlayer.Backpack:FindFirstChild("Delete")
+		local Player = game.Players.LocalPlayer
+		local Character = Player.Character
+		local Humanoid = Character.Humanoid
+		local HumanoidRootPart = Character.HumanoidRootPart
+		Humanoid:EquipTool(Dtool)
+		while Griefing == true do
+			task.wait()
+			if max == 1000 then
+				Griefing = false
+			end
+			max += 1
+			print(max)
+		for _, part in pairs(playersblocks:GetChildren()) do
+		
+				task.wait()
+				HumanoidRootPart.Position = part.Position
+				
+				Dtool.Script.Event:FireServer(part, part.Position)
+	
+				Dtool:Activate()
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_25);
+-- StarterGui.VOID WARE.Frame.Close gui.LocalScript
+local function C_28()
+local script = G2L["28"];
+	local button = script.Parent
+	local keyboard = game:GetService("UserInputService")
+	
+	button.MouseButton1Click:Connect(function()
+	    script.Parent.Parent:Destroy()
+	end)
+end;
+task.spawn(C_28);
 
 return G2L["1"], require;
