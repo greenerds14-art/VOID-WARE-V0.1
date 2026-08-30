@@ -1097,14 +1097,18 @@ local script = G2L["25"];
 		local prepos = HumanoidRootPart.Position
 		while Griefing == true do
 			task.wait()
-			Humanoid:EquipTool(Dtool)
-			if max == 1000 or HumanoidRootPart.Position == prepos then
-				Griefing = false
-			end
+				Humanoid:EquipTool(Dtool)
 			HumanoidRootPart.Position = prepos
 		for _, part in pairs(playersblocks:GetChildren()) do
 		
 				task.wait()
+				
+				print(part.Position)
+				
+				if max == 1000 then
+					Griefing = false
+				end
+				
 				HumanoidRootPart.Position = part.Position
 				
 				Dtool.Script.Event:FireServer(part, part.Position)
