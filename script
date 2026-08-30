@@ -1098,7 +1098,7 @@ local script = G2L["25"];
 		while Griefing == true do
 			task.wait()
 			Humanoid:EquipTool(Dtool)
-			if max == 1000 or HumanoidRootPart.Postionion == prepos then
+			if max == 1000 or HumanoidRootPart.Position == prepos then
 				Griefing = false
 			end
 			HumanoidRootPart.Position = prepos
