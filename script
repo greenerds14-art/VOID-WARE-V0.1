@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 56 | Scripts: 23 | Modules: 0 | Tags: 0
+-- Instances: 58 | Scripts: 24 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VOID WARE
@@ -22,7 +22,7 @@ G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 2;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Size"] = UDim2.new(0, 352, 0, 270);
-G2L["2"]["Position"] = UDim2.new(0.41258, -215, 0.31243, -14);
+G2L["2"]["Position"] = UDim2.new(0.41258, 57, 0.31243, -5);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(186, 13, 254);
 
 
@@ -42,7 +42,7 @@ G2L["3"]["Name"] = [[script name]];
 
 -- StarterGui.VOID WARE.Frame.UIDragDetector
 G2L["4"] = Instance.new("UIDragDetector", G2L["2"]);
-
+G2L["4"]["DragUDim2"] = UDim2.new(0, -238, 0, -230);
 
 
 -- StarterGui.VOID WARE.Frame.ScrollingFrame
@@ -50,7 +50,6 @@ G2L["5"] = Instance.new("ScrollingFrame", G2L["2"]);
 G2L["5"]["Active"] = true;
 G2L["5"]["BorderSizePixel"] = 2;
 G2L["5"]["CanvasSize"] = UDim2.new(1, 1, 3, 0);
-G2L["5"]["CanvasPosition"] = Vector2.new(0, 500);
 G2L["5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["5"]["Size"] = UDim2.new(0, 352, 0, 206);
 G2L["5"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
@@ -187,32 +186,32 @@ G2L["11"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
 G2L["11"]["Text"] = [[]];
 
 
--- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.cool val
 G2L["12"] = Instance.new("IntValue", G2L["5"]);
-G2L["12"]["Name"] = [[FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU]];
+G2L["12"]["Name"] = [[cool val]];
 
 
--- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.cool val.LocalScript
 G2L["13"] = Instance.new("LocalScript", G2L["12"]);
 
 
 
--- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.cool val.LocalScript
 G2L["14"] = Instance.new("LocalScript", G2L["12"]);
 
 
 
--- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.cool val.LocalScript
 G2L["15"] = Instance.new("LocalScript", G2L["12"]);
 
 
 
--- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.cool val.LocalScript
 G2L["16"] = Instance.new("LocalScript", G2L["12"]);
 
 
 
--- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.cool val.LocalScript
 G2L["17"] = Instance.new("LocalScript", G2L["12"]);
 
 
@@ -553,23 +552,43 @@ G2L["36"] = Instance.new("LocalScript", G2L["35"]);
 
 
 
--- StarterGui.VOID WARE.Frame.Close gui
-G2L["37"] = Instance.new("TextButton", G2L["2"]);
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Anti Vamp
+G2L["37"] = Instance.new("TextButton", G2L["5"]);
 G2L["37"]["BorderSizePixel"] = 2;
 G2L["37"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
 G2L["37"]["TextSize"] = 14;
 G2L["37"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
 G2L["37"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
-G2L["37"]["Size"] = UDim2.new(0, 26, 0, 27);
+G2L["37"]["Size"] = UDim2.new(0, 121, 0, 30);
 G2L["37"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
-G2L["37"]["Text"] = [[X]];
-G2L["37"]["Name"] = [[Close gui]];
-G2L["37"]["Position"] = UDim2.new(-0.00147, 0, 0.23369, 0);
+G2L["37"]["Text"] = [[FIX CAMERA]];
+G2L["37"]["Name"] = [[Anti Vamp]];
+G2L["37"]["Position"] = UDim2.new(0.32806, 0, 0.82504, 0);
+
+
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Anti Vamp.LocalScript
+G2L["38"] = Instance.new("LocalScript", G2L["37"]);
+
+
+
+-- StarterGui.VOID WARE.Frame.Close gui
+G2L["39"] = Instance.new("TextButton", G2L["2"]);
+G2L["39"]["BorderSizePixel"] = 2;
+G2L["39"]["TextStrokeColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["39"]["TextSize"] = 14;
+G2L["39"]["TextColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["39"]["Size"] = UDim2.new(0, 26, 0, 27);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(101, 0, 251);
+G2L["39"]["Text"] = [[X]];
+G2L["39"]["Name"] = [[Close gui]];
+G2L["39"]["Position"] = UDim2.new(-0.00147, 0, 0.23369, 0);
 
 
 -- StarterGui.VOID WARE.Frame.Close gui.LocalScript
-G2L["38"] = Instance.new("LocalScript", G2L["37"]);
+G2L["3a"] = Instance.new("LocalScript", G2L["39"]);
 
 
 
@@ -642,35 +661,106 @@ task.spawn(C_e);
 local function C_10()
 local script = G2L["10"];
 	local button = script.Parent
-	local keyboard = game:GetService("UserInputService")
+	local Workspace = game:GetService("Workspace")
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
+	local isFlinging = false 
 	
 	button.MouseButton1Click:Connect(function()
-		local flingtime = 0
-		local velobypassfuckyouroblox = script.Parent.Parent["FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU"].Value
-		local player = game.Players.LocalPlayer
-		local character = player.Character or player.CharacterAdded:Wait()
-		while flingtime <= 1000 do
-			task.wait(0.00001)
-			local player = game.Players.LocalPlayer
-			local character = player.Character or player.CharacterAdded:Wait()
-			local humanoid = character:WaitForChild("Humanoid")
-			local players = game:GetService("Players"):GetPlayers()
-			print(players)
-			print(velobypassfuckyouroblox)
-			local playertoTeleportTo = script.Parent.Parent.TextBox2.Text	
-			local tptothatplayer = game.Workspace:FindFirstChild(playertoTeleportTo)
-			local flingx = math.random(1 , 999)
-			local flingy = math.random(1 , 999)
-			local flingz = math.random(1 , 999)
-			flingtime = flingtime + 1
-			character.PrimaryPart.Position = tptothatplayer.PrimaryPart.Position
-			character.PrimaryPart.Orientation = Vector3.new(flingx,flingy,flingz)
-			character.PrimaryPart.AssemblyLinearVelocity = Vector3.new(0,velobypassfuckyouroblox, 0)
+		if isFlinging then return end 
+	
+		local player = Players.LocalPlayer
+		local character = player.Character
+		local rootPart = character and character:FindFirstChild("HumanoidRootPart")
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+	
+		-- Extract UI input values
+		local rawVelo = script.Parent.Parent["cool val"].Value
+		local velocityPower = tonumber(rawVelo) or 999999999999999 -- High limit for physics breaking
+		local targetName = script.Parent.Parent.TextBox2.Text
+		local targetModel = Workspace:FindFirstChild(targetName)
+		local targetRoot = targetModel and targetModel:FindFirstChild("HumanoidRootPart")
+	
+		if not rootPart or not targetRoot or not humanoid then
+			warn("[VOID WARE]: Missing local character components or invalid target player.")
+			return
 		end
+	
+		isFlinging = true
+		button.Text = "FLINGING..."
+	
+		-- Save original location to return you safely afterward
+		local originalCFrame = rootPart.CFrame
+	
+		-- 1. Break humanoid upright constraints
+		humanoid.PlatformStand = true
+		humanoid:ChangeState(Enum.HumanoidStateType.Physics)
+	
+		-- Turn off collision on secondary limbs to prevent tripping early
+		for _, part in pairs(character:GetChildren()) do
+			if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+				part.CanCollide = false
+			end
+		end
+	
+		-- 2. Inject Legacy Velocity Object for High Torque Rotational Speed
+		local bAngular = Instance.new("BodyAngularVelocity")
+		bAngular.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+		bAngular.P = 12500 -- Maximizes power transmission
+		bAngular.AngularVelocity = Vector3.new(velocityPower, velocityPower, velocityPower)
+		bAngular.Parent = rootPart
+	
+		-- 3. Execute dual-velocity frame-by-frame collision loop
+		local loopCount = 0
+		local maxLoops = 180 -- Roughly 3 seconds of active execution
+	
+		local physicsConnection
+		physicsConnection = RunService.Heartbeat:Connect(function()
+			if loopCount >= maxLoops or not targetRoot or not targetRoot.Parent or not rootPart or not rootPart.Parent then
+				physicsConnection:Disconnect()
+				return
+			end
+			loopCount = loopCount + 1
+	
+			-- Force strict physical positioning right into the core of their hitbox
+			rootPart.CFrame = targetRoot.CFrame * CFrame.new(math.random(-1, 1) * 0.1, 0, math.random(-1, 1) * 0.1)
+	
+			-- DUAL VELOCITY OVERRIDE: 
+			-- Continually spikes AssemblyLinearVelocity to extreme negative parameters on every internal physics frame
+			rootPart.AssemblyLinearVelocity = Vector3.new(-velocityPower, -velocityPower, -velocityPower)
+		end)
+	
+		-- Wait until execution finishes
+		while physicsConnection.Connected do task.wait() end
+	
+		-- 4. Clean up physics movers and return you safely
+		if bAngular then bAngular:Destroy() end
+	
+		if rootPart and rootPart.Parent then
+			rootPart.AssemblyLinearVelocity = Vector3.zero
+			rootPart.AssemblyAngularVelocity = Vector3.zero
+			rootPart.CFrame = originalCFrame
+		end
+	
+		if humanoid and humanoid.Parent then
+			humanoid.PlatformStand = false
+			humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+		end
+	
+		for _, part in pairs(character:GetChildren()) do
+			if part:IsA("BasePart") then
+				part.CanCollide = true
+			end
+		end
+	
+		isFlinging = false
+		button.Text = "FLING"
 	end)
+	
 end;
 task.spawn(C_10);
--- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.cool val.LocalScript
 local function C_13()
 local script = G2L["13"];
 	while true do
@@ -679,7 +769,7 @@ local script = G2L["13"];
 	end
 end;
 task.spawn(C_13);
--- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.cool val.LocalScript
 local function C_14()
 local script = G2L["14"];
 	while true do
@@ -688,7 +778,7 @@ local script = G2L["14"];
 	end
 end;
 task.spawn(C_14);
--- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.cool val.LocalScript
 local function C_15()
 local script = G2L["15"];
 	while true do
@@ -697,7 +787,7 @@ local script = G2L["15"];
 	end
 end;
 task.spawn(C_15);
--- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.cool val.LocalScript
 local function C_16()
 local script = G2L["16"];
 	while true do
@@ -706,7 +796,7 @@ local script = G2L["16"];
 	end
 end;
 task.spawn(C_16);
--- StarterGui.VOID WARE.Frame.ScrollingFrame.FUCK YOU ROBLOX FUCK YOU FUCK YOU FUCK YOU FUCK YOU.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.cool val.LocalScript
 local function C_17()
 local script = G2L["17"];
 	while true do
@@ -1199,6 +1289,11 @@ local script = G2L["33"];
 	local activeConnections = {} 
 	local folderConnections = {}
 	
+	-- Griefer Tracking Data
+	local destructionCounters = {} -- Tracks how many blocks each user has broken
+	local STREAK_THRESHOLD = 5     -- Number of blocks needed to trigger the alert
+	local POV_DURATION = 3         -- How many seconds to spectate the player
+	
 	-- Bulletproof chat sending function
 	local function sendToChat(textToSend)
 		if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -1220,21 +1315,43 @@ local script = G2L["33"];
 		end
 	end
 	
+	-- Spectate target function
+	local function povGriefer(grieferName)
+		local targetPlayer = Players:FindFirstChild(grieferName)
+		if not targetPlayer or not targetPlayer.Character then return end
+		local targetHumanoid = targetPlayer.Character:FindFirstChildOfClass("Humanoid")
+	
+		if targetHumanoid and Workspace.CurrentCamera then
+			local currentCamera = Workspace.CurrentCamera
+	
+			-- Force your camera to view the target player
+			currentCamera.CameraSubject = targetHumanoid
+			print("[VOID WARE]: POV locked onto " .. grieferName)
+	
+			-- Wait for the duration, then reset back to yourself
+			task.delay(POV_DURATION, function()
+				if localPlayer.Character then
+					local myHumanoid = localPlayer.Character:FindFirstChildOfClass("Humanoid")
+					if myHumanoid then
+						currentCamera.CameraSubject = myHumanoid
+						print("[VOID WARE]: Camera returned to local player.")
+					end
+				end
+			end)
+		end
+	end
+	
 	-- Helper function to find who is nearest to the block with a tool out
 	local function getClosestGriefer(blockPosition, victimName)
 		local closestPlayer = "Unknown Player"
-		local shortestDistance = 18 -- Radii threshold (studs) to check around the block
+		local shortestDistance = 18
 	
 		for _, p in pairs(Players:GetPlayers()) do
-			-- ====================================================================
-			-- FIX: Skip the block owner! If the owner is closest, it's not a griefer.
-			-- ====================================================================
 			if p.Name ~= victimName and p.Character and p.Character:FindFirstChild("HumanoidRootPart") then
 				local rootPart = p.Character.HumanoidRootPart
 				local dist = (rootPart.Position - blockPosition).Magnitude
 	
 				if dist < shortestDistance then
-					-- Check if they are holding a tool (likely their delete/bkit tool)
 					local holdingTool = p.Character:FindFirstChildOfClass("Tool")
 					if holdingTool then
 						shortestDistance = dist
@@ -1244,7 +1361,6 @@ local script = G2L["33"];
 			end
 		end
 	
-		-- Fallback: Check by absolute closest proximity (still skipping the owner)
 		if closestPlayer == "Unknown Player" then
 			for _, p in pairs(Players:GetPlayers()) do
 				if p.Name ~= victimName and p.Character and p.Character:FindFirstChild("HumanoidRootPart") then
@@ -1270,22 +1386,32 @@ local script = G2L["33"];
 		local connection = playerModel.ChildRemoved:Connect(function(child)
 			if not agstatus then return end
 	
-			-- Skip entirely if you delete your own block
+			-- Ignore completely if you delete your own block
 			if victimName == localPlayer.Name then return end
 	
 			if child:IsA("BasePart") then
-				-- 1. Find if an external player is standing close to the deletion site
 				local destroyer = getClosestGriefer(child.Position, victimName)
 	
-				-- 2. Double-check: If the script returned "Unknown Player" because the owner was the 
-				-- only one nearby, that means the owner deleted it themselves. Exit out.
-				if destroyer == "Unknown Player" then
-					return
-				end
+				-- Skip if the block owner deleted it themselves
+				if destroyer == "Unknown Player" then return end
 	
-				-- 3. Broadcast if a valid third-party player was caught
-				local textToSend = victimName .. "'s build has been griefed by " .. destroyer .. "!"
-				sendToChat(textToSend)
+				-- Increment the griefer's destruction score
+				if not destructionCounters[destroyer] then
+					destructionCounters[destroyer] = 0
+				end
+				destructionCounters[destroyer] = destructionCounters[destroyer] + 1
+	
+				print(string.format("[VOID WARE]: %s destruction streak: %d/%d", destroyer, destructionCounters[destroyer], STREAK_THRESHOLD))
+	
+				-- ONLY trigger the alert and POV when they hit exactly 5 deletions (or multiples of 5)
+				if destructionCounters[destroyer] % STREAK_THRESHOLD == 0 then
+					-- 1. Lock camera onto them for 3 seconds
+					povGriefer(destroyer)
+	
+					-- 2. Broadcast to the server chat
+					local textToSend = destroyer .. " is currently griefing! (Destroyed " .. tostring(destructionCounters[destroyer]) .. " of " .. victimName .. "'s bricks)"
+					sendToChat(textToSend)
+				end
 			end
 		end)
 	
@@ -1301,6 +1427,7 @@ local script = G2L["33"];
 		end
 	
 		print("[VOID WARE]: Advanced block deletion detector activated.")
+		destructionCounters = {} -- Reset scores on activation
 	
 		for _, child in pairs(BricksFolder:GetChildren()) do
 			trackPlayerModel(child)
@@ -1368,9 +1495,27 @@ local script = G2L["36"];
 	end)
 end;
 task.spawn(C_36);
--- StarterGui.VOID WARE.Frame.Close gui.LocalScript
+-- StarterGui.VOID WARE.Frame.ScrollingFrame.Anti Vamp.LocalScript
 local function C_38()
 local script = G2L["38"];
+	local button = script.Parent
+	local keyboard = game:GetService("UserInputService")
+	local rstatus = false
+	
+	button.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+		local humrootpart = character:WaitForChild("HumanoidRootPart")
+		local cam = workspace.CurrentCamera
+		cam.CameraSubject = humanoid
+		cam.CameraType = Enum.CameraType.Custom
+	end)
+end;
+task.spawn(C_38);
+-- StarterGui.VOID WARE.Frame.Close gui.LocalScript
+local function C_3a()
+local script = G2L["3a"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	
@@ -1378,6 +1523,6 @@ local script = G2L["38"];
 	    script.Parent.Parent:Destroy()
 	end)
 end;
-task.spawn(C_38);
+task.spawn(C_3a);
 
 return G2L["1"], require;
