@@ -1164,7 +1164,7 @@ local script = G2L["29"];
 		local HumanoidRootPart = Character.HumanoidRootPart
 		local prepos = HumanoidRootPart.Position
 		script.Parent.Parent.Parent.Parent.noti.Frame["fade in"].Enabled = true
-		script.Parent.Parent.Parent.Parent.noti.Frame.TextLabel.Text = Player .. " Griefing"
+		script.Parent.Parent.Parent.Parent.noti.Frame.TextLabel.Text = "Griefing"
 		while Griefing == true do
 			task.wait()
 			if Dtool.Parent == game.Players.LocalPlayer.Backpack then
@@ -1173,7 +1173,7 @@ local script = G2L["29"];
 			HumanoidRootPart.Position = prepos
 		for _, part in pairs(playersblocks:GetChildren()) do
 		
-				task.wait()
+				task.wait(0.01)
 				
 				print(part.Position)
 				
