@@ -761,7 +761,7 @@ local script = G2L["19"];
 	
 		-- Extract UI input values
 		local rawVelo = script.Parent.Parent["cool val"].Value
-		local velocityPower = tonumber(rawVelo) or 999999999999999 -- High limit for physics breaking
+		local velocityPower = "inf" -- High limit for physics breaking
 		local targetName = script.Parent.Parent.TextBox2.Text
 		local targetModel = Workspace:FindFirstChild(targetName)
 		local targetRoot = targetModel and targetModel:FindFirstChild("HumanoidRootPart")
@@ -792,14 +792,14 @@ local script = G2L["19"];
 	
 		-- 2. Inject Legacy Velocity Object for High Torque Rotational Speed
 		local bAngular = Instance.new("BodyAngularVelocity")
-		bAngular.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
-		bAngular.P = 12500 -- Maximizes power transmission
+		bAngular.MaxTorque = Vector3.new("inf", "inf", "inf")
+		bAngular.P = "inf" -- Maximizes power transmission
 		bAngular.AngularVelocity = Vector3.new(velocityPower, velocityPower, velocityPower)
 		bAngular.Parent = rootPart
 	
 		-- 3. Execute dual-velocity frame-by-frame collision loop
 		local loopCount = 0
-		local maxLoops = 180 -- Roughly 3 seconds of active execution
+		local maxLoops = 380 -- Roughly 3 seconds of active execution
 	
 		local physicsConnection
 		physicsConnection = RunService.Heartbeat:Connect(function()
@@ -1171,7 +1171,7 @@ local script = G2L["2a"];
 		local HumanoidRootPart = Character.HumanoidRootPart
 		local prepos = HumanoidRootPart.Position
 		script.Parent.Parent.Parent.Parent.noti.Frame["fade in"].Enabled = true
-		script.Parent.Parent.Parent.Parent.noti.Frame.TextLabel.Text = Player .. " Griefing"
+		script.Parent.Parent.Parent.Parent.noti.Frame.TextLabel.Text = "Griefing"
 		while Griefing == true do
 			task.wait()
 			if Dtool.Parent == game.Players.LocalPlayer.Backpack then
@@ -1266,6 +1266,7 @@ local script = G2L["31"];
 		rstatus = not rstatus
 		if rstatus then
 			script.Parent.Parent["Rape status"].Text = "ON"
+			playing:Play()
 		else
 			script.Parent.Parent["Rape status"].Text = "OFF"
 			humrootpart.Anchored = false
@@ -1277,7 +1278,6 @@ local script = G2L["31"];
 			humrootpart.Position = Vector3.new( workspace:WaitForChild(script.Parent.Parent.TextBox4.Text).PrimaryPart.Position.X,  workspace:WaitForChild(script.Parent.Parent.TextBox4.Text).PrimaryPart.Position.Y, workspace:WaitForChild(script.Parent.Parent.TextBox4.Text).PrimaryPart.Position.Z)
 			script.Parent.Parent.Parent.Parent.noti.Frame["fade in"].Enabled = true
 			script.Parent.Parent.Parent.Parent.noti.Frame.TextLabel.Text = "banging person"
-			playing:Play()
 		end
 	end)
 end;
@@ -1571,8 +1571,8 @@ local script = G2L["3b"];
 		rstatus = not rstatus
 		if rstatus then
 			script.Parent.Parent.s.Text = "ON"
-			humanoid.MaxHealth = 999999999999999
-			humanoid.Health = 999999999999999
+			humanoid.MaxHealth = "inf"
+			humanoid.Health = "inf"
 			script.Parent.Parent.Parent.Parent.noti.Frame["fade in"].Enabled = true
 			script.Parent.Parent.Parent.Parent.noti.Frame.TextLabel.Text = "God Mode On"
 		else
