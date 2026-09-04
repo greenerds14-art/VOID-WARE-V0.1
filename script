@@ -29,7 +29,7 @@ G2L["2"]["Name"] = [[VOID WARE FRAME]];
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.UIDragDetector
 G2L["3"] = Instance.new("UIDragDetector", G2L["2"]);
-G2L["3"]["DragUDim2"] = UDim2.new(0, 181, 0, -12);
+
 
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.Script Tittle
@@ -976,7 +976,7 @@ task.spawn(C_1a);
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.nc clip.LocalScript
 local function C_1c()
 local script = G2L["1c"];
-	local plr = game.LocalPlayer
+	local plr = game.Players.LocalPlayer
 	local char = plr.Character or plr.CharacterAdded:Wait()
 	local hum = char:WaitForChild("Humanoid")
 	local humrootpart = char:WaitForChild("HumanoidRootPart")
