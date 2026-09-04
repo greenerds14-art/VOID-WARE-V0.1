@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 30 | Scripts: 6 | Modules: 0 | Tags: 0
+-- Instances: 39 | Scripts: 11 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VOID WARE NEW
@@ -104,7 +104,6 @@ G2L["9"]["Size"] = UDim2.new(0, 112, 0, 34);
 G2L["9"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["9"]["Text"] = [[RESET]];
 G2L["9"]["Name"] = [[Reset]];
-G2L["9"]["Visible"] = false;
 G2L["9"]["Position"] = UDim2.new(0.20823, 0, 0.23108, 0);
 
 
@@ -136,7 +135,6 @@ G2L["c"]["Size"] = UDim2.new(0, 112, 0, 34);
 G2L["c"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["c"]["Text"] = [[GOD]];
 G2L["c"]["Name"] = [[god]];
-G2L["c"]["Visible"] = false;
 G2L["c"]["Position"] = UDim2.new(0.20823, 0, 0.41833, 0);
 
 
@@ -156,7 +154,6 @@ G2L["e"]["Size"] = UDim2.new(0, 112, 0, 34);
 G2L["e"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["e"]["Text"] = [[FLY]];
 G2L["e"]["Name"] = [[fly]];
-G2L["e"]["Visible"] = false;
 G2L["e"]["Position"] = UDim2.new(0.20823, 0, 0.60956, 0);
 
 
@@ -176,135 +173,213 @@ G2L["10"]["Size"] = UDim2.new(0, 112, 0, 34);
 G2L["10"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["10"]["Text"] = [[TELEPORT]];
 G2L["10"]["Name"] = [[Teleport]];
-G2L["10"]["Visible"] = false;
 G2L["10"]["Position"] = UDim2.new(0.20823, 0, 0.81673, 0);
 
 
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Teleport.LocalScript
+G2L["11"] = Instance.new("LocalScript", G2L["10"]);
+
+
+
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.LocalScript
-G2L["11"] = Instance.new("LocalScript", G2L["8"]);
+G2L["12"] = Instance.new("LocalScript", G2L["8"]);
+
+
+
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Fling
+G2L["13"] = Instance.new("TextButton", G2L["8"]);
+G2L["13"]["BorderSizePixel"] = 2;
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["Text"] = [[FLING]];
+G2L["13"]["Name"] = [[Fling]];
+G2L["13"]["Position"] = UDim2.new(0.5109, 0, 0.81673, 0);
+
+
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Fling.LocalScript
+G2L["14"] = Instance.new("LocalScript", G2L["13"]);
+
+
+
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Teleport to spawn
+G2L["15"] = Instance.new("TextButton", G2L["8"]);
+G2L["15"]["BorderSizePixel"] = 2;
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["Text"] = [[TP TO SPAWN]];
+G2L["15"]["Name"] = [[Teleport to spawn]];
+G2L["15"]["Position"] = UDim2.new(0.5109, 0, 0.60956, 0);
+
+
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Teleport to spawn.LocalScript
+G2L["16"] = Instance.new("LocalScript", G2L["15"]);
+
+
+
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Auto Pick up
+G2L["17"] = Instance.new("TextButton", G2L["8"]);
+G2L["17"]["BorderSizePixel"] = 2;
+G2L["17"]["TextSize"] = 14;
+G2L["17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["17"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["Text"] = [[PICK UP TOOLS]];
+G2L["17"]["Name"] = [[Auto Pick up]];
+G2L["17"]["Position"] = UDim2.new(0.5109, 0, 0.41833, 0);
+
+
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Auto Pick up.LocalScript
+G2L["18"] = Instance.new("LocalScript", G2L["17"]);
+
+
+
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Rejoin
+G2L["19"] = Instance.new("TextButton", G2L["8"]);
+G2L["19"]["BorderSizePixel"] = 2;
+G2L["19"]["TextSize"] = 14;
+G2L["19"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["19"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["Text"] = [[REJOIN]];
+G2L["19"]["Name"] = [[Rejoin]];
+G2L["19"]["Position"] = UDim2.new(0.50847, 0, 0.23108, 0);
+
+
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Rejoin.LocalScript
+G2L["1a"] = Instance.new("LocalScript", G2L["19"]);
 
 
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.TCO_SCRIPTS
-G2L["12"] = Instance.new("Folder", G2L["2"]);
-G2L["12"]["Name"] = [[TCO_SCRIPTS]];
+G2L["1b"] = Instance.new("Folder", G2L["2"]);
+G2L["1b"]["Name"] = [[TCO_SCRIPTS]];
 
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.STATS_UI
-G2L["13"] = Instance.new("Folder", G2L["2"]);
-G2L["13"]["Name"] = [[STATS_UI]];
+G2L["1c"] = Instance.new("Folder", G2L["2"]);
+G2L["1c"]["Name"] = [[STATS_UI]];
 
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.SELECTED PLAYER
-G2L["14"] = Instance.new("TextLabel", G2L["2"]);
-G2L["14"]["TextWrapped"] = true;
-G2L["14"]["BorderSizePixel"] = 0;
-G2L["14"]["TextSize"] = 13;
-G2L["14"]["TextScaled"] = true;
-G2L["14"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["14"]["Size"] = UDim2.new(0, 200, 0, 14);
-G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["Text"] = [[PLAYER SELECTED : ]];
-G2L["14"]["Name"] = [[SELECTED PLAYER]];
-G2L["14"]["Position"] = UDim2.new(0, 0, 0.14343, 0);
+G2L["1d"] = Instance.new("TextLabel", G2L["2"]);
+G2L["1d"]["TextWrapped"] = true;
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextSize"] = 13;
+G2L["1d"]["TextScaled"] = true;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["Size"] = UDim2.new(0, 200, 0, 14);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[PLAYER SELECTED : ]];
+G2L["1d"]["Name"] = [[SELECTED PLAYER]];
+G2L["1d"]["Position"] = UDim2.new(0, 0, 0.14343, 0);
 
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.User
-G2L["15"] = Instance.new("TextBox", G2L["2"]);
-G2L["15"]["CursorPosition"] = -1;
-G2L["15"]["Name"] = [[User]];
-G2L["15"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["15"]["BorderSizePixel"] = 2;
-G2L["15"]["TextWrapped"] = true;
-G2L["15"]["TextSize"] = 14;
-G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["15"]["TextScaled"] = true;
-G2L["15"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["15"]["Size"] = UDim2.new(0, 62, 0, 26);
-G2L["15"]["Position"] = UDim2.new(0, 0, 0.78884, 0);
-G2L["15"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["15"]["Text"] = [[]];
+G2L["1e"] = Instance.new("TextBox", G2L["2"]);
+G2L["1e"]["Name"] = [[User]];
+G2L["1e"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["BorderSizePixel"] = 2;
+G2L["1e"]["TextWrapped"] = true;
+G2L["1e"]["TextSize"] = 14;
+G2L["1e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["TextScaled"] = true;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1e"]["Size"] = UDim2.new(0, 62, 0, 26);
+G2L["1e"]["Position"] = UDim2.new(0, 0, 0.78884, 0);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["Text"] = [[]];
 
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.idk
-G2L["16"] = Instance.new("TextLabel", G2L["2"]);
-G2L["16"]["TextWrapped"] = true;
-G2L["16"]["BorderSizePixel"] = 2;
-G2L["16"]["TextSize"] = 14;
-G2L["16"]["TextScaled"] = true;
-G2L["16"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["16"]["Size"] = UDim2.new(0, 62, 0, 43);
-G2L["16"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["16"]["Text"] = [[TYPE PLAYERS USERNAME]];
-G2L["16"]["Name"] = [[idk]];
-G2L["16"]["Position"] = UDim2.new(0, 0, 0.58167, 0);
+G2L["1f"] = Instance.new("TextLabel", G2L["2"]);
+G2L["1f"]["TextWrapped"] = true;
+G2L["1f"]["BorderSizePixel"] = 2;
+G2L["1f"]["TextSize"] = 14;
+G2L["1f"]["TextScaled"] = true;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["Size"] = UDim2.new(0, 62, 0, 43);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["Text"] = [[TYPE PLAYERS USERNAME]];
+G2L["1f"]["Name"] = [[idk]];
+G2L["1f"]["Position"] = UDim2.new(0, 0, 0.58167, 0);
 
 
 -- StarterGui.VOID WARE NEW.status effects frame
-G2L["17"] = Instance.new("Frame", G2L["1"]);
-G2L["17"]["BorderSizePixel"] = 2;
-G2L["17"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["17"]["Size"] = UDim2.new(0, 224, 0, 254);
-G2L["17"]["Position"] = UDim2.new(0.78652, -32, 0.39571, -32);
-G2L["17"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["17"]["Name"] = [[status effects frame]];
+G2L["20"] = Instance.new("Frame", G2L["1"]);
+G2L["20"]["BorderSizePixel"] = 2;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Size"] = UDim2.new(0, 224, 0, 254);
+G2L["20"]["Position"] = UDim2.new(0.78652, -32, 0.39571, -32);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["Name"] = [[status effects frame]];
 
 
 -- StarterGui.VOID WARE NEW.status effects frame.Statuses
-G2L["18"] = Instance.new("TextLabel", G2L["17"]);
-G2L["18"]["BorderSizePixel"] = 2;
-G2L["18"]["TextSize"] = 20;
-G2L["18"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["18"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["18"]["Size"] = UDim2.new(0, 224, 0, 50);
-G2L["18"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["18"]["Text"] = [[VOID WARE MANAGER]];
-G2L["18"]["Name"] = [[Statuses]];
+G2L["21"] = Instance.new("TextLabel", G2L["20"]);
+G2L["21"]["BorderSizePixel"] = 2;
+G2L["21"]["TextSize"] = 20;
+G2L["21"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["21"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["Size"] = UDim2.new(0, 224, 0, 50);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["Text"] = [[VOID WARE MANAGER]];
+G2L["21"]["Name"] = [[Statuses]];
 
 
 -- StarterGui.VOID WARE NEW.status effects frame.ScrollingFrame
-G2L["19"] = Instance.new("ScrollingFrame", G2L["17"]);
-G2L["19"]["Active"] = true;
-G2L["19"]["BorderSizePixel"] = 2;
-G2L["19"]["CanvasPosition"] = Vector2.new(0, 104);
-G2L["19"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.ScrollBar;
-G2L["19"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["19"]["Size"] = UDim2.new(0, 224, 0, 204);
-G2L["19"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["19"]["Position"] = UDim2.new(0, 0, 0.19685, 0);
-G2L["19"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["19"]["ScrollBarThickness"] = 0;
+G2L["22"] = Instance.new("ScrollingFrame", G2L["20"]);
+G2L["22"]["Active"] = true;
+G2L["22"]["BorderSizePixel"] = 2;
+G2L["22"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.ScrollBar;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Size"] = UDim2.new(0, 224, 0, 204);
+G2L["22"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Position"] = UDim2.new(0, 0, 0.19685, 0);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["ScrollBarThickness"] = 0;
 
 
 -- StarterGui.VOID WARE NEW.status effects frame.ScrollingFrame.delete
-G2L["1a"] = Instance.new("LocalScript", G2L["19"]);
-G2L["1a"]["Name"] = [[delete]];
+G2L["23"] = Instance.new("LocalScript", G2L["22"]);
+G2L["23"]["Name"] = [[delete]];
 
 
 -- StarterGui.VOID WARE NEW.status effects frame.UIDragDetector
-G2L["1b"] = Instance.new("UIDragDetector", G2L["17"]);
+G2L["24"] = Instance.new("UIDragDetector", G2L["20"]);
 
 
 
 -- StarterGui.VOID WARE NEW.clicktoselect
-G2L["1c"] = Instance.new("LocalScript", G2L["1"]);
-G2L["1c"]["Name"] = [[clicktoselect]];
+G2L["25"] = Instance.new("LocalScript", G2L["1"]);
+G2L["25"]["Name"] = [[clicktoselect]];
 
 
 -- StarterGui.VOID WARE NEW.name_val
-G2L["1d"] = Instance.new("IntValue", G2L["1"]);
-G2L["1d"]["Name"] = [[name_val]];
+G2L["26"] = Instance.new("IntValue", G2L["1"]);
+G2L["26"]["Name"] = [[name_val]];
 
 
 -- StarterGui.VOID WARE NEW.Value
-G2L["1e"] = Instance.new("IntValue", G2L["1"]);
+G2L["27"] = Instance.new("IntValue", G2L["1"]);
 
 
 
@@ -313,16 +388,16 @@ local function C_a()
 local script = G2L["a"];
 	local plr = game.Players.LocalPlayer
 	local btn = script.Parent
-	local gui = script.Parent.Parent.Parent.Parent
-	local vman = gui["status effects frame"]
-	local nameVal = gui.name_val       -- the IntValue object
-	local posVal = gui.Value           -- the IntValue object
 	
 	btn.MouseButton1Click:Connect(function()
 		local char = plr.Character
 		local humanoid = char and char:FindFirstChildOfClass("Humanoid")
 		if not humanoid then return end
-	
+		
+		local gui = script.Parent.Parent.Parent.Parent
+		local vman = gui["status effects frame"]      -- the IntValue object
+		local nameVal = gui.name_val       -- the IntValue object
+		local posVal = gui.Value     
 		local say = Instance.new("TextLabel")
 		say.Size = UDim2.new(0, 224, 0, 37)
 		say.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -334,6 +409,7 @@ local script = G2L["a"];
 		say.TextScaled = false
 		say.TextWrapped = false	say.TextScaled = false
 		say.TextSize = 14
+		say.FontFace = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 		
 		nameVal.Value += 1
 		posVal.Value += 30
@@ -374,7 +450,7 @@ local script = G2L["d"];
 		say.TextScaled = false
 		say.TextWrapped = false	say.TextScaled = false
 		say.TextSize = 14
-	
+		say.FontFace = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 		nameVal.Value += 1
 		posVal.Value += 30
 	
@@ -382,7 +458,7 @@ local script = G2L["d"];
 		say.Position = UDim2.new(0, 0, 0, posVal.Value)  -- use pixel offset
 		if offon then
 			say.Text = "Godmode Enabled"
-	
+			humanoid.MaxHealth = "inf"
 			humanoid.Health = "inf"
 		else
 			say.Text = "Godmode Disabled"
@@ -488,7 +564,8 @@ local script = G2L["f"];
 		say.TextScaled = false
 		say.TextWrapped = false	say.TextScaled = false
 		say.TextSize = 14
-	
+		say.FontFace = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+		
 		nameVal.Value += 1
 		posVal.Value += 30
 	
@@ -497,7 +574,6 @@ local script = G2L["f"];
 		if not flying then
 			startFlying()
 			say.Text = "flying on"
-	
 		else
 			stopFlying()
 	say.Text = "flying off"
@@ -603,9 +679,57 @@ local script = G2L["f"];
 	end)
 end;
 task.spawn(C_f);
--- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.LocalScript
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Teleport.LocalScript
 local function C_11()
 local script = G2L["11"];
+	local button = script.Parent
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local gui = script.Parent.Parent.Parent.Parent
+	local vman = gui["status effects frame"]
+	local nameVal = gui.name_val       -- the IntValue object
+	local posVal = gui.Value           -- the IntValue object
+	
+	button.MouseButton1Click:Connect(function()
+		local button = script.Parent
+		local gui = script.Parent.Parent.Parent.Parent
+		local vman = gui["status effects frame"]
+		local nameVal = gui.name_val       -- the IntValue object
+		local posVal = gui.Value           -- the IntValue object
+		local player = Players.LocalPlayer
+		local char = player.Character
+		local humanoid = char and char:FindFirstChildOfClass("Humanoid")
+		local rootPart = char and char:FindFirstChild("HumanoidRootPart")
+		
+		local plrtotpto = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text) or workspace:FindFirstChild(script.Parent.Parent.Parent["SELECTED PLAYER"].Text)
+		rootPart.Position = plrtotpto.HumanoidRootPart.Position
+		local say = Instance.new("TextLabel")
+		say.Size = UDim2.new(0, 224, 0, 37)
+		say.TextColor3 = Color3.fromRGB(255, 255, 255)
+		say.BackgroundTransparency = 1
+		say.TextStrokeTransparency = 0
+		say.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+		say.TextSize = 14
+		say.TextScaled = false
+		say.Parent = vman.ScrollingFrame
+		say.TextScaled = false
+		say.TextWrapped = false	say.TextScaled = false
+		say.TextSize = 14
+		say.Name = tostring(nameVal.Value)
+		say.FontFace = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+		
+		nameVal.Value += 1
+		posVal.Value += 30
+		
+		say.Position = UDim2.new(0, 0, 0, posVal.Value) 
+		say.Text = "Teleported to ".. plrtotpto.Name
+		
+	end)
+end;
+task.spawn(C_11);
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.LocalScript
+local function C_12()
+local script = G2L["12"];
 	for _, v in pairs(script.Parent:GetChildren()) do
 		if v:IsA("TextButton") then
 			v.Visible = true
@@ -614,10 +738,220 @@ local script = G2L["11"];
 	print("THANKS FOR USING VOID WARE --VVOID")
 	script:Destroy()
 end;
-task.spawn(C_11);
--- StarterGui.VOID WARE NEW.status effects frame.ScrollingFrame.delete
+task.spawn(C_12);
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Fling.LocalScript
+local function C_14()
+local script = G2L["14"];
+	local btn = script.Parent
+	local plr = game.Players.LocalPlayer
+	local gui = script.Parent.Parent.Parent.Parent
+	local vman = gui["status effects frame"]
+	local nameVal = gui.name_val       -- the IntValue object
+	local posVal = gui.Value           -- the IntValue object
+	local offon = false
+	
+	btn.MouseButton1Click:Connect(function()
+		local char = plr.Character
+		if not char then return end
+	
+		local hum = char:FindFirstChildOfClass("Humanoid")
+		local hrp = char:FindFirstChild("HumanoidRootPart")
+		if not hum or not hrp then return end
+	
+		-- Correctly fallback to the alternative UI text field if the primary one is empty
+		local targetName = script.Parent.Parent.Parent.User.Text
+		if targetName == "" or targetName == "User" then
+			targetName = script.Parent.Parent.Parent["SELECTED PLAYER"].Text
+		end
+	
+		-- Verify the target exists in workspace before proceeding
+		local plrtotpto = workspace:FindFirstChild(targetName)
+		if not plrtotpto or not plrtotpto:FindFirstChild("HumanoidRootPart") then
+			warn("Target player or their HumanoidRootPart could not be found.")
+			return
+		end
+	
+		offon = not offon
+	
+		-- UI Creation
+		local say = Instance.new("TextLabel")
+		say.Size = UDim2.new(0, 224, 0, 37)
+		say.TextColor3 = Color3.fromRGB(255, 255, 255)
+		say.BackgroundTransparency = 1
+		say.TextStrokeTransparency = 0
+		say.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+		say.TextSize = 14
+		say.FontFace = Font.new("rbxasset://fonts/families/PressStart2P.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+		say.Parent = vman.ScrollingFrame
+	
+		nameVal.Value += 1
+		posVal.Value += 30
+	
+		say.Name = tostring(nameVal.Value)
+		say.Position = UDim2.new(0, 0, 0, posVal.Value)
+	
+		if offon and hrp.Position.Y <= 200 then
+			say.Text = "Flinging " .. targetName
+	
+			-- Disable character collision safely
+			for _, v in pairs(char:GetChildren()) do
+				if v:IsA("BasePart") then
+					v.CanCollide = (v.Name == "HumanoidRootPart")
+				end
+			end
+	
+			-- Loop sequence
+			while offon and hrp.Position.Y <= 200 and plrtotpto:FindFirstChild("HumanoidRootPart") do
+				task.wait()
+				hrp.Velocity = Vector3.new(0, 99999, 0)
+				-- Using CFrame instead of Position prevents physics/joint breaking bugs
+				hrp.CFrame = plrtotpto.HumanoidRootPart.CFrame 
+	
+				if hrp.Position.Y >= 200 then
+					hrp.CFrame = CFrame.new(0, 100, 0)
+					for _, v in pairs(char:GetChildren()) do
+						if v:IsA("BasePart") then
+							v.CanCollide = true
+						end
+					end
+					offon = false
+					break
+				end
+			end
+		else
+			say.Text = "Stopped Flinging " .. targetName
+			for _, v in pairs(char:GetChildren()) do
+				if v:IsA("BasePart") then
+					v.CanCollide = true
+					hrp.Velocity = Vector3.new(0, 0, 0)
+				end
+			end
+			hrp.CFrame = CFrame.new(0, 100, 0)
+		end
+	end)
+	
+end;
+task.spawn(C_14);
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Teleport to spawn.LocalScript
+local function C_16()
+local script = G2L["16"];
+	local button = script.Parent
+	local keyboard = game:GetService("UserInputService")
+	
+	button.MouseButton1Click:Connect(function()
+		local gui = script.Parent.Parent.Parent.Parent
+		local vman = gui["status effects frame"]      -- the IntValue object
+		local nameVal = gui.name_val       -- the IntValue object
+		local posVal = gui.Value     
+		local say = Instance.new("TextLabel")
+		say.Size = UDim2.new(0, 224, 0, 37)
+		say.TextColor3 = Color3.fromRGB(255, 255, 255)
+		say.BackgroundTransparency = 1
+		say.TextStrokeTransparency = 0
+		say.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+		say.TextScaled = true
+		say.Parent = vman.ScrollingFrame
+		say.TextScaled = false
+		say.TextWrapped = false	say.TextScaled = false
+		say.TextSize = 14
+		say.FontFace = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	
+		nameVal.Value += 1
+		posVal.Value += 30
+	
+		say.Name = tostring(nameVal.Value)
+		say.Position = UDim2.new(0, 0, 0, posVal.Value)  -- use pixel offset
+		say.Text = "Teleporting to spawn"
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+		local rp = character.HumanoidRootPart
+		rp.Position = Vector3.new(0,100,0)
+		rp.Velocity = Vector3.new(0,0,0)
+	end)
+end;
+task.spawn(C_16);
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Auto Pick up.LocalScript
+local function C_18()
+local script = G2L["18"];
+	local button = script.Parent
+	local keyboard = game:GetService("UserInputService")
+	local Toolpickup = false
+	local pickingup = false
+	
+	button.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+		local pripart = character.PrimaryPart
+		local previouspos = pripart.Position
+		local gui = script.Parent.Parent.Parent.Parent
+		local vman = gui["status effects frame"]      -- the IntValue object
+	
+		local nameVal = gui.name_val       -- the IntValue object
+		local posVal = gui.Value     
+		local say = Instance.new("TextLabel")
+		say.Size = UDim2.new(0, 224, 0, 37)
+		say.TextColor3 = Color3.fromRGB(255, 255, 255)
+		say.BackgroundTransparency = 1
+		say.TextStrokeTransparency = 0
+		say.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+		say.TextScaled = true
+		say.Parent = vman.ScrollingFrame
+		say.TextScaled = false
+		say.TextWrapped = false	say.TextScaled = false
+		say.TextSize = 14
+		say.FontFace = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	
+		nameVal.Value += 1
+		posVal.Value += 30
+	
+		say.Name = tostring(nameVal.Value)
+		say.Position = UDim2.new(0, 0, 0, posVal.Value)  -- use pixel offset
+	
+		Toolpickup = not Toolpickup
+		if Toolpickup then
+			say.Text = "Auto picking up tools on"
+			task.wait()
+			pickingup = true
+			while pickingup do
+				local tools = workspace:GetChildren()
+				if #tools > 0 then
+					for _, tool in ipairs(tools) do
+						if tool:IsA("Tool") then
+							pripart.Position = tool.Handle.Position
+							task.wait()
+							pripart.Position = previouspos					
+						end
+						task.wait()
+					end
+					task.wait()
+				end
+				task.wait()
+			end
+			task.wait()
+		else
+			say.Text = "Auto picking up tools off"
+			pickingup = false
+		end
+	end)
+end;
+task.spawn(C_18);
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.Rejoin.LocalScript
 local function C_1a()
 local script = G2L["1a"];
+	local TeleportService = game:GetService("TeleportService")
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		TeleportService:Teleport(game.PlaceId, player)
+	end)
+end;
+task.spawn(C_1a);
+-- StarterGui.VOID WARE NEW.status effects frame.ScrollingFrame.delete
+local function C_23()
+local script = G2L["23"];
 	local plr = game.Players.LocalPlayer
 	local btn = script.Parent
 	local gui = script.Parent.Parent.Parent
@@ -635,10 +969,10 @@ local script = G2L["1a"];
 		end
 	end
 end;
-task.spawn(C_1a);
+task.spawn(C_23);
 -- StarterGui.VOID WARE NEW.clicktoselect
-local function C_1c()
-local script = G2L["1c"];
+local function C_25()
+local script = G2L["25"];
 	local plr = game.Players.LocalPlayer
 	local mouse = plr:GetMouse()
 	local mainui = script.Parent
@@ -685,6 +1019,6 @@ local script = G2L["1c"];
 		end
 	end)
 end;
-task.spawn(C_1c);
+task.spawn(C_25);
 
 return G2L["1"], require;
