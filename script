@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 39 | Scripts: 11 | Modules: 0 | Tags: 0
+-- Instances: 40 | Scripts: 12 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VOID WARE NEW
@@ -380,6 +380,11 @@ G2L["26"]["Name"] = [[name_val]];
 
 -- StarterGui.VOID WARE NEW.Value
 G2L["27"] = Instance.new("IntValue", G2L["1"]);
+
+
+
+-- StarterGui.VOID WARE NEW.LocalScript
+G2L["28"] = Instance.new("LocalScript", G2L["1"]);
 
 
 
@@ -1020,5 +1025,32 @@ local script = G2L["25"];
 	end)
 end;
 task.spawn(C_25);
+-- StarterGui.VOID WARE NEW.LocalScript
+local function C_28()
+local script = G2L["28"];
+	while true do
+		task.wait()
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+		local humrootpart = character:WaitForChild("HumanoidRootPart")
+		local cam = workspace.CurrentCamera
+		cam.CameraSubject = humanoid
+		cam.CameraType = Enum.CameraType.Custom
+	
+		local StarterGui = game:GetService("StarterGui")
+		local CurrentCamera = workspace.CurrentCamera
+		local RunService = game:GetService("RunService")
+	
+		repeat
+			CurrentCamera.CameraType = Enum.CameraType.Custom
+			CurrentCamera.FieldOfView = 70
+			CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+			StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+			RunService.RenderStepped:Wait()
+		until not (script and StarterGui)
+	end
+end;
+task.spawn(C_28);
 
 return G2L["1"], require;
