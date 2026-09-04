@@ -42,7 +42,7 @@ G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]],
 G2L["4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4"]["Size"] = UDim2.new(0, 413, 0, 50);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4"]["Text"] = [[VOID WARE BY VVOID]];
+G2L["4"]["Text"] = [[VOID WARE V3.5 BY VVOID]];
 G2L["4"]["Name"] = [[Script Tittle]];
 
 
