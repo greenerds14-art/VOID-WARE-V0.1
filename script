@@ -1012,15 +1012,19 @@ local script = G2L["1c"];
 		local humanoid = character:WaitForChild("Humanoid")
 		local humrootpart = character:WaitForChild("HumanoidRootPart")
 		if offon then
-		for _, part in pairs(character:GetChildren()) do
+			for _, part in pairs(character:GetChildren()) do
+				if part:IsA("BasePart") or part:IsA("MeshPart") then
 				part.CanCollide = false
 			end
-			say.Text = "NOCLIPPED"
+				say.Text = "NOCLIPPED"
+			end
 		else
 			for _, part in pairs(character:GetChildren()) do
+				if part:IsA("BasePart") or part:IsA("MeshPart") then
 				part.CanCollide = true
 			end
-			say.Text = "CLIPPED"
+				say.Text = "CLIPPED"
+			end
 		end
 	end)
 end;
