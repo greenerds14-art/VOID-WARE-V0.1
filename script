@@ -2604,7 +2604,7 @@ local script = G2L["60"];
 						humanoid:UnequipTools()
 					end
 				end)
-	
+				humanoid:UnequipTools()
 				task.wait(3) -- Cooldown
 				debounce = false
 			end
@@ -2724,7 +2724,7 @@ local script = G2L["62"];
 						generalChannel:SendAsync(";r15 " .. shortName)
 					end
 				end)
-	
+				humanoid:UnequipTools()
 				task.wait(3) -- Cooldown
 				debounce = false
 			end
@@ -2841,11 +2841,10 @@ local script = G2L["64"];
 						-- This simulates you physically typing and sending the message
 						generalChannel:SendAsync(";bkit " .. shortName)
 						task.wait(0.1)
-	
 					    humanoid:UnequipTools()
 					end
 				end)
-	
+				humanoid:UnequipTools()
 				task.wait(3) -- Cooldown
 				debounce = false
 			end
@@ -2965,7 +2964,7 @@ local script = G2L["66"];
 						humanoid:UnequipTools()
 					end
 				end)
-	
+				humanoid:UnequipTools()
 				task.wait(3) -- Cooldown
 				debounce = false
 			end
@@ -3085,7 +3084,7 @@ local script = G2L["68"];
 					    humanoid:UnequipTools()
 					end
 				end)
-	
+				humanoid:UnequipTools()
 				task.wait(3) -- Cooldown
 				debounce = false
 			end
