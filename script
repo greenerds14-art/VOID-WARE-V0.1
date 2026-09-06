@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 87 | Scripts: 30 | Modules: 0 | Tags: 0
+-- Instances: 88 | Scripts: 31 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VOID WARE NEW
@@ -22,7 +22,7 @@ G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 2;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Size"] = UDim2.new(0, 413, 0, 251);
-G2L["2"]["Position"] = UDim2.new(-0.0494, 113, 0.72782, -202);
+G2L["2"]["Position"] = UDim2.new(0.10231, 113, 0.79044, -202);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2"]["Name"] = [[VOID WARE FRAME]];
 
@@ -426,7 +426,7 @@ G2L["2b"] = Instance.new("LocalScript", G2L["2a"]);
 
 
 
--- StarterGui.VOID WARE NEW.VOID WARE FRAME.TCO_SCRIPTS.raid
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.TCO_SCRIPTS.Grief
 G2L["2c"] = Instance.new("TextButton", G2L["21"]);
 G2L["2c"]["BorderSizePixel"] = 2;
 G2L["2c"]["TextSize"] = 14;
@@ -435,13 +435,13 @@ G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["2c"]["Size"] = UDim2.new(0, 112, 0, 34);
 G2L["2c"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2c"]["Text"] = [[??????]];
-G2L["2c"]["Name"] = [[raid]];
+G2L["2c"]["Text"] = [[raid]];
+G2L["2c"]["Name"] = [[Grief]];
 G2L["2c"]["Visible"] = false;
 G2L["2c"]["Position"] = UDim2.new(0.48184, 0, 0.43028, 0);
 
 
--- StarterGui.VOID WARE NEW.VOID WARE FRAME.TCO_SCRIPTS.raid.LocalScript
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.TCO_SCRIPTS.Grief.LocalScript
 G2L["2d"] = Instance.new("LocalScript", G2L["2c"]);
 
 
@@ -867,6 +867,11 @@ G2L["56"]["DragUDim2"] = UDim2.new(0, 321, 0, 83);
 
 -- StarterGui.VOID WARE NEW.UIScale
 G2L["57"] = Instance.new("UIScale", G2L["1"]);
+
+
+
+-- StarterGui.VOID WARE NEW.LocalScript
+G2L["58"] = Instance.new("LocalScript", G2L["1"]);
 
 
 
@@ -1748,20 +1753,78 @@ local script = G2L["2b"];
 	end
 end;
 task.spawn(C_2b);
--- StarterGui.VOID WARE NEW.VOID WARE FRAME.TCO_SCRIPTS.raid.LocalScript
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.TCO_SCRIPTS.Grief.LocalScript
 local function C_2d()
 local script = G2L["2d"];
-	local btn = script.Parent
-	local offon
+	local TextChatService = game:GetService("TextChatService")
+	local Players = game:GetService("Players")
+	local TextChannels = TextChatService:WaitForChild("TextChannels", 5)
 	
-	btn.MouseButton1Click:Connect(function()
+	local LocalPlayer = Players.LocalPlayer
+	local offon = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
 		offon = not offon
-		if offon then
-			script.Parent.Parent.Parent.Parent.Grief.Visible = true
-		else
-			script.Parent.Parent.Parent.Parent.Grief.Visible = false
+	end)
+	-- Configuration
+	local BROADCAST_INTERVAL = 2 -- Time in seconds between messages
+	local STOP_COMMAND = "/stop"
+	local isRunning = true -- Controls the loop state
+	
+	-- Preset messages with siren, fire, and star emojis
+	local PRESET_MESSAGES = {
+		"🚨🔥⭐ [Void Ware] Void Ware is the best script today! ⭐🔥🚨",
+		"🚨🔥⭐ [Void Ware] Void Ware: Better than agar ware. ⭐🔥🚨",
+		"🚨🔥⭐ [Void Ware] Void Ware is getting more features daily! ⭐🔥🚨",
+		"🚨🔥⭐ [Void Ware] I never expected scripts to be so fun! ⭐🔥🚨",
+		"🚨🔥⭐ [Void Ware] Experience zero lag and smooth optimization! ⭐🔥🚨",
+		"🚨🔥⭐ [Void Ware] Fully loaded with automated features and safe execution! ⭐🔥🚨",
+		"🚨🔥⭐ [Void Ware] The cleanest user interface you will ever use! ⭐🔥🚨",
+		"🚨🔥⭐ [Void Ware] Constant updates keeping everything fresh daily! ⭐🔥🚨",
+		"🚨🔥⭐ [Void Ware] Join the next generation of script testing! ⭐🔥🚨",
+		"🚨🔥⭐ [Void Ware] Unmatched quality, entirely built different! ⭐🔥🚨",
+		"🚨🔥⭐ [Void Ware] Simple to set up, impossible to match! ⭐🔥🚨",
+		"🚨🔥⭐ [Void Ware] Dominate your favorite games with absolute ease! ⭐🔥🚨"
+	}
+	
+	-- 1. Hook up the listener to check for the stop command
+	TextChatService.MessageReceived:Connect(function(textChatMessage)
+		local textSource = textChatMessage.TextSource
+		if not textSource then return end
+	
+		-- Verify that YOU are the one who typed the stop command
+		if textSource.UserId == LocalPlayer.UserId then
+			if textChatMessage.Text == STOP_COMMAND then
+				isRunning = false
+				warn("[Void Ware Test]: Automatic broadcasting stopped.")
+			end
 		end
 	end)
+	
+	-- 2. Start the automatic broadcasting loop
+	if TextChannels then
+		local generalChannel = TextChannels:WaitForChild("RBXGeneral", 5)
+	
+		if generalChannel then
+			task.spawn(function()
+				while isRunning do
+					-- Pick a random message from the presets
+					local randomIndex = math.random(1, #PRESET_MESSAGES)
+					local selectedMessage = PRESET_MESSAGES[randomIndex]
+	                 if offon then
+					-- Send the message to the global chat channel
+					generalChannel:SendAsync(selectedMessage)
+	end
+					-- Wait before firing the next message
+					task.wait(BROADCAST_INTERVAL)
+				end
+			end)
+		else
+			warn("[Void Ware Test]: Could not find the RBXGeneral channel.")
+		end
+	else
+		warn("[Void Ware Test]: TextChannels service not found.")
+	end
 end;
 task.spawn(C_2d);
 -- StarterGui.VOID WARE NEW.status effects frame.ScrollingFrame.delete
@@ -2195,5 +2258,11 @@ local script = G2L["54"];
 	end)
 end;
 task.spawn(C_54);
+-- StarterGui.VOID WARE NEW.LocalScript
+local function C_58()
+local script = G2L["58"];
+	
+end;
+task.spawn(C_58);
 
 return G2L["1"], require;
