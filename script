@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 104 | Scripts: 37 | Modules: 0 | Tags: 0
+-- Instances: 106 | Scripts: 38 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VOID WARE NEW
@@ -931,6 +931,7 @@ G2L["5d"]["Name"] = [[Buttion ui]];
 G2L["5e"] = Instance.new("ScrollingFrame", G2L["5d"]);
 G2L["5e"]["Active"] = true;
 G2L["5e"]["BorderSizePixel"] = 2;
+G2L["5e"]["CanvasPosition"] = Vector2.new(0, 100);
 G2L["5e"]["Name"] = [[scripts]];
 G2L["5e"]["ScrollBarImageTransparency"] = 1;
 G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
@@ -1017,23 +1018,42 @@ G2L["66"] = Instance.new("LocalScript", G2L["65"]);
 
 
 
--- StarterGui.VOID WARE NEW.Buttion ui.name
-G2L["67"] = Instance.new("TextLabel", G2L["5d"]);
-G2L["67"]["BorderSizePixel"] = 0;
-G2L["67"]["TextSize"] = 29;
-G2L["67"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+-- StarterGui.VOID WARE NEW.Buttion ui.scripts.unfly
+G2L["67"] = Instance.new("TextButton", G2L["5e"]);
+G2L["67"]["BorderSizePixel"] = 2;
+G2L["67"]["TextSize"] = 14;
+G2L["67"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["67"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["67"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["67"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["67"]["Size"] = UDim2.new(0, 226, 0, 50);
+G2L["67"]["Size"] = UDim2.new(0, 112, 0, 34);
 G2L["67"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["67"]["Text"] = [[ITEM UI]];
-G2L["67"]["Name"] = [[name]];
+G2L["67"]["Text"] = [[Unfly]];
+G2L["67"]["Name"] = [[unfly]];
+G2L["67"]["Position"] = UDim2.new(0.28081, 0, 0.39111, 0);
+
+
+-- StarterGui.VOID WARE NEW.Buttion ui.scripts.unfly.LocalScript
+G2L["68"] = Instance.new("LocalScript", G2L["67"]);
+
+
+
+-- StarterGui.VOID WARE NEW.Buttion ui.name
+G2L["69"] = Instance.new("TextLabel", G2L["5d"]);
+G2L["69"]["BorderSizePixel"] = 0;
+G2L["69"]["TextSize"] = 29;
+G2L["69"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["69"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["69"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["69"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["69"]["Size"] = UDim2.new(0, 226, 0, 50);
+G2L["69"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["69"]["Text"] = [[ITEM UI]];
+G2L["69"]["Name"] = [[name]];
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.UIDragDetector
-G2L["68"] = Instance.new("UIDragDetector", G2L["5d"]);
-G2L["68"]["DragUDim2"] = UDim2.new(0, 321, 0, 83);
+G2L["6a"] = Instance.new("UIDragDetector", G2L["5d"]);
+G2L["6a"]["DragUDim2"] = UDim2.new(0, 321, 0, 83);
 
 
 -- StarterGui.VOID WARE NEW.LocalScript
@@ -2580,6 +2600,8 @@ local script = G2L["60"];
 					if generalChannel then
 						-- This simulates you physically typing and sending the message
 						generalChannel:SendAsync(";fly " .. shortName)
+						task.wait(0.1)
+						humanoid:UnequipTools()
 					end
 				end)
 	
@@ -2685,6 +2707,8 @@ local script = G2L["62"];
 	
 				if tool and localHumanoid then
 					localHumanoid:EquipTool(tool)
+					task.wait(0.1)
+					humanoid:UnequipTools()
 				end
 	
 				-- Grab ONLY the first 4 letters of the touching player's name
@@ -2816,6 +2840,9 @@ local script = G2L["64"];
 					if generalChannel then
 						-- This simulates you physically typing and sending the message
 						generalChannel:SendAsync(";bkit " .. shortName)
+						task.wait(0.1)
+	
+					    humanoid:UnequipTools()
 					end
 				end)
 	
@@ -2934,6 +2961,8 @@ local script = G2L["66"];
 					if generalChannel then
 						-- This simulates you physically typing and sending the message
 						generalChannel:SendAsync(";r6 " .. shortName)
+						task.wait(0.1)
+						humanoid:UnequipTools()
 					end
 				end)
 	
@@ -2982,5 +3011,125 @@ local script = G2L["66"];
 	
 end;
 task.spawn(C_66);
+-- StarterGui.VOID WARE NEW.Buttion ui.scripts.unfly.LocalScript
+local function C_68()
+local script = G2L["68"];
+	local Players = game:GetService("Players")
+	local TextChatService = game:GetService("TextChatService")
+	local localPlayer = Players.LocalPlayer
+	local button = script.Parent -- The script is inside the button
+	
+	local toolName = "The Arkenstone"
+	local debounce = false
+	local scriptEnabled = false -- Starts turned OFF by default
+	
+	-- Keep track of our event connection so we can disconnect it
+	local touchConnection = nil 
+	
+	-- 1. Helper function to find your specific green brick with the r6 spray
+	local function findGreenR6Block()
+		local bricksFolder = workspace:WaitForChild("Bricks")
+		local playerBricks = bricksFolder:FindFirstChild(localPlayer.Name) or bricksFolder:WaitForChild(localPlayer.Name, 5)
+	
+		if not playerBricks then return nil end
+	
+		for _, block in pairs(playerBricks:GetChildren()) do
+			if block:IsA("BasePart") and block.BrickColor == BrickColor.new("Bright green") then
+				local surfaceGui = block:FindFirstChildOfClass("SurfaceGui")
+				if surfaceGui then
+					local label = surfaceGui:FindFirstChild("Label") or surfaceGui:FindFirstChildOfClass("TextLabel")
+					if label and label.Text == "unfly" then
+						return block
+					end
+				end
+			end
+		end
+		return nil
+	end
+	
+	-- 2. Core touch logic
+	local function onTouch(hit)
+		if not scriptEnabled then return end 
+	
+		local character = hit.Parent
+		local humanoid = character:FindFirstChildOfClass("Humanoid")
+	
+		if humanoid and not debounce then
+			local touchingPlayer = Players:GetPlayerFromCharacter(character)
+	
+			if touchingPlayer then
+				debounce = true
+	
+				-- Equip "The Arkenstone"
+				local backpack = localPlayer:FindFirstChildOfClass("Backpack")
+				local tool = backpack and backpack:FindFirstChild(toolName)
+				local localCharacter = localPlayer.Character
+				local localHumanoid = localCharacter and localCharacter:FindFirstChildOfClass("Humanoid")
+	
+				if tool and localHumanoid then
+					localHumanoid:EquipTool(tool)
+				end
+	
+				-- Grab ONLY the first 4 letters of the touching player's name
+				local shortName = string.sub(touchingPlayer.Name, 1, 4)
+	
+				-- 3. SEND THE MESSAGE DIRECTLY INTO THE REAL CHAT FEED
+				task.spawn(function()
+					local textChannels = TextChatService:FindFirstChild("TextChannels")
+					local generalChannel = textChannels and textChannels:FindFirstChild("RBXGeneral")
+	
+					if generalChannel then
+						-- This simulates you physically typing and sending the message
+						generalChannel:SendAsync(";unfly " .. shortName)
+						task.wait(0.1)
+					    humanoid:UnequipTools()
+					end
+				end)
+	
+				task.wait(3) -- Cooldown
+				debounce = false
+			end
+		end
+	end
+	
+	-- 4. Toggle Functionality when Button is Clicked
+	local function onButtonClicked()
+		scriptEnabled = not scriptEnabled 
+	
+		if scriptEnabled then
+			button.Text = "unfly Giver: On"
+			button.BackgroundColor3 = Color3.fromRGB(0, 200, 0) -- Green
+	
+			task.spawn(function()
+				local targetBlock = findGreenR6Block()
+				if targetBlock then
+					if touchConnection then touchConnection:Disconnect() end
+					touchConnection = targetBlock.Touched:Connect(onTouch)
+				else
+					button.Text = "Block Not Found!"
+					scriptEnabled = false
+					button.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+					task.wait(1)
+					button.Text = "unfly Giver"
+					scriptEnabled = true	
+				end
+			end)
+		else
+			button.Text = "unfly Giver: Off"
+			button.BackgroundColor3 = Color3.fromRGB(200, 0, 0) -- Red
+			if touchConnection then
+				touchConnection:Disconnect()
+				touchConnection = nil
+			end
+		end
+	end
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+	
+	button.Text = "unfly Giver: Off"
+	button.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+	
+end;
+task.spawn(C_68);
 
 return G2L["1"], require;
