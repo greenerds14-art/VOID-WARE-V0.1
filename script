@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 132 | Scripts: 49 | Modules: 0 | Tags: 0
+-- Instances: 133 | Scripts: 50 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VOID WARE NEW
@@ -1323,6 +1323,11 @@ G2L["84"]["DragUDim2"] = UDim2.new(0, 153, 0, 203);
 
 
 -- StarterGui.VOID WARE NEW.LocalScript
+G2L["85"] = Instance.new("LocalScript", G2L["1"]);
+
+
+
+-- StarterGui.VOID WARE NEW.LocalScript
 local function C_2()
 local script = G2L["2"];
 	while true do
@@ -1999,7 +2004,7 @@ local script = G2L["1b"];
 				
 				end
 	
-				if hrp.Position.Y >= 1000 then
+				if hrp.Position.Y >= 2000 then
 					hrp.CFrame = CFrame.new(0, 100, 0)
 					for _, v in pairs(char:GetChildren()) do
 						if v:IsA("BasePart") then
@@ -4107,5 +4112,53 @@ local script = G2L["83"];
 	end
 end;
 task.spawn(C_83);
+-- StarterGui.VOID WARE NEW.LocalScript
+local function C_85()
+local script = G2L["85"];
+	local Players = game:GetService("Players")
+	local Workspace = game:GetService("Workspace")
+	
+	local plr = Players.LocalPlayer
+	
+	-- Target CFrame coordinates set directly to (0, 100, 0)
+	local TARGET_CFRAME = CFrame.new(0, 100, 0)
+	
+	local function onCharacterAdded(char)
+		local hrp = char:WaitForChild("HumanoidRootPart", 5)
+		local humanoid = char:WaitForChild("Humanoid", 5)
+	
+		if not hrp or not humanoid then return end
+	
+		-- 1. Immediate Teleport upon spawning
+		hrp.CFrame = TARGET_CFRAME
+	
+		-- 2. Verify position for 1 second after spawning
+		local startTime = os.clock()
+		while os.clock() - startTime < 1 do
+			if (hrp.Position - TARGET_CFRAME.Position).Magnitude > 5 then
+				hrp.CFrame = TARGET_CFRAME
+			end
+			task.wait()
+		end
+	
+		-- 3. Continuous anti-fall/height check
+		while char:IsDescendantOf(Workspace) and humanoid.Health > 0 do
+			if hrp.Position.Y >= 2000 or hrp.Position.Y <= -100 then
+				hrp.CFrame = TARGET_CFRAME
+				hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+			end
+			task.wait(0.01)
+		end
+	end
+	
+	-- Connect spawn event
+	plr.CharacterAdded:Connect(onCharacterAdded)
+	
+	-- Run for initial spawn if already loaded
+	if plr.Character then
+		task.spawn(onCharacterAdded, plr.Character)
+	end
+end;
+task.spawn(C_85);
 
 return G2L["1"], require;
