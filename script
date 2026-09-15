@@ -1643,8 +1643,11 @@ local script = G2L["15"];
 		say.Position = UDim2.new(0, 0, 0, posVal.Value)  -- use pixel offset
 		if offon then
 			say.Text = "Godmode Enabled"
+			while offon do
+			task.wait()
 			humanoid.MaxHealth = "inf"
 			humanoid.Health = "inf"
+			end
 		else
 			say.Text = "Godmode Disabled"
 	
@@ -1885,8 +1888,11 @@ local script = G2L["19"];
 		local char = player.Character
 		local humanoid = char and char:FindFirstChildOfClass("Humanoid")
 		local rootPart = char and char:FindFirstChild("HumanoidRootPart")
-		
 		local plrtotpto = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text) or workspace:FindFirstChild(script.Parent.Parent.Parent["SELECTED PLAYER"].Text)
+		if plrtotpto.Name == "Clone" then
+			rootPart.CFrame = plrtotpto.PrimaryPart.CFrame
+			return
+		end
 		rootPart.Position = plrtotpto.HumanoidRootPart.Position
 		local say = Instance.new("TextLabel")
 		say.Size = UDim2.new(0, 224, 0, 37)
@@ -1940,7 +1946,13 @@ local script = G2L["1b"];
 		-- Verify the target exists in workspace before proceeding
 		local plrtotpto = workspace:FindFirstChild(targetName)
 		if not plrtotpto or not plrtotpto:FindFirstChild("HumanoidRootPart") then
-			warn("Target player or their HumanoidRootPart could not be found.")
+			warn("[VOID WARE]: Target player or their HumanoidRootPart could not be found.")
+			print("[VOID WARE]: Trying to find PrimaryPart/Head")
+			if plrtotpto.Name == "Clone" then
+				print("[VOID WARE]: Clone Found")
+			else
+				warn("[VOID WARE]: Not Flinging Clone Or Player")
+			end
 			return
 		end
 	
@@ -1963,7 +1975,7 @@ local script = G2L["1b"];
 		say.Name = tostring(nameVal.Value)
 		say.Position = UDim2.new(0, 0, 0, posVal.Value)
 	
-		if offon and hrp.Position.Y <= 200 then
+		if offon and hrp.Position.Y <= 1000 then
 			say.Text = "Flinging " .. targetName
 	
 			-- Disable character collision safely
@@ -1974,13 +1986,20 @@ local script = G2L["1b"];
 			end
 	
 			-- Loop sequence
-			while offon and hrp.Position.Y <= 200 and plrtotpto:FindFirstChild("HumanoidRootPart") do
+			while offon and hrp.Position.Y <= 1000 and plrtotpto:FindFirstChild("HumanoidRootPart") or plrtotpto:WaitForChild("PrimaryPart") do
 				task.wait()
-				hrp.AssemblyLinearVelocity = Vector3.new(1,732.05,1,732.05,1,732.05)
+				hrp.AssemblyLinearVelocity = Vector3.new(999999999999999,999999999999999,999999999999999)
 				-- Using CFrame instead of Position prevents physics/joint breaking bugs
+				if plrtotpto.Name ~= "Clone" then
 				hrp.CFrame = plrtotpto.HumanoidRootPart.CFrame 
+				
+				else
+					
+				hrp.CFrame = plrtotpto.PrimaryPart.CFrame - CFrame.new(0, 3, 0)
+				
+				end
 	
-				if hrp.Position.Y >= 200 then
+				if hrp.Position.Y >= 1000 then
 					hrp.CFrame = CFrame.new(0, 100, 0)
 					for _, v in pairs(char:GetChildren()) do
 						if v:IsA("BasePart") then
@@ -2086,6 +2105,7 @@ local script = G2L["1f"];
 		Toolpickup = not Toolpickup
 		if Toolpickup then
 			say.Text = "Auto picking up tools on"
+			while pickingup do
 			task.wait()
 			pickingup = true
 			while pickingup do
@@ -2104,6 +2124,7 @@ local script = G2L["1f"];
 				task.wait()
 			end
 			task.wait()
+			end
 		else
 			say.Text = "Auto picking up tools off"
 			pickingup = false
@@ -2199,14 +2220,18 @@ local script = G2L["25"];
 		if rstatus then
 			playing:Play()
 		else
-			humrootpart.Anchored = false
 			for i,v in pairs(humanoid:GetPlayingAnimationTracks()) do
 				v:Stop()
 			end
 		end
 		while rstatus do
 			task.wait()
-			humrootpart.Position = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text).HumanoidRootPart.Position
+			if script.Parent.Parent.Parent.User.Text == "Clone" then
+				warn("[VOID WARE]: BANGING CLONE")
+				humrootpart.Position = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text).PrimaryPart.HumanoidRootPart.CFrame - CFrame.new(0,2,0)
+				humrootpart.Orientation = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text).PrimaryPart.Orientation
+			end
+			humrootpart.Position = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text).HumanoidRootPart.CFrame
 			humrootpart.Orientation = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text).HumanoidRootPart.Orientation
 		end
 	end)
@@ -2625,6 +2650,7 @@ local script = G2L["48"];
 	button.MouseButton1Click:Connect(function()
 		Griefing = true
 		local Player = script.Parent.Parent.Parent.Parent["player selected"].Value
+		if Player.Name ~= "Clone" then
 		local playersblocks = game.Workspace.Bricks:WaitForChild(Player)
 		local Dtool = game.Players.LocalPlayer.Backpack:FindFirstChild("Delete")
 		local Player = game.Players.LocalPlayer
@@ -2650,6 +2676,7 @@ local script = G2L["48"];
 				Dtool.Script.Event:FireServer(part, part.Position)
 	
 				Dtool:Activate()
+			end
 			end
 		end
 	end)
