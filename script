@@ -1534,45 +1534,24 @@ task.spawn(C_6);
 local function C_7()
 local script = G2L["7"];
 	local Players = game:GetService("Players")
-	local Workspace = game:GetService("Workspace")
-	
 	local plr = Players.LocalPlayer
 	
-	-- Target CFrame coordinates set directly to (0, 100, 0)
-	local TARGET_CFRAME = CFrame.new(0, 100, 0)
+	-- Define your custom client-sided spawn position here
+	local CUSTOM_SPAWN_CFRAME = CFrame.new(0, 100, 0)
 	
 	local function onCharacterAdded(char)
+		-- Wait for the root part to load
 		local hrp = char:WaitForChild("HumanoidRootPart", 5)
-		local humanoid = char:WaitForChild("Humanoid", 5)
+		if not hrp then return end
 	
-		if not hrp or not humanoid then return end
-	
-		-- 1. Immediate Teleport upon spawning
-		hrp.CFrame = TARGET_CFRAME
-	
-		-- 2. Verify position for 1 second after spawning
-		local startTime = os.clock()
-		while os.clock() - startTime < 1 do
-			if (hrp.Position - TARGET_CFRAME.Position).Magnitude > 5 then
-				hrp.CFrame = TARGET_CFRAME
-			end
-			task.wait()
-		end
-	
-		-- 3. Continuous anti-fall/height check
-		while char:IsDescendantOf(Workspace) and humanoid.Health > 0 do
-			if hrp.Position.Y >= 2000 or hrp.Position.Y <= -100 then
-				hrp.CFrame = TARGET_CFRAME
-				hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-			end
-			task.wait(0.01)
-		end
+		-- Immediately move the character to your custom position
+		hrp.CFrame = CUSTOM_SPAWN_CFRAME
 	end
 	
-	-- Connect spawn event
+	-- Listen for future respawns
 	plr.CharacterAdded:Connect(onCharacterAdded)
 	
-	-- Run for initial spawn if already loaded
+	-- Run for current character if it already exists
 	if plr.Character then
 		task.spawn(onCharacterAdded, plr.Character)
 	end
@@ -2279,12 +2258,7 @@ local script = G2L["26"];
 		end
 		while rstatus do
 			task.wait()
-			if script.Parent.Parent.Parent.User.Text == "Clone" then
-				warn("[VOID WARE]: BANGING CLONE")
-				humrootpart.Position = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text).PrimaryPart.HumanoidRootPart.CFrame - CFrame.new(0,2,0)
-				humrootpart.Orientation = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text).PrimaryPart.Orientation
-			end
-			humrootpart.Position = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text).HumanoidRootPart.CFrame
+			humrootpart.CFrame = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text).HumanoidRootPart.CFrame
 			humrootpart.Orientation = workspace:FindFirstChild(script.Parent.Parent.Parent.User.Text).HumanoidRootPart.Orientation
 		end
 	end)
@@ -2497,7 +2471,7 @@ local script = G2L["33"];
 		offon = not offon
 	end)
 	-- Configuration
-	local BROADCAST_INTERVAL = 4 -- Time in seconds between messages
+	local BROADCAST_INTERVAL = 5 -- Time in seconds between messages
 	local STOP_COMMAND = "/stop"
 	local isRunning = true -- Controls the loop state
 	
@@ -2519,7 +2493,7 @@ local script = G2L["33"];
 	}
 	
 	-- 1. Hook up the listener to check for the stop command
-	TextChatService.MessageReceived:Connect(function(textChatMessage)
+	TextChatService.MessageReceived:Connect(function(textChatMessage : Message)
 		local textSource = textChatMessage.TextSource
 		if not textSource then return end
 	
