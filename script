@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 133 | Scripts: 50 | Modules: 0 | Tags: 0
+-- Instances: 134 | Scripts: 51 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VOID WARE NEW
@@ -1327,6 +1327,11 @@ G2L["85"]["DragUDim2"] = UDim2.new(0, 153, 0, 203);
 
 
 -- StarterGui.VOID WARE NEW.LocalScript
+G2L["86"] = Instance.new("LocalScript", G2L["1"]);
+
+
+
+-- StarterGui.VOID WARE NEW.LocalScript
 local function C_2()
 local script = G2L["2"];
 	while true do
@@ -1664,7 +1669,18 @@ local script = G2L["11"];
 			v.Visible = true
 		end
 	end
-	print("THANKS FOR USING VOID WARE --VVOID")
+	print([[
+	========================================================================================
+	 __      ______ _____ _____  __          __ ___  _____  ______ 
+	 \ \    / / __ \_   _|  __ \ \ \        / // _ \|  __ \|  ____|
+	  \ \  / / |  | || | | |  | | \ \  /\  / /| /_\ | |__) | |__   
+	   \ \/ /| |  | || | | |  | |  \ \/  \/ / |  _  |  _  /|  __|  
+	    \  / | |__| || |_| |__| |   \  /\  /  | | | | | \ \| |____ 
+	     \/   \____/_____|_____/     \/  \/   |_| |_|_|  \_\______|
+	                                                               
+	========================================================================================
+	]])
+	
 	script:Destroy()
 end;
 task.spawn(C_11);
@@ -2227,12 +2243,57 @@ task.spawn(C_20);
 local function C_22()
 local script = G2L["22"];
 	local TeleportService = game:GetService("TeleportService")
+	local HttpService = game:GetService("HttpService")
 	local Players = game:GetService("Players")
 	local player = Players.LocalPlayer
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		TeleportService:Teleport(game.PlaceId, player)
+		local placeId = game.PlaceId
+		local jobId = game.JobId
+	
+		-- Instruct your background autoexec script to ignore this leave
+		_G.VoidWareIntentionalLeave = true
+		print("VOID WARE: Fetching public server instance mapping...")
+	
+		-- Try an explicit external server index check to look up your server room
+		local success = pcall(function()
+			-- We request the public server list API using a proxy to bypass client limitations
+			local apiURL = string.format("https://roproxy.com" .. placeId)
+			local serverDataRaw = game:HttpGet(apiURL)
+			local serverData = HttpService:JSONDecode(serverDataRaw)
+	
+			if serverData and serverData.data then
+				local roomFound = false
+	
+				for _, server in ipairs(serverData.data) do
+					-- If we match your exact current server ID, push the client into it explicitly
+					if server.id == jobId then
+						roomFound = true
+						local teleportOptions = Instance.new("TeleportOptions")
+						teleportOptions.ServerInstanceId = jobId
+	
+						TeleportService:TeleportAsync(placeId, {player}, teleportOptions)
+						break
+					end
+				end
+	
+				-- Hard lock fallback if the specific room filled up or can't be indexed
+				if not roomFound then
+					print("VOID WARE: Server room no longer indexed. Retrying raw latch...")
+					TeleportService:Teleport(placeId)
+				end
+			end
+		end)
+	
+		-- Absolute backup if the HTTP service throws an issue on the executor
+		if not success then
+			print("VOID WARE: Bridge network block. Executing base-level match...")
+			pcall(function()
+				TeleportService:Teleport(placeId)
+			end)
+		end
 	end)
+	
 end;
 task.spawn(C_22);
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.MAIN_SCRIPTS.nc clip.LocalScript
@@ -3065,49 +3126,99 @@ local script = G2L["5e"];
 	local btn = script.Parent
 	local offon = false
 	
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local plr = Players.LocalPlayer
+	
+	local monitorConnection = nil
+	
+	-- Safely finds the spawn position without throwing errors if missing
+	local function getSpawnPosition()
+		local spawnLoc = workspace:FindFirstChild("SpawnLocation")
+		if spawnLoc and spawnLoc:IsA("BasePart") then
+			return spawnLoc.Position
+		end
+		return Vector3.new(0, 10, 0) -- Fallback coordinates
+	end
+	
+	-- Completely turns off the background monitoring loop
+	local function stopMonitoring()
+		if monitorConnection then
+			monitorConnection:Disconnect()
+			monitorConnection = nil
+		end
+	end
+	
+	-- Runs the main checks efficiently every frame
+	local function startMonitoring()
+		stopMonitoring() -- Clear any running loops first
+	
+		monitorConnection = RunService.Heartbeat:Connect(function()
+			local char = plr.Character
+			if not char or not char.Parent then return end
+	
+			local hum = char:FindFirstChildOfClass("Humanoid")
+			local hrp = char:FindFirstChild("HumanoidRootPart")
+			if not hum or not hrp or hum.Health <= 0 then return end
+	
+			-- 1. Scan children instantly (NO task.wait inside here anymore)
+			for _, v in ipairs(char:GetChildren()) do
+				if v.Name == "Hielo" or v.Name == "Jail" then
+					hum.Health = 0
+					return
+				end
+				if v.Name == "Head" and v:IsA("BasePart") and v.Transparency == 1 then
+					hum.Health = 0
+					return
+				end
+			end
+	
+			-- 2. Out of Bounds Teleport Fix (Checks if too high OR too low in the void)
+			if hrp.Position.Y >= 900 or hrp.Position.Y <= -900 then
+				local targetSpawn = getSpawnPosition()
+				hrp.CFrame = CFrame.new(targetSpawn + Vector3.new(0, 10, 0))
+				hrp.AssemblyLinearVelocity = Vector3.zero -- Stop falling momentum
+			end
+	
+			-- 3. Identity Check
+			if hum.DisplayName ~= plr.DisplayName then
+				hum.Health = 0
+				return
+			end
+	
+			-- 4. Stat Enforcements
+			if hum.WalkSpeed ~= 16 then
+				hum.WalkSpeed = 16
+			end
+	
+			if hum.UseJumpPower == false and hum.JumpHeight < 8 then
+				hum.JumpHeight = 7
+			end
+	
+			-- 5. Part Color Check
+			if hrp.BrickColor.Name == "Bright green" then
+				hum.Health = 0
+				return
+			end
+		end)
+	end
+	
+	-- Toggle button configuration
 	btn.MouseButton1Click:Connect(function()
 		offon = not offon
 		if offon then
-			while offon do
-				task.wait()
-					local plr = game.Players.LocalPlayer
-					local char = plr.Character
-					local hum = char:FindFirstChild("Humanoid")
-					local hrp = char:FindFirstChild("HumanoidRootPart")
-					local tr = char:FindFirstChild("Torso") or char:FindFirstChild("UpperTorso")
-					local hs = char:FindFirstChild("Head").Size
-					local SpawnP = workspace:FindFirstChild("SpawnLocation").Position or Vector3.new(0,10,0)
-					for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-						task.wait()
-						if v.Name == "Hielo" then
-							hum.Health = 0
-						end
-						if v.Name == "Jail" then
-							hum.Health = 0
-						end
-						if v.Name == "Head"  then
-							if v.Transparency == 1 then
-								hum.Health = 0
-							end
-						end
-					   end
-				       if hrp.Position.Y >= 900 or hrp.Position.Y >= -900 then
-							hrp.Position = Vector3.new(SpawnP)
-						end
-						if hum.DisplayName ~= plr.DisplayName then
-							hum.Health = 0
-						end
-						if hum.WalkSpeed ~= 16 then
-							hum.WalkSpeed = 16
-						end
-						if hum.JumpHeight < 8 then
-							hum.JumpHeight = 7
-						end
-						if hrp.BrickColor.Name == "Bright green" then
-							hum.Health = 0
-						end
-			end
-	     end
+			startMonitoring()
+		else
+			stopMonitoring()
+		end
+	end)
+	
+	-- Respawn persistence handler (makes it keep working after you die)
+	plr.CharacterAdded:Connect(function(newCharacter)
+		if offon then
+			task.wait(0.3) -- Small delay to allow the character parts to physically load
+			startMonitoring()
+		end
 	end)
 	
 end;
@@ -3118,85 +3229,103 @@ local script = G2L["5f"];
 	local btn = script.Parent
 	local offon = false
 	
-	btn.MouseButton1Click:Connect(function()
-		offon = not offon
-		if offon then
-			while offon do
-				task.wait(0.1)
-				local plr = game.Players.LocalPlayer
-				local char = plr.Character
-				local hum = char:FindFirstChild("Humanoid")
-				local hrp = char:FindFirstChild("HumanoidRootPart")
-				local tr = char:FindFirstChild("Torso") or char:FindFirstChild("UpperTorso")
-				local hs = char:FindFirstChild("Head").Size
-				for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-					local Players = game:GetService("Players")
-					local RunService = game:GetService("RunService")
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
 	
-					local LocalPlayer = Players.LocalPlayer
-					local TOLERANCE = 0.05 -- Margin of error for physics/animations
+	local LocalPlayer = Players.LocalPlayer
+	local TOLERANCE = 0.05 -- Margin of error for physics/animations
 	
-					local function monitorCharacter(character: Model)
-						local humanoid = character:WaitForChild("Humanoid") :: Humanoid
+	local heartbeatConnection = nil
+	local characterAddedConnection = nil
+	local baselineSizes = {}
 	
-	
-						-- Cache the ACTUAL spawn sizes of every limb on this specific avatar
-						local baselineSizes = {}
-	
-						for _, child in ipairs(character:GetChildren()) do
-							if child:IsA("BasePart") then
-								baselineSizes[child.Name] = child.Size
-							end
-						end
-	
-						-- Connect size monitoring loop
-						local connection: RBXScriptConnection? = nil
-	
-						local function onDetection(part: BasePart, expectedSize: Vector3)
-	
-	
-							-- Kill exploiter locally
-							task.wait(0.1)
-							humanoid.Health = 0
-	
-							if connection then
-								connection:Disconnect()
-								connection = nil
-							end
-						end
-	
-						-- Heartbeat scan: continuously compare current size against cached spawn size
-						connection = RunService.Heartbeat:Connect(function()
-							if not character or not character.Parent or humanoid.Health <= 0 then
-								if connection then connection:Disconnect() end
-								return
-							end
-	
-							for partName, expectedSize in pairs(baselineSizes) do
-								local part = character:FindFirstChild(partName) :: BasePart?
-								if part and part:IsA("BasePart") then
-									local sizeDifference = (part.Size - expectedSize).Magnitude
-									if sizeDifference > TOLERANCE then
-										onDetection(part, expectedSize)
-										break
-									end
-								end
-							end
-						end)
-					end
-	
-					-- Track current and future characters
-					if LocalPlayer.Character then
-						task.spawn(monitorCharacter, LocalPlayer.Character)
-					end
-	
-					LocalPlayer.CharacterAdded:Connect(function(newCharacter)
-						task.spawn(monitorCharacter, newCharacter)
-					end)
+	-- Function to cache your character's natural sizes
+	local function cacheBaseline(character)
+		table.clear(baselineSizes)
+		for _, child in ipairs(character:GetChildren()) do
+			if child:IsA("BasePart") then
+				baselineSizes[child.Name] = child.Size
 			end
 		end
+	end
+	
+	-- Safely disconnects the frame-by-frame loop without breaking respawn tracking
+	local function stopHeartbeat()
+		if heartbeatConnection then
+			heartbeatConnection:Disconnect()
+			heartbeatConnection = nil
+		end
+	end
+	
+	-- Completely turns off everything when the button is toggled off
+	local function resetAllConnections()
+		stopHeartbeat()
+		if characterAddedConnection then
+			characterAddedConnection:Disconnect()
+			characterAddedConnection = nil
+		end
+	end
+	
+	-- Starts monitoring your character size efficiently
+	local function startMonitoring(character)
+		if not character then return end
+		local humanoid = character:WaitForChild("Humanoid", 5)
+		if not humanoid then return end
+	
+		-- Cache your actual spawn sizes
+		cacheBaseline(character)
+	
+		-- Disconnect any old scan loop before making a new one
+		stopHeartbeat()
+	
+		-- Efficient single-loop Heartbeat scan
+		heartbeatConnection = RunService.Heartbeat:Connect(function()
+			if not character or not character.Parent or humanoid.Health <= 0 then
+				stopHeartbeat() -- Only stop the heartbeat loop on death, don't kill respawn listener
+				return
+			end
+	
+			for partName, expectedSize in pairs(baselineSizes) do
+				local part = character:FindFirstChild(partName)
+				if part and part:IsA("BasePart") then
+					local sizeDifference = (part.Size - expectedSize).Magnitude
+					if sizeDifference > TOLERANCE then
+						-- Detection triggered: Kill the local player safely
+						stopHeartbeat()
+						task.wait(0.1)
+						humanoid.Health = 0
+						break
+					end
+				end
+			end
+		end)
+	end
+	
+	-- Toggle button logic
+	btn.MouseButton1Click:Connect(function()
+		offon = not offon
+	
+		if offon then
+			-- Turn ON: Start monitoring current character
+			if LocalPlayer.Character then
+				startMonitoring(LocalPlayer.Character)
+			end
+	
+			-- Setup clean listener for next spawns (This now stays alive after death)
+			if not characterAddedConnection then
+				characterAddedConnection = LocalPlayer.CharacterAdded:Connect(function(newCharacter)
+					task.wait(0.5) -- Give character a brief moment to assemble
+					if offon then
+						startMonitoring(newCharacter)
+					end
+				end)
+			end
+		else
+			-- Turn OFF: Safely clear everything from memory
+			resetAllConnections()
 		end
 	end)
+	
 end;
 task.spawn(C_5f);
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.ANTI VIS.LocalScript
@@ -3212,9 +3341,15 @@ local script = G2L["61"];
 				task.wait(0.1)
 				game.Lighting.Blur.Enabled = false
 				game.Players.LocalPlayer.PlayerGui.Blind.Enabled = false
+				game.StarterGui.Blind.Enabled = false
 				game.Lighting.RGB.Enabled = false
 				game.Lighting.Fog.Density = 0
+				if game.Players.LocalPlayer.PlayerGui.Epic then
 				game.Players.LocalPlayer.PlayerGui.Epic.Enabled = false
+				else
+				game.StarterGui.Epic.Enabled = false
+				end
+				game.StarterGui.Epic.Enabled = false
 			end
 		end
 	end)
@@ -3881,7 +4016,7 @@ local script = G2L["77"];
 		overlapParams.FilterDescendantsInstances = {char, aura}
 	
 		while Griefing do
-			task.wait(0.05) -- Yield to prevent freezing
+			task.wait() -- Yield to prevent freezing
 	
 			-- Re-verify character references in case of respawn
 			char = plr.Character
@@ -3912,7 +4047,7 @@ local script = G2L["77"];
 							dtool:Activate()
 						end
 	
-						task.wait(0.01)
+						task.wait()
 	
 						-- Equip previous tool back if applicable
 						if previouslyholding and previouslyholding.Parent == plr.Backpack then
@@ -3993,7 +4128,7 @@ local script = G2L["79"];
 		overlapParams.FilterDescendantsInstances = {bricksFolder}
 	
 		while Griefing do
-			task.wait(0.05)
+			task.wait()
 	
 			local Character = LocalPlayer.Character
 			local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
@@ -4032,7 +4167,7 @@ local script = G2L["79"];
 						Dtool:Activate()
 					end
 	
-					task.wait(0.05)
+					task.wait()
 				end
 			end
 		end
@@ -4105,7 +4240,7 @@ local script = G2L["7e"];
 		overlapParams.FilterDescendantsInstances = {bricksFolder}
 	
 		while Griefing do
-			task.wait(0.05)
+			task.wait()
 	
 			local Character = LocalPlayer.Character
 			local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
@@ -4144,7 +4279,7 @@ local script = G2L["7e"];
 						Dtool:Activate()
 					end
 	
-					task.wait(0.05)
+					task.wait()
 				end
 			end
 		end
@@ -4217,7 +4352,7 @@ local script = G2L["81"];
 		overlapParams.FilterDescendantsInstances = {bricksFolder}
 	
 		while Griefing do
-			task.wait(0.05)
+			task.wait()
 	
 			local Character = LocalPlayer.Character
 			local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
@@ -4261,7 +4396,7 @@ local script = G2L["81"];
 						Dtool:Activate()
 					end
 	
-					task.wait(0.05)
+					task.wait()
 				end
 			end
 		end
@@ -4282,5 +4417,65 @@ local script = G2L["84"];
 	end
 end;
 task.spawn(C_84);
+-- StarterGui.VOID WARE NEW.LocalScript
+local function C_86()
+local script = G2L["86"];
+	-- Save this file in your Solara V3 'autoexec' folder
+	local TeleportService = game:GetService("TeleportService")
+	local Players = game:GetService("Players")
+	local CoreGui = game:GetService("CoreGui")
+	
+	local plr = Players.LocalPlayer
+	while not plr do
+		task.wait(0.1)
+		plr = Players.LocalPlayer
+	end
+	
+	local placeId = game.PlaceId
+	
+	-- Initialize the global leave flag as false when you join a new server
+	_G.VoidWareIntentionalLeave = false
+	
+	local function attemptRejoin()
+		-- If the button script set this to true, STOP and let the button handle the teleport
+		if _G.VoidWareIntentionalLeave == true then
+			print("VOID WARE: User initiated a voluntary rejoin. Auto-kick handler standing down.")
+			return
+		end
+	
+		print("VOID WARE: Kick detected! Attempting automatic server rejoin...")
+	
+		while true do
+			-- Double check inside the loop just in case
+			if _G.VoidWareIntentionalLeave == true then break end
+	
+			pcall(function()
+				TeleportService:Teleport(placeId)
+			end)
+			task.wait(2.5) 
+		end
+	end
+	
+	-- Monitor the UI overlay for disconnection prompts
+	task.spawn(function()
+		local promptGui = CoreGui:WaitForChild("RobloxPromptGui", 15)
+		if not promptGui then return end
+	
+		local promptOverlay = promptGui:WaitForChild("promptOverlay", 15)
+		if not promptOverlay then return end
+	
+		if promptOverlay:FindFirstChild("ErrorPrompt") then
+			attemptRejoin()
+		end
+	
+		promptOverlay.ChildAdded:Connect(function(child)
+			if child.Name == "ErrorPrompt" then
+				attemptRejoin()
+			end
+		end)
+	end)
+	
+end;
+task.spawn(C_86);
 
 return G2L["1"], require;
