@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 134 | Scripts: 51 | Modules: 0 | Tags: 0
+-- Instances: 135 | Scripts: 51 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VOID WARE NEW
@@ -593,151 +593,147 @@ G2L["3d"]["Name"] = [[idk]];
 G2L["3d"]["Position"] = UDim2.new(0, 0, 0.58167, 0);
 
 
--- StarterGui.VOID WARE NEW.status effects frame
-G2L["3e"] = Instance.new("Frame", G2L["1"]);
-G2L["3e"]["BorderSizePixel"] = 2;
+-- StarterGui.VOID WARE NEW.VOID WARE FRAME.GITHUB
+G2L["3e"] = Instance.new("TextLabel", G2L["8"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["TextSize"] = 13;
 G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Size"] = UDim2.new(0, 224, 0, 254);
-G2L["3e"]["Position"] = UDim2.new(0.76061, -38, 0.75214, -221);
-G2L["3e"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3e"]["Name"] = [[status effects frame]];
+G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["Size"] = UDim2.new(0, 200, 0, 14);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["Text"] = [[https://discord.gg/cuqvRZpPEH]];
+G2L["3e"]["Name"] = [[GITHUB]];
+G2L["3e"]["Position"] = UDim2.new(0.07568, 0, 0.94301, 0);
+
+
+-- StarterGui.VOID WARE NEW.status effects frame
+G2L["3f"] = Instance.new("Frame", G2L["1"]);
+G2L["3f"]["BorderSizePixel"] = 2;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["Size"] = UDim2.new(0, 224, 0, 254);
+G2L["3f"]["Position"] = UDim2.new(0.76061, -38, 0.75214, -221);
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["Name"] = [[status effects frame]];
 
 
 -- StarterGui.VOID WARE NEW.status effects frame.Statuses
-G2L["3f"] = Instance.new("TextLabel", G2L["3e"]);
-G2L["3f"]["BorderSizePixel"] = 2;
-G2L["3f"]["TextSize"] = 20;
-G2L["3f"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3f"]["Size"] = UDim2.new(0, 224, 0, 50);
-G2L["3f"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3f"]["Text"] = [[VOID WARE MANAGER]];
-G2L["3f"]["Name"] = [[Statuses]];
+G2L["40"] = Instance.new("TextLabel", G2L["3f"]);
+G2L["40"]["BorderSizePixel"] = 2;
+G2L["40"]["TextSize"] = 20;
+G2L["40"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["40"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["Size"] = UDim2.new(0, 224, 0, 50);
+G2L["40"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["Text"] = [[VOID WARE MANAGER]];
+G2L["40"]["Name"] = [[Statuses]];
 
 
 -- StarterGui.VOID WARE NEW.status effects frame.ScrollingFrame
-G2L["40"] = Instance.new("ScrollingFrame", G2L["3e"]);
-G2L["40"]["Active"] = true;
-G2L["40"]["BorderSizePixel"] = 2;
-G2L["40"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.ScrollBar;
-G2L["40"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["40"]["Size"] = UDim2.new(0, 224, 0, 204);
-G2L["40"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["40"]["Position"] = UDim2.new(0, 0, 0.19685, 0);
-G2L["40"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["40"]["ScrollBarThickness"] = 0;
+G2L["41"] = Instance.new("ScrollingFrame", G2L["3f"]);
+G2L["41"]["Active"] = true;
+G2L["41"]["BorderSizePixel"] = 2;
+G2L["41"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.ScrollBar;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Size"] = UDim2.new(0, 224, 0, 204);
+G2L["41"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Position"] = UDim2.new(0, 0, 0.19685, 0);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["ScrollBarThickness"] = 0;
 
 
 -- StarterGui.VOID WARE NEW.status effects frame.ScrollingFrame.delete
-G2L["41"] = Instance.new("LocalScript", G2L["40"]);
-G2L["41"]["Name"] = [[delete]];
+G2L["42"] = Instance.new("LocalScript", G2L["41"]);
+G2L["42"]["Name"] = [[delete]];
 
 
 -- StarterGui.VOID WARE NEW.status effects frame.UIDragDetector
-G2L["42"] = Instance.new("UIDragDetector", G2L["3e"]);
-G2L["42"]["DragUDim2"] = UDim2.new(0, -6, 0, -189);
+G2L["43"] = Instance.new("UIDragDetector", G2L["3f"]);
+G2L["43"]["DragUDim2"] = UDim2.new(0, -6, 0, -189);
 
 
 -- StarterGui.VOID WARE NEW.name_val
-G2L["43"] = Instance.new("IntValue", G2L["1"]);
-G2L["43"]["Name"] = [[name_val]];
+G2L["44"] = Instance.new("IntValue", G2L["1"]);
+G2L["44"]["Name"] = [[name_val]];
 
 
 -- StarterGui.VOID WARE NEW.Value
-G2L["44"] = Instance.new("IntValue", G2L["1"]);
+G2L["45"] = Instance.new("IntValue", G2L["1"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Grief
-G2L["45"] = Instance.new("Frame", G2L["1"]);
-G2L["45"]["Visible"] = false;
-G2L["45"]["BorderSizePixel"] = 2;
-G2L["45"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["Size"] = UDim2.new(0, 226, 0, 256);
-G2L["45"]["Position"] = UDim2.new(0.3185, 306, -0.30858, 406);
-G2L["45"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["45"]["Name"] = [[Grief]];
+G2L["46"] = Instance.new("Frame", G2L["1"]);
+G2L["46"]["Visible"] = false;
+G2L["46"]["BorderSizePixel"] = 2;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Size"] = UDim2.new(0, 226, 0, 256);
+G2L["46"]["Position"] = UDim2.new(0.3185, 306, -0.30858, 406);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["Name"] = [[Grief]];
 
 
 -- StarterGui.VOID WARE NEW.Grief.scripts
-G2L["46"] = Instance.new("ScrollingFrame", G2L["45"]);
-G2L["46"]["Active"] = true;
-G2L["46"]["BorderSizePixel"] = 2;
-G2L["46"]["Name"] = [[scripts]];
-G2L["46"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["46"]["Size"] = UDim2.new(0, 226, 0, 196);
-G2L["46"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["46"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
-G2L["46"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["46"]["ScrollBarThickness"] = 0;
+G2L["47"] = Instance.new("ScrollingFrame", G2L["46"]);
+G2L["47"]["Active"] = true;
+G2L["47"]["BorderSizePixel"] = 2;
+G2L["47"]["Name"] = [[scripts]];
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["Size"] = UDim2.new(0, 226, 0, 196);
+G2L["47"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
+G2L["47"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["ScrollBarThickness"] = 0;
 
 
 -- StarterGui.VOID WARE NEW.Grief.scripts.LocalScript
-G2L["47"] = Instance.new("LocalScript", G2L["46"]);
+G2L["48"] = Instance.new("LocalScript", G2L["47"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Grief.scripts.Delete grief
-G2L["48"] = Instance.new("TextButton", G2L["46"]);
-G2L["48"]["BorderSizePixel"] = 2;
-G2L["48"]["TextSize"] = 14;
-G2L["48"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["48"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["48"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["48"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["48"]["Text"] = [[Delete grief]];
-G2L["48"]["Name"] = [[Delete grief]];
-G2L["48"]["Position"] = UDim2.new(0.24983, 0, 0.18408, 0);
+G2L["49"] = Instance.new("TextButton", G2L["47"]);
+G2L["49"]["BorderSizePixel"] = 2;
+G2L["49"]["TextSize"] = 14;
+G2L["49"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["49"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["49"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["Text"] = [[Delete grief]];
+G2L["49"]["Name"] = [[Delete grief]];
+G2L["49"]["Position"] = UDim2.new(0.24983, 0, 0.18408, 0);
 
 
 -- StarterGui.VOID WARE NEW.Grief.scripts.Delete grief.LocalScript
-G2L["49"] = Instance.new("LocalScript", G2L["48"]);
+G2L["4a"] = Instance.new("LocalScript", G2L["49"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Grief.scripts.Paint Grief
-G2L["4a"] = Instance.new("TextButton", G2L["46"]);
-G2L["4a"]["BorderSizePixel"] = 2;
-G2L["4a"]["TextSize"] = 14;
-G2L["4a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4a"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["4a"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4a"]["Text"] = [[Paint Grief]];
-G2L["4a"]["Name"] = [[Paint Grief]];
-G2L["4a"]["Position"] = UDim2.new(0.24983, 0, 0.40857, 0);
+G2L["4b"] = Instance.new("TextButton", G2L["47"]);
+G2L["4b"]["BorderSizePixel"] = 2;
+G2L["4b"]["TextSize"] = 14;
+G2L["4b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4b"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["4b"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4b"]["Text"] = [[Paint Grief]];
+G2L["4b"]["Name"] = [[Paint Grief]];
+G2L["4b"]["Position"] = UDim2.new(0.24983, 0, 0.40857, 0);
 
 
 -- StarterGui.VOID WARE NEW.Grief.scripts.Paint Grief.LocalScript
-G2L["4b"] = Instance.new("LocalScript", G2L["4a"]);
+G2L["4c"] = Instance.new("LocalScript", G2L["4b"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Grief.scripts.Color g
-G2L["4c"] = Instance.new("TextBox", G2L["46"]);
-G2L["4c"]["Name"] = [[Color g]];
-G2L["4c"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4c"]["BorderSizePixel"] = 2;
-G2L["4c"]["TextWrapped"] = true;
-G2L["4c"]["TextSize"] = 14;
-G2L["4c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4c"]["TextScaled"] = true;
-G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4c"]["PlaceholderText"] = [[INPUT COLOR RGB]];
-G2L["4c"]["Size"] = UDim2.new(0, 62, 0, 26);
-G2L["4c"]["Position"] = UDim2.new(0.36283, 0, 0.64089, 0);
-G2L["4c"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4c"]["Text"] = [[]];
-
-
--- StarterGui.VOID WARE NEW.Grief.scripts.Color b
-G2L["4d"] = Instance.new("TextBox", G2L["46"]);
-G2L["4d"]["Name"] = [[Color b]];
+G2L["4d"] = Instance.new("TextBox", G2L["47"]);
+G2L["4d"]["Name"] = [[Color g]];
 G2L["4d"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4d"]["BorderSizePixel"] = 2;
 G2L["4d"]["TextWrapped"] = true;
@@ -748,14 +744,14 @@ G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["4d"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["4d"]["PlaceholderText"] = [[INPUT COLOR RGB]];
 G2L["4d"]["Size"] = UDim2.new(0, 62, 0, 26);
-G2L["4d"]["Position"] = UDim2.new(0.66814, 0, 0.64089, 0);
+G2L["4d"]["Position"] = UDim2.new(0.36283, 0, 0.64089, 0);
 G2L["4d"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4d"]["Text"] = [[]];
 
 
--- StarterGui.VOID WARE NEW.Grief.scripts.Color r
-G2L["4e"] = Instance.new("TextBox", G2L["46"]);
-G2L["4e"]["Name"] = [[Color r]];
+-- StarterGui.VOID WARE NEW.Grief.scripts.Color b
+G2L["4e"] = Instance.new("TextBox", G2L["47"]);
+G2L["4e"]["Name"] = [[Color b]];
 G2L["4e"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4e"]["BorderSizePixel"] = 2;
 G2L["4e"]["TextWrapped"] = true;
@@ -766,444 +762,444 @@ G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["4e"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["4e"]["PlaceholderText"] = [[INPUT COLOR RGB]];
 G2L["4e"]["Size"] = UDim2.new(0, 62, 0, 26);
-G2L["4e"]["Position"] = UDim2.new(0.06195, 0, 0.64089, 0);
+G2L["4e"]["Position"] = UDim2.new(0.66814, 0, 0.64089, 0);
 G2L["4e"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4e"]["Text"] = [[]];
 
 
--- StarterGui.VOID WARE NEW.Grief.scripts.Spray Grief
-G2L["4f"] = Instance.new("TextButton", G2L["46"]);
+-- StarterGui.VOID WARE NEW.Grief.scripts.Color r
+G2L["4f"] = Instance.new("TextBox", G2L["47"]);
+G2L["4f"]["Name"] = [[Color r]];
+G2L["4f"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4f"]["BorderSizePixel"] = 2;
+G2L["4f"]["TextWrapped"] = true;
 G2L["4f"]["TextSize"] = 14;
 G2L["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["TextScaled"] = true;
 G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4f"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["4f"]["PlaceholderText"] = [[INPUT COLOR RGB]];
+G2L["4f"]["Size"] = UDim2.new(0, 62, 0, 26);
+G2L["4f"]["Position"] = UDim2.new(0.06195, 0, 0.64089, 0);
 G2L["4f"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4f"]["Text"] = [[Spray Grief]];
-G2L["4f"]["Name"] = [[Spray Grief]];
-G2L["4f"]["Position"] = UDim2.new(0.24983, 0, 0.81673, 0);
+G2L["4f"]["Text"] = [[]];
+
+
+-- StarterGui.VOID WARE NEW.Grief.scripts.Spray Grief
+G2L["50"] = Instance.new("TextButton", G2L["47"]);
+G2L["50"]["BorderSizePixel"] = 2;
+G2L["50"]["TextSize"] = 14;
+G2L["50"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["50"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["50"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["Text"] = [[Spray Grief]];
+G2L["50"]["Name"] = [[Spray Grief]];
+G2L["50"]["Position"] = UDim2.new(0.24983, 0, 0.81673, 0);
 
 
 -- StarterGui.VOID WARE NEW.Grief.scripts.Spray Grief.LocalScript
-G2L["50"] = Instance.new("LocalScript", G2L["4f"]);
+G2L["51"] = Instance.new("LocalScript", G2L["50"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Grief.scripts.TextLabel
-G2L["51"] = Instance.new("TextLabel", G2L["46"]);
-G2L["51"]["BorderSizePixel"] = 0;
-G2L["51"]["TextSize"] = 14;
-G2L["51"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["51"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["51"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["51"]["Text"] = [[COLOR(RGB)]];
-G2L["51"]["Position"] = UDim2.new(0.06195, 0, 0.50977, 0);
+G2L["52"] = Instance.new("TextLabel", G2L["47"]);
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["TextSize"] = 14;
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["52"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Text"] = [[COLOR(RGB)]];
+G2L["52"]["Position"] = UDim2.new(0.06195, 0, 0.50977, 0);
 
 
 -- StarterGui.VOID WARE NEW.Grief.scripts.Toxic grief
-G2L["52"] = Instance.new("TextButton", G2L["46"]);
-G2L["52"]["BorderSizePixel"] = 2;
-G2L["52"]["TextSize"] = 14;
-G2L["52"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["52"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["52"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["52"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["52"]["Text"] = [[Toxic grief]];
-G2L["52"]["Name"] = [[Toxic grief]];
-G2L["52"]["Position"] = UDim2.new(0.25426, 0, 0.28748, 0);
+G2L["53"] = Instance.new("TextButton", G2L["47"]);
+G2L["53"]["BorderSizePixel"] = 2;
+G2L["53"]["TextSize"] = 14;
+G2L["53"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["53"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["53"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["Text"] = [[Toxic grief]];
+G2L["53"]["Name"] = [[Toxic grief]];
+G2L["53"]["Position"] = UDim2.new(0.25426, 0, 0.28748, 0);
 
 
 -- StarterGui.VOID WARE NEW.Grief.scripts.Toxic grief.LocalScript
-G2L["53"] = Instance.new("LocalScript", G2L["52"]);
+G2L["54"] = Instance.new("LocalScript", G2L["53"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Grief.name
-G2L["54"] = Instance.new("TextLabel", G2L["45"]);
-G2L["54"]["BorderSizePixel"] = 0;
-G2L["54"]["TextSize"] = 29;
-G2L["54"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["54"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["54"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["54"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["54"]["Size"] = UDim2.new(0, 226, 0, 50);
-G2L["54"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["54"]["Text"] = [[GRIEF GUI]];
-G2L["54"]["Name"] = [[name]];
-
-
--- StarterGui.VOID WARE NEW.Grief.Selected Player
-G2L["55"] = Instance.new("TextLabel", G2L["45"]);
+G2L["55"] = Instance.new("TextLabel", G2L["46"]);
 G2L["55"]["BorderSizePixel"] = 0;
-G2L["55"]["TextSize"] = 14;
+G2L["55"]["TextSize"] = 29;
+G2L["55"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["55"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["55"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["55"]["Size"] = UDim2.new(0, 200, 0, 18);
+G2L["55"]["Size"] = UDim2.new(0, 226, 0, 50);
 G2L["55"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["55"]["Text"] = [[PLAYER SELECTED:]];
-G2L["55"]["Name"] = [[Selected Player]];
-G2L["55"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
+G2L["55"]["Text"] = [[GRIEF GUI]];
+G2L["55"]["Name"] = [[name]];
+
+
+-- StarterGui.VOID WARE NEW.Grief.Selected Player
+G2L["56"] = Instance.new("TextLabel", G2L["46"]);
+G2L["56"]["BorderSizePixel"] = 0;
+G2L["56"]["TextSize"] = 14;
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["Size"] = UDim2.new(0, 200, 0, 18);
+G2L["56"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["Text"] = [[PLAYER SELECTED:]];
+G2L["56"]["Name"] = [[Selected Player]];
+G2L["56"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
 
 
 -- StarterGui.VOID WARE NEW.Grief.Selected Player.LocalScript
-G2L["56"] = Instance.new("LocalScript", G2L["55"]);
+G2L["57"] = Instance.new("LocalScript", G2L["56"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Grief.UIDragDetector
-G2L["57"] = Instance.new("UIDragDetector", G2L["45"]);
-G2L["57"]["DragUDim2"] = UDim2.new(0, 153, 0, 203);
+G2L["58"] = Instance.new("UIDragDetector", G2L["46"]);
+G2L["58"]["DragUDim2"] = UDim2.new(0, 153, 0, 203);
 
 
 -- StarterGui.VOID WARE NEW.player selected
-G2L["58"] = Instance.new("StringValue", G2L["1"]);
-G2L["58"]["Name"] = [[player selected]];
+G2L["59"] = Instance.new("StringValue", G2L["1"]);
+G2L["59"]["Name"] = [[player selected]];
 
 
 -- StarterGui.VOID WARE NEW.Anti ui
-G2L["59"] = Instance.new("Frame", G2L["1"]);
-G2L["59"]["Visible"] = false;
-G2L["59"]["BorderSizePixel"] = 2;
-G2L["59"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["59"]["Size"] = UDim2.new(0, 226, 0, 256);
-G2L["59"]["Position"] = UDim2.new(0.39038, 321, 0.05281, 83);
-G2L["59"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["59"]["Name"] = [[Anti ui]];
+G2L["5a"] = Instance.new("Frame", G2L["1"]);
+G2L["5a"]["Visible"] = false;
+G2L["5a"]["BorderSizePixel"] = 2;
+G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5a"]["Size"] = UDim2.new(0, 226, 0, 256);
+G2L["5a"]["Position"] = UDim2.new(0.39038, 321, 0.05281, 83);
+G2L["5a"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5a"]["Name"] = [[Anti ui]];
 
 
 -- StarterGui.VOID WARE NEW.Anti ui.scripts
-G2L["5a"] = Instance.new("ScrollingFrame", G2L["59"]);
-G2L["5a"]["Active"] = true;
-G2L["5a"]["BorderSizePixel"] = 2;
-G2L["5a"]["Name"] = [[scripts]];
-G2L["5a"]["ScrollBarImageTransparency"] = 1;
-G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5a"]["Size"] = UDim2.new(0, 226, 0, 196);
-G2L["5a"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5a"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
-G2L["5a"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5b"] = Instance.new("ScrollingFrame", G2L["5a"]);
+G2L["5b"]["Active"] = true;
+G2L["5b"]["BorderSizePixel"] = 2;
+G2L["5b"]["Name"] = [[scripts]];
+G2L["5b"]["ScrollBarImageTransparency"] = 1;
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["Size"] = UDim2.new(0, 226, 0, 196);
+G2L["5b"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
+G2L["5b"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 
 
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.Anti mute
-G2L["5b"] = Instance.new("TextButton", G2L["5a"]);
-G2L["5b"]["BorderSizePixel"] = 2;
-G2L["5b"]["TextSize"] = 14;
-G2L["5b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5b"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5b"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["5b"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5b"]["Text"] = [[Anti mute]];
-G2L["5b"]["Name"] = [[Anti mute]];
-G2L["5b"]["Position"] = UDim2.new(0.28081, 0, 0.05713, 0);
+G2L["5c"] = Instance.new("TextButton", G2L["5b"]);
+G2L["5c"]["BorderSizePixel"] = 2;
+G2L["5c"]["TextSize"] = 14;
+G2L["5c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5c"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5c"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["5c"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5c"]["Text"] = [[Anti mute]];
+G2L["5c"]["Name"] = [[Anti mute]];
+G2L["5c"]["Position"] = UDim2.new(0.28081, 0, 0.05713, 0);
 
 
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.Anti mute.LocalScript
-G2L["5c"] = Instance.new("LocalScript", G2L["5b"]);
+G2L["5d"] = Instance.new("LocalScript", G2L["5c"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.anti char changes
-G2L["5d"] = Instance.new("TextButton", G2L["5a"]);
-G2L["5d"]["TextWrapped"] = true;
-G2L["5d"]["BorderSizePixel"] = 2;
-G2L["5d"]["TextSize"] = 14;
-G2L["5d"]["TextScaled"] = true;
-G2L["5d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5d"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["5d"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5d"]["Text"] = [[Anti char changes]];
-G2L["5d"]["Name"] = [[anti char changes]];
-G2L["5d"]["Position"] = UDim2.new(0.28081, 0, 0.13916, 0);
+G2L["5e"] = Instance.new("TextButton", G2L["5b"]);
+G2L["5e"]["TextWrapped"] = true;
+G2L["5e"]["BorderSizePixel"] = 2;
+G2L["5e"]["TextSize"] = 14;
+G2L["5e"]["TextScaled"] = true;
+G2L["5e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5e"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["Text"] = [[Anti char changes]];
+G2L["5e"]["Name"] = [[anti char changes]];
+G2L["5e"]["Position"] = UDim2.new(0.28081, 0, 0.13916, 0);
 
 
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.anti char changes.LocalScript
-G2L["5e"] = Instance.new("LocalScript", G2L["5d"]);
+G2L["5f"] = Instance.new("LocalScript", G2L["5e"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.anti char changes.LocalScript
-G2L["5f"] = Instance.new("LocalScript", G2L["5d"]);
+G2L["60"] = Instance.new("LocalScript", G2L["5e"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.ANTI VIS
-G2L["60"] = Instance.new("TextButton", G2L["5a"]);
-G2L["60"]["BorderSizePixel"] = 2;
-G2L["60"]["TextSize"] = 14;
-G2L["60"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["60"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["60"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["60"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["60"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["60"]["Text"] = [[ANTI VIS]];
-G2L["60"]["Name"] = [[ANTI VIS]];
-G2L["60"]["Position"] = UDim2.new(0.28081, 0, 0.22314, 0);
+G2L["61"] = Instance.new("TextButton", G2L["5b"]);
+G2L["61"]["BorderSizePixel"] = 2;
+G2L["61"]["TextSize"] = 14;
+G2L["61"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["61"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["61"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["Text"] = [[ANTI VIS]];
+G2L["61"]["Name"] = [[ANTI VIS]];
+G2L["61"]["Position"] = UDim2.new(0.28081, 0, 0.22314, 0);
 
 
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.ANTI VIS.LocalScript
-G2L["61"] = Instance.new("LocalScript", G2L["60"]);
+G2L["62"] = Instance.new("LocalScript", G2L["61"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Anti ui.name
-G2L["62"] = Instance.new("TextLabel", G2L["59"]);
-G2L["62"]["BorderSizePixel"] = 0;
-G2L["62"]["TextSize"] = 29;
-G2L["62"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["62"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["62"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["62"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["62"]["Size"] = UDim2.new(0, 226, 0, 50);
-G2L["62"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["62"]["Text"] = [[ANTI UI]];
-G2L["62"]["Name"] = [[name]];
+G2L["63"] = Instance.new("TextLabel", G2L["5a"]);
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["TextSize"] = 29;
+G2L["63"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["63"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["Size"] = UDim2.new(0, 226, 0, 50);
+G2L["63"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["Text"] = [[ANTI UI]];
+G2L["63"]["Name"] = [[name]];
 
 
 -- StarterGui.VOID WARE NEW.Anti ui.UIDragDetector
-G2L["63"] = Instance.new("UIDragDetector", G2L["59"]);
-G2L["63"]["DragUDim2"] = UDim2.new(0, 321, 0, 83);
+G2L["64"] = Instance.new("UIDragDetector", G2L["5a"]);
+G2L["64"]["DragUDim2"] = UDim2.new(0, 321, 0, 83);
 
 
 -- StarterGui.VOID WARE NEW.UIScale
-G2L["64"] = Instance.new("UIScale", G2L["1"]);
+G2L["65"] = Instance.new("UIScale", G2L["1"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui
-G2L["65"] = Instance.new("Frame", G2L["1"]);
-G2L["65"]["Visible"] = false;
-G2L["65"]["BorderSizePixel"] = 2;
-G2L["65"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["65"]["Size"] = UDim2.new(0, 226, 0, 256);
-G2L["65"]["Position"] = UDim2.new(0.20722, 321, -0.0429, 83);
-G2L["65"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["65"]["Name"] = [[Buttion ui]];
+G2L["66"] = Instance.new("Frame", G2L["1"]);
+G2L["66"]["Visible"] = false;
+G2L["66"]["BorderSizePixel"] = 2;
+G2L["66"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["66"]["Size"] = UDim2.new(0, 226, 0, 256);
+G2L["66"]["Position"] = UDim2.new(0.20722, 321, -0.0429, 83);
+G2L["66"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["66"]["Name"] = [[Buttion ui]];
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts
-G2L["66"] = Instance.new("ScrollingFrame", G2L["65"]);
-G2L["66"]["Active"] = true;
-G2L["66"]["BorderSizePixel"] = 2;
-G2L["66"]["Name"] = [[scripts]];
-G2L["66"]["ScrollBarImageTransparency"] = 1;
-G2L["66"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["66"]["Size"] = UDim2.new(0, 226, 0, 196);
-G2L["66"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["66"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
-G2L["66"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["67"] = Instance.new("ScrollingFrame", G2L["66"]);
+G2L["67"]["Active"] = true;
+G2L["67"]["BorderSizePixel"] = 2;
+G2L["67"]["Name"] = [[scripts]];
+G2L["67"]["ScrollBarImageTransparency"] = 1;
+G2L["67"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["Size"] = UDim2.new(0, 226, 0, 196);
+G2L["67"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
+G2L["67"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.fly giver
-G2L["67"] = Instance.new("TextButton", G2L["66"]);
-G2L["67"]["BorderSizePixel"] = 2;
-G2L["67"]["TextSize"] = 14;
-G2L["67"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["67"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["67"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["67"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["67"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["67"]["Text"] = [[fly giver]];
-G2L["67"]["Name"] = [[fly giver]];
-G2L["67"]["Position"] = UDim2.new(0.28081, 0, 0.05713, 0);
+G2L["68"] = Instance.new("TextButton", G2L["67"]);
+G2L["68"]["BorderSizePixel"] = 2;
+G2L["68"]["TextSize"] = 14;
+G2L["68"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["68"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["68"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["68"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["Text"] = [[fly giver]];
+G2L["68"]["Name"] = [[fly giver]];
+G2L["68"]["Position"] = UDim2.new(0.28081, 0, 0.05713, 0);
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.fly giver.LocalScript
-G2L["68"] = Instance.new("LocalScript", G2L["67"]);
+G2L["69"] = Instance.new("LocalScript", G2L["68"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.r15 giver
-G2L["69"] = Instance.new("TextButton", G2L["66"]);
-G2L["69"]["TextWrapped"] = true;
-G2L["69"]["BorderSizePixel"] = 2;
-G2L["69"]["TextSize"] = 14;
-G2L["69"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["69"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["69"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["69"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["69"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["69"]["Text"] = [[r15 giver]];
-G2L["69"]["Name"] = [[r15 giver]];
-G2L["69"]["Position"] = UDim2.new(0.28081, 0, 0.13916, 0);
+G2L["6a"] = Instance.new("TextButton", G2L["67"]);
+G2L["6a"]["TextWrapped"] = true;
+G2L["6a"]["BorderSizePixel"] = 2;
+G2L["6a"]["TextSize"] = 14;
+G2L["6a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6a"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6a"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["6a"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["Text"] = [[r15 giver]];
+G2L["6a"]["Name"] = [[r15 giver]];
+G2L["6a"]["Position"] = UDim2.new(0.28081, 0, 0.13916, 0);
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.r15 giver.LocalScript
-G2L["6a"] = Instance.new("LocalScript", G2L["69"]);
+G2L["6b"] = Instance.new("LocalScript", G2L["6a"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.BKIT BUTTON
-G2L["6b"] = Instance.new("TextButton", G2L["66"]);
-G2L["6b"]["BorderSizePixel"] = 2;
-G2L["6b"]["TextSize"] = 14;
-G2L["6b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6b"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6b"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["6b"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6b"]["Text"] = [[bkit giver]];
-G2L["6b"]["Name"] = [[BKIT BUTTON]];
-G2L["6b"]["Position"] = UDim2.new(0.28081, 0, 0.22314, 0);
+G2L["6c"] = Instance.new("TextButton", G2L["67"]);
+G2L["6c"]["BorderSizePixel"] = 2;
+G2L["6c"]["TextSize"] = 14;
+G2L["6c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6c"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6c"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["6c"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6c"]["Text"] = [[bkit giver]];
+G2L["6c"]["Name"] = [[BKIT BUTTON]];
+G2L["6c"]["Position"] = UDim2.new(0.28081, 0, 0.22314, 0);
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.BKIT BUTTON.LocalScript
-G2L["6c"] = Instance.new("LocalScript", G2L["6b"]);
+G2L["6d"] = Instance.new("LocalScript", G2L["6c"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.r6 giver
-G2L["6d"] = Instance.new("TextButton", G2L["66"]);
-G2L["6d"]["BorderSizePixel"] = 2;
-G2L["6d"]["TextSize"] = 14;
-G2L["6d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6d"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6d"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["6d"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6d"]["Text"] = [[r6 giver]];
-G2L["6d"]["Name"] = [[r6 giver]];
-G2L["6d"]["Position"] = UDim2.new(0.28081, 0, 0.31103, 0);
+G2L["6e"] = Instance.new("TextButton", G2L["67"]);
+G2L["6e"]["BorderSizePixel"] = 2;
+G2L["6e"]["TextSize"] = 14;
+G2L["6e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6e"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6e"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["6e"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6e"]["Text"] = [[r6 giver]];
+G2L["6e"]["Name"] = [[r6 giver]];
+G2L["6e"]["Position"] = UDim2.new(0.28081, 0, 0.31103, 0);
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.r6 giver.LocalScript
-G2L["6e"] = Instance.new("LocalScript", G2L["6d"]);
+G2L["6f"] = Instance.new("LocalScript", G2L["6e"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.unfly
-G2L["6f"] = Instance.new("TextButton", G2L["66"]);
-G2L["6f"]["BorderSizePixel"] = 2;
-G2L["6f"]["TextSize"] = 14;
-G2L["6f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6f"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6f"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["6f"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6f"]["Text"] = [[Unfly]];
-G2L["6f"]["Name"] = [[unfly]];
-G2L["6f"]["Position"] = UDim2.new(0.28081, 0, 0.39111, 0);
+G2L["70"] = Instance.new("TextButton", G2L["67"]);
+G2L["70"]["BorderSizePixel"] = 2;
+G2L["70"]["TextSize"] = 14;
+G2L["70"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["70"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["70"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["70"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["70"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["70"]["Text"] = [[Unfly]];
+G2L["70"]["Name"] = [[unfly]];
+G2L["70"]["Position"] = UDim2.new(0.28081, 0, 0.39111, 0);
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.unfly.LocalScript
-G2L["70"] = Instance.new("LocalScript", G2L["6f"]);
+G2L["71"] = Instance.new("LocalScript", G2L["70"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.name
-G2L["71"] = Instance.new("TextLabel", G2L["65"]);
-G2L["71"]["BorderSizePixel"] = 0;
-G2L["71"]["TextSize"] = 29;
-G2L["71"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["71"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["71"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["71"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["71"]["Size"] = UDim2.new(0, 226, 0, 50);
-G2L["71"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["71"]["Text"] = [[ITEM UI]];
-G2L["71"]["Name"] = [[name]];
+G2L["72"] = Instance.new("TextLabel", G2L["66"]);
+G2L["72"]["BorderSizePixel"] = 0;
+G2L["72"]["TextSize"] = 29;
+G2L["72"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["72"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["72"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["72"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["72"]["Size"] = UDim2.new(0, 226, 0, 50);
+G2L["72"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["72"]["Text"] = [[ITEM UI]];
+G2L["72"]["Name"] = [[name]];
 
 
 -- StarterGui.VOID WARE NEW.Buttion ui.UIDragDetector
-G2L["72"] = Instance.new("UIDragDetector", G2L["65"]);
-G2L["72"]["DragUDim2"] = UDim2.new(0, 321, 0, 83);
+G2L["73"] = Instance.new("UIDragDetector", G2L["66"]);
+G2L["73"]["DragUDim2"] = UDim2.new(0, 321, 0, 83);
 
 
 -- StarterGui.VOID WARE NEW.Aura
-G2L["73"] = Instance.new("Frame", G2L["1"]);
-G2L["73"]["Visible"] = false;
-G2L["73"]["BorderSizePixel"] = 2;
-G2L["73"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["73"]["Size"] = UDim2.new(0, 226, 0, 256);
-G2L["73"]["Position"] = UDim2.new(0.3185, 306, -0.30858, 406);
-G2L["73"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["73"]["Name"] = [[Aura]];
+G2L["74"] = Instance.new("Frame", G2L["1"]);
+G2L["74"]["Visible"] = false;
+G2L["74"]["BorderSizePixel"] = 2;
+G2L["74"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["74"]["Size"] = UDim2.new(0, 226, 0, 256);
+G2L["74"]["Position"] = UDim2.new(0.3185, 306, -0.30858, 406);
+G2L["74"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["Name"] = [[Aura]];
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts
-G2L["74"] = Instance.new("ScrollingFrame", G2L["73"]);
-G2L["74"]["Active"] = true;
-G2L["74"]["BorderSizePixel"] = 2;
-G2L["74"]["Name"] = [[scripts]];
-G2L["74"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["74"]["Size"] = UDim2.new(0, 226, 0, 196);
-G2L["74"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["74"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
-G2L["74"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["74"]["ScrollBarThickness"] = 0;
+G2L["75"] = Instance.new("ScrollingFrame", G2L["74"]);
+G2L["75"]["Active"] = true;
+G2L["75"]["BorderSizePixel"] = 2;
+G2L["75"]["Name"] = [[scripts]];
+G2L["75"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["75"]["Size"] = UDim2.new(0, 226, 0, 196);
+G2L["75"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["75"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
+G2L["75"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["75"]["ScrollBarThickness"] = 0;
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.LocalScript
-G2L["75"] = Instance.new("LocalScript", G2L["74"]);
+G2L["76"] = Instance.new("LocalScript", G2L["75"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Delete grief
-G2L["76"] = Instance.new("TextButton", G2L["74"]);
-G2L["76"]["BorderSizePixel"] = 2;
-G2L["76"]["TextSize"] = 14;
-G2L["76"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["76"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["76"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["76"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["76"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["76"]["Text"] = [[Delete aura]];
-G2L["76"]["Name"] = [[Delete grief]];
-G2L["76"]["Position"] = UDim2.new(0.24983, 0, 0.18408, 0);
+G2L["77"] = Instance.new("TextButton", G2L["75"]);
+G2L["77"]["BorderSizePixel"] = 2;
+G2L["77"]["TextSize"] = 14;
+G2L["77"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["77"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["77"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["Text"] = [[Delete aura]];
+G2L["77"]["Name"] = [[Delete grief]];
+G2L["77"]["Position"] = UDim2.new(0.24983, 0, 0.18408, 0);
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Delete grief.LocalScript
-G2L["77"] = Instance.new("LocalScript", G2L["76"]);
+G2L["78"] = Instance.new("LocalScript", G2L["77"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Paint Grief
-G2L["78"] = Instance.new("TextButton", G2L["74"]);
-G2L["78"]["BorderSizePixel"] = 2;
-G2L["78"]["TextSize"] = 14;
-G2L["78"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["78"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["78"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["78"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["78"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["78"]["Text"] = [[Paint aura]];
-G2L["78"]["Name"] = [[Paint Grief]];
-G2L["78"]["Position"] = UDim2.new(0.24983, 0, 0.40857, 0);
+G2L["79"] = Instance.new("TextButton", G2L["75"]);
+G2L["79"]["BorderSizePixel"] = 2;
+G2L["79"]["TextSize"] = 14;
+G2L["79"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["79"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["79"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["79"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["79"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["79"]["Text"] = [[Paint aura]];
+G2L["79"]["Name"] = [[Paint Grief]];
+G2L["79"]["Position"] = UDim2.new(0.24983, 0, 0.40857, 0);
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Paint Grief.LocalScript
-G2L["79"] = Instance.new("LocalScript", G2L["78"]);
+G2L["7a"] = Instance.new("LocalScript", G2L["79"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Color g
-G2L["7a"] = Instance.new("TextBox", G2L["74"]);
-G2L["7a"]["Name"] = [[Color g]];
-G2L["7a"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7a"]["BorderSizePixel"] = 2;
-G2L["7a"]["TextWrapped"] = true;
-G2L["7a"]["TextSize"] = 14;
-G2L["7a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7a"]["TextScaled"] = true;
-G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7a"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7a"]["PlaceholderText"] = [[INPUT COLOR RGB]];
-G2L["7a"]["Size"] = UDim2.new(0, 62, 0, 26);
-G2L["7a"]["Position"] = UDim2.new(0.36283, 0, 0.64089, 0);
-G2L["7a"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7a"]["Text"] = [[]];
-
-
--- StarterGui.VOID WARE NEW.Aura.scripts.Color b
-G2L["7b"] = Instance.new("TextBox", G2L["74"]);
-G2L["7b"]["Name"] = [[Color b]];
+G2L["7b"] = Instance.new("TextBox", G2L["75"]);
+G2L["7b"]["Name"] = [[Color g]];
 G2L["7b"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["7b"]["BorderSizePixel"] = 2;
 G2L["7b"]["TextWrapped"] = true;
@@ -1214,14 +1210,14 @@ G2L["7b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["7b"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["7b"]["PlaceholderText"] = [[INPUT COLOR RGB]];
 G2L["7b"]["Size"] = UDim2.new(0, 62, 0, 26);
-G2L["7b"]["Position"] = UDim2.new(0.66814, 0, 0.64089, 0);
+G2L["7b"]["Position"] = UDim2.new(0.36283, 0, 0.64089, 0);
 G2L["7b"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["7b"]["Text"] = [[]];
 
 
--- StarterGui.VOID WARE NEW.Aura.scripts.Color r
-G2L["7c"] = Instance.new("TextBox", G2L["74"]);
-G2L["7c"]["Name"] = [[Color r]];
+-- StarterGui.VOID WARE NEW.Aura.scripts.Color b
+G2L["7c"] = Instance.new("TextBox", G2L["75"]);
+G2L["7c"]["Name"] = [[Color b]];
 G2L["7c"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["7c"]["BorderSizePixel"] = 2;
 G2L["7c"]["TextWrapped"] = true;
@@ -1232,102 +1228,120 @@ G2L["7c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["7c"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["7c"]["PlaceholderText"] = [[INPUT COLOR RGB]];
 G2L["7c"]["Size"] = UDim2.new(0, 62, 0, 26);
-G2L["7c"]["Position"] = UDim2.new(0.06195, 0, 0.64089, 0);
+G2L["7c"]["Position"] = UDim2.new(0.66814, 0, 0.64089, 0);
 G2L["7c"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["7c"]["Text"] = [[]];
 
 
--- StarterGui.VOID WARE NEW.Aura.scripts.Spray Grief
-G2L["7d"] = Instance.new("TextButton", G2L["74"]);
+-- StarterGui.VOID WARE NEW.Aura.scripts.Color r
+G2L["7d"] = Instance.new("TextBox", G2L["75"]);
+G2L["7d"]["Name"] = [[Color r]];
+G2L["7d"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["7d"]["BorderSizePixel"] = 2;
+G2L["7d"]["TextWrapped"] = true;
 G2L["7d"]["TextSize"] = 14;
 G2L["7d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7d"]["TextScaled"] = true;
 G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["7d"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7d"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["7d"]["PlaceholderText"] = [[INPUT COLOR RGB]];
+G2L["7d"]["Size"] = UDim2.new(0, 62, 0, 26);
+G2L["7d"]["Position"] = UDim2.new(0.06195, 0, 0.64089, 0);
 G2L["7d"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7d"]["Text"] = [[Spray aura]];
-G2L["7d"]["Name"] = [[Spray Grief]];
-G2L["7d"]["Position"] = UDim2.new(0.24983, 0, 0.81673, 0);
+G2L["7d"]["Text"] = [[]];
+
+
+-- StarterGui.VOID WARE NEW.Aura.scripts.Spray Grief
+G2L["7e"] = Instance.new("TextButton", G2L["75"]);
+G2L["7e"]["BorderSizePixel"] = 2;
+G2L["7e"]["TextSize"] = 14;
+G2L["7e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7e"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7e"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["7e"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7e"]["Text"] = [[Spray aura]];
+G2L["7e"]["Name"] = [[Spray Grief]];
+G2L["7e"]["Position"] = UDim2.new(0.24983, 0, 0.81673, 0);
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Spray Grief.LocalScript
-G2L["7e"] = Instance.new("LocalScript", G2L["7d"]);
+G2L["7f"] = Instance.new("LocalScript", G2L["7e"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.TextLabel
-G2L["7f"] = Instance.new("TextLabel", G2L["74"]);
-G2L["7f"]["BorderSizePixel"] = 0;
-G2L["7f"]["TextSize"] = 14;
-G2L["7f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7f"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7f"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["7f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7f"]["Text"] = [[COLOR(RGB)]];
-G2L["7f"]["Position"] = UDim2.new(0.06195, 0, 0.50977, 0);
+G2L["80"] = Instance.new("TextLabel", G2L["75"]);
+G2L["80"]["BorderSizePixel"] = 0;
+G2L["80"]["TextSize"] = 14;
+G2L["80"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["80"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["80"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["80"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["80"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["80"]["Text"] = [[COLOR(RGB)]];
+G2L["80"]["Position"] = UDim2.new(0.06195, 0, 0.50977, 0);
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Toxic grief
-G2L["80"] = Instance.new("TextButton", G2L["74"]);
-G2L["80"]["BorderSizePixel"] = 2;
-G2L["80"]["TextSize"] = 14;
-G2L["80"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["80"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["80"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["80"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["80"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["80"]["Text"] = [[Toxic aura]];
-G2L["80"]["Name"] = [[Toxic grief]];
-G2L["80"]["Position"] = UDim2.new(0.25426, 0, 0.28748, 0);
+G2L["81"] = Instance.new("TextButton", G2L["75"]);
+G2L["81"]["BorderSizePixel"] = 2;
+G2L["81"]["TextSize"] = 14;
+G2L["81"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["81"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["81"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["81"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["81"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["81"]["Text"] = [[Toxic aura]];
+G2L["81"]["Name"] = [[Toxic grief]];
+G2L["81"]["Position"] = UDim2.new(0.25426, 0, 0.28748, 0);
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Toxic grief.LocalScript
-G2L["81"] = Instance.new("LocalScript", G2L["80"]);
+G2L["82"] = Instance.new("LocalScript", G2L["81"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Aura.Aura ui
-G2L["82"] = Instance.new("TextLabel", G2L["73"]);
-G2L["82"]["BorderSizePixel"] = 0;
-G2L["82"]["TextSize"] = 29;
-G2L["82"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["82"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["82"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["82"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["82"]["Size"] = UDim2.new(0, 226, 0, 50);
-G2L["82"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["82"]["Text"] = [[AURA UI]];
-G2L["82"]["Name"] = [[Aura ui]];
-
-
--- StarterGui.VOID WARE NEW.Aura.Selected Player
-G2L["83"] = Instance.new("TextLabel", G2L["73"]);
+G2L["83"] = Instance.new("TextLabel", G2L["74"]);
 G2L["83"]["BorderSizePixel"] = 0;
-G2L["83"]["TextSize"] = 14;
+G2L["83"]["TextSize"] = 29;
+G2L["83"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["83"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["83"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["83"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["83"]["Size"] = UDim2.new(0, 200, 0, 18);
+G2L["83"]["Size"] = UDim2.new(0, 226, 0, 50);
 G2L["83"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["83"]["Text"] = [[PLAYER SELECTED:]];
-G2L["83"]["Name"] = [[Selected Player]];
-G2L["83"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
+G2L["83"]["Text"] = [[AURA UI]];
+G2L["83"]["Name"] = [[Aura ui]];
+
+
+-- StarterGui.VOID WARE NEW.Aura.Selected Player
+G2L["84"] = Instance.new("TextLabel", G2L["74"]);
+G2L["84"]["BorderSizePixel"] = 0;
+G2L["84"]["TextSize"] = 14;
+G2L["84"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["84"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["84"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["84"]["Size"] = UDim2.new(0, 200, 0, 18);
+G2L["84"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["84"]["Text"] = [[PLAYER SELECTED:]];
+G2L["84"]["Name"] = [[Selected Player]];
+G2L["84"]["Position"] = UDim2.new(0, 0, 0.23438, 0);
 
 
 -- StarterGui.VOID WARE NEW.Aura.Selected Player.LocalScript
-G2L["84"] = Instance.new("LocalScript", G2L["83"]);
+G2L["85"] = Instance.new("LocalScript", G2L["84"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Aura.UIDragDetector
-G2L["85"] = Instance.new("UIDragDetector", G2L["73"]);
-G2L["85"]["DragUDim2"] = UDim2.new(0, 153, 0, 203);
+G2L["86"] = Instance.new("UIDragDetector", G2L["74"]);
+G2L["86"]["DragUDim2"] = UDim2.new(0, 153, 0, 203);
 
 
 -- StarterGui.VOID WARE NEW.LocalScript
-G2L["86"] = Instance.new("LocalScript", G2L["1"]);
+G2L["87"] = Instance.new("LocalScript", G2L["1"]);
 
 
 
@@ -2754,8 +2768,8 @@ local script = G2L["39"];
 end;
 task.spawn(C_39);
 -- StarterGui.VOID WARE NEW.status effects frame.ScrollingFrame.delete
-local function C_41()
-local script = G2L["41"];
+local function C_42()
+local script = G2L["42"];
 	local plr = game.Players.LocalPlayer
 	local btn = script.Parent
 	local gui = script.Parent.Parent.Parent
@@ -2773,16 +2787,16 @@ local script = G2L["41"];
 		end
 	end
 end;
-task.spawn(C_41);
+task.spawn(C_42);
 -- StarterGui.VOID WARE NEW.Grief.scripts.LocalScript
-local function C_47()
-local script = G2L["47"];
+local function C_48()
+local script = G2L["48"];
 	
 end;
-task.spawn(C_47);
+task.spawn(C_48);
 -- StarterGui.VOID WARE NEW.Grief.scripts.Delete grief.LocalScript
-local function C_49()
-local script = G2L["49"];
+local function C_4a()
+local script = G2L["4a"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -2830,10 +2844,10 @@ local script = G2L["49"];
 	end)
 	
 end;
-task.spawn(C_49);
+task.spawn(C_4a);
 -- StarterGui.VOID WARE NEW.Grief.scripts.Paint Grief.LocalScript
-local function C_4b()
-local script = G2L["4b"];
+local function C_4c()
+local script = G2L["4c"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -2896,10 +2910,10 @@ local script = G2L["4b"];
 	end)
 	
 end;
-task.spawn(C_4b);
+task.spawn(C_4c);
 -- StarterGui.VOID WARE NEW.Grief.scripts.Spray Grief.LocalScript
-local function C_50()
-local script = G2L["50"];
+local function C_51()
+local script = G2L["51"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -2962,10 +2976,10 @@ local script = G2L["50"];
 	end)
 	
 end;
-task.spawn(C_50);
+task.spawn(C_51);
 -- StarterGui.VOID WARE NEW.Grief.scripts.Toxic grief.LocalScript
-local function C_53()
-local script = G2L["53"];
+local function C_54()
+local script = G2L["54"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -3035,19 +3049,19 @@ local script = G2L["53"];
 	end)
 	
 end;
-task.spawn(C_53);
+task.spawn(C_54);
 -- StarterGui.VOID WARE NEW.Grief.Selected Player.LocalScript
-local function C_56()
-local script = G2L["56"];
+local function C_57()
+local script = G2L["57"];
 	while true do
 		task.wait()
 		script.Parent.Text = "Selected Player: ".. script.Parent.Parent.Parent["player selected"].Value
 	end
 end;
-task.spawn(C_56);
+task.spawn(C_57);
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.Anti mute.LocalScript
-local function C_5c()
-local script = G2L["5c"];
+local function C_5d()
+local script = G2L["5d"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local amstauts = false
@@ -3119,10 +3133,10 @@ local script = G2L["5c"];
 		end
 	end)
 end;
-task.spawn(C_5c);
+task.spawn(C_5d);
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.anti char changes.LocalScript
-local function C_5e()
-local script = G2L["5e"];
+local function C_5f()
+local script = G2L["5f"];
 	local btn = script.Parent
 	local offon = false
 	
@@ -3222,10 +3236,10 @@ local script = G2L["5e"];
 	end)
 	
 end;
-task.spawn(C_5e);
+task.spawn(C_5f);
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.anti char changes.LocalScript
-local function C_5f()
-local script = G2L["5f"];
+local function C_60()
+local script = G2L["60"];
 	local btn = script.Parent
 	local offon = false
 	
@@ -3327,10 +3341,10 @@ local script = G2L["5f"];
 	end)
 	
 end;
-task.spawn(C_5f);
+task.spawn(C_60);
 -- StarterGui.VOID WARE NEW.Anti ui.scripts.ANTI VIS.LocalScript
-local function C_61()
-local script = G2L["61"];
+local function C_62()
+local script = G2L["62"];
 	local btn = script.Parent
 	local offon = false
 	
@@ -3354,10 +3368,10 @@ local script = G2L["61"];
 		end
 	end)
 end;
-task.spawn(C_61);
+task.spawn(C_62);
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.fly giver.LocalScript
-local function C_68()
-local script = G2L["68"];
+local function C_69()
+local script = G2L["69"];
 	local Players = game:GetService("Players")
 	local TextChatService = game:GetService("TextChatService")
 	local localPlayer = Players.LocalPlayer
@@ -3474,10 +3488,10 @@ local script = G2L["68"];
 	button.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
 	
 end;
-task.spawn(C_68);
+task.spawn(C_69);
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.r15 giver.LocalScript
-local function C_6a()
-local script = G2L["6a"];
+local function C_6b()
+local script = G2L["6b"];
 	local Players = game:GetService("Players")
 	local TextChatService = game:GetService("TextChatService")
 	local localPlayer = Players.LocalPlayer
@@ -3594,10 +3608,10 @@ local script = G2L["6a"];
 	button.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
 	
 end;
-task.spawn(C_6a);
+task.spawn(C_6b);
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.BKIT BUTTON.LocalScript
-local function C_6c()
-local script = G2L["6c"];
+local function C_6d()
+local script = G2L["6d"];
 	local Players = game:GetService("Players")
 	local TextChatService = game:GetService("TextChatService")
 	local localPlayer = Players.LocalPlayer
@@ -3714,10 +3728,10 @@ local script = G2L["6c"];
 	button.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
 	
 end;
-task.spawn(C_6c);
+task.spawn(C_6d);
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.r6 giver.LocalScript
-local function C_6e()
-local script = G2L["6e"];
+local function C_6f()
+local script = G2L["6f"];
 	local Players = game:GetService("Players")
 	local TextChatService = game:GetService("TextChatService")
 	local localPlayer = Players.LocalPlayer
@@ -3834,10 +3848,10 @@ local script = G2L["6e"];
 	button.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
 	
 end;
-task.spawn(C_6e);
+task.spawn(C_6f);
 -- StarterGui.VOID WARE NEW.Buttion ui.scripts.unfly.LocalScript
-local function C_70()
-local script = G2L["70"];
+local function C_71()
+local script = G2L["71"];
 	local Players = game:GetService("Players")
 	local TextChatService = game:GetService("TextChatService")
 	local localPlayer = Players.LocalPlayer
@@ -3954,16 +3968,16 @@ local script = G2L["70"];
 	button.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
 	
 end;
-task.spawn(C_70);
+task.spawn(C_71);
 -- StarterGui.VOID WARE NEW.Aura.scripts.LocalScript
-local function C_75()
-local script = G2L["75"];
+local function C_76()
+local script = G2L["76"];
 	
 end;
-task.spawn(C_75);
+task.spawn(C_76);
 -- StarterGui.VOID WARE NEW.Aura.scripts.Delete grief.LocalScript
-local function C_77()
-local script = G2L["77"];
+local function C_78()
+local script = G2L["78"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local plr = game.Players.LocalPlayer
@@ -4066,10 +4080,10 @@ local script = G2L["77"];
 		end
 	end)
 end;
-task.spawn(C_77);
+task.spawn(C_78);
 -- StarterGui.VOID WARE NEW.Aura.scripts.Paint Grief.LocalScript
-local function C_79()
-local script = G2L["79"];
+local function C_7a()
+local script = G2L["7a"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local Players = game:GetService("Players")
@@ -4178,10 +4192,10 @@ local script = G2L["79"];
 		end
 	end)
 end;
-task.spawn(C_79);
+task.spawn(C_7a);
 -- StarterGui.VOID WARE NEW.Aura.scripts.Spray Grief.LocalScript
-local function C_7e()
-local script = G2L["7e"];
+local function C_7f()
+local script = G2L["7f"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local Players = game:GetService("Players")
@@ -4290,10 +4304,10 @@ local script = G2L["7e"];
 		end
 	end)
 end;
-task.spawn(C_7e);
+task.spawn(C_7f);
 -- StarterGui.VOID WARE NEW.Aura.scripts.Toxic grief.LocalScript
-local function C_81()
-local script = G2L["81"];
+local function C_82()
+local script = G2L["82"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local Players = game:GetService("Players")
@@ -4407,19 +4421,19 @@ local script = G2L["81"];
 		end
 	end)
 end;
-task.spawn(C_81);
+task.spawn(C_82);
 -- StarterGui.VOID WARE NEW.Aura.Selected Player.LocalScript
-local function C_84()
-local script = G2L["84"];
+local function C_85()
+local script = G2L["85"];
 	while true do
 		task.wait()
 		script.Parent.Text = "Selected Player: ".. script.Parent.Parent.Parent["player selected"].Value
 	end
 end;
-task.spawn(C_84);
+task.spawn(C_85);
 -- StarterGui.VOID WARE NEW.LocalScript
-local function C_86()
-local script = G2L["86"];
+local function C_87()
+local script = G2L["87"];
 	-- Save this file in your Solara V3 'autoexec' folder
 	local TeleportService = game:GetService("TeleportService")
 	local Players = game:GetService("Players")
@@ -4476,6 +4490,6 @@ local script = G2L["86"];
 	end)
 	
 end;
-task.spawn(C_86);
+task.spawn(C_87);
 
 return G2L["1"], require;
