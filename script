@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 149 | Scripts: 53 | Modules: 0 | Tags: 0
+-- Instances: 151 | Scripts: 54 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VOID WARE NEW
@@ -17,9 +17,9 @@ G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
 
 
--- StarterGui.VOID WARE NEW.LocalScript
+-- StarterGui.VOID WARE NEW.anti vamp
 G2L["2"] = Instance.new("LocalScript", G2L["1"]);
-
+G2L["2"]["Name"] = [[anti vamp]];
 
 
 -- StarterGui.VOID WARE NEW.clicktoselect
@@ -37,19 +37,19 @@ G2L["5"] = Instance.new("LocalScript", G2L["1"]);
 
 
 
--- StarterGui.VOID WARE NEW.LocalScript
+-- StarterGui.VOID WARE NEW.spy chat
 G2L["6"] = Instance.new("LocalScript", G2L["1"]);
+G2L["6"]["Name"] = [[spy chat]];
 
 
-
--- StarterGui.VOID WARE NEW.LocalScript
+-- StarterGui.VOID WARE NEW.anti nan
 G2L["7"] = Instance.new("LocalScript", G2L["1"]);
+G2L["7"]["Name"] = [[anti nan]];
 
 
-
--- StarterGui.VOID WARE NEW.LocalScript
+-- StarterGui.VOID WARE NEW.anti kick
 G2L["8"] = Instance.new("LocalScript", G2L["1"]);
-
+G2L["8"]["Name"] = [[anti kick]];
 
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME
@@ -57,14 +57,14 @@ G2L["9"] = Instance.new("Frame", G2L["1"]);
 G2L["9"]["BorderSizePixel"] = 2;
 G2L["9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9"]["Size"] = UDim2.new(0, 413, 0, 251);
-G2L["9"]["Position"] = UDim2.new(0.04674, 0, 1.49235, -639);
+G2L["9"]["Position"] = UDim2.new(0.10343, 0, 0.34983, 0);
 G2L["9"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["9"]["Name"] = [[VOID WARE FRAME]];
 
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.UIDragDetector
 G2L["a"] = Instance.new("UIDragDetector", G2L["9"]);
-
+G2L["a"]["DragUDim2"] = UDim2.new(0, 241, 0, -139);
 
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.Script Tittle
@@ -676,7 +676,7 @@ G2L["47"] = Instance.new("Frame", G2L["1"]);
 G2L["47"]["BorderSizePixel"] = 2;
 G2L["47"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["47"]["Size"] = UDim2.new(0, 224, 0, 254);
-G2L["47"]["Position"] = UDim2.new(0.76061, -38, 0.75214, -221);
+G2L["47"]["Position"] = UDim2.new(0.59356, 0, 0.46205, 0);
 G2L["47"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["47"]["Name"] = [[status effects frame]];
 
@@ -1473,7 +1473,17 @@ G2L["95"] = Instance.new("UIDragDetector", G2L["85"]);
 G2L["95"]["DragUDim2"] = UDim2.new(0, 153, 0, 203);
 
 
--- StarterGui.VOID WARE NEW.LocalScript
+-- StarterGui.VOID WARE NEW.Cloneparent
+G2L["96"] = Instance.new("StringValue", G2L["1"]);
+G2L["96"]["Name"] = [[Cloneparent]];
+
+
+-- StarterGui.VOID WARE NEW.Anti invis
+G2L["97"] = Instance.new("LocalScript", G2L["1"]);
+G2L["97"]["Name"] = [[Anti invis]];
+
+
+-- StarterGui.VOID WARE NEW.anti vamp
 local function C_2()
 local script = G2L["2"];
 	while true do
@@ -1521,6 +1531,9 @@ local script = G2L["3"];
 				script.Parent["player selected"].Value = target
 				textbox.Text = target.Name
 				textlabel.Text = "PLAYER SELECTED : " .. target.Name
+				if target.Name == "Clone" then
+					script.Parent.Cloneparent.Value = target.Parent.Name
+				end
 				if target:IsA("Tool") then
 					
 					local boombox = target.SuperFlyGoldBoombox.Handle
@@ -1607,14 +1620,9 @@ local script = G2L["5"];
 	
 end;
 task.spawn(C_5);
--- StarterGui.VOID WARE NEW.LocalScript
+-- StarterGui.VOID WARE NEW.spy chat
 local function C_6()
 local script = G2L["6"];
-	-- Script Path: game:GetService("TextChatService").LocalChatFunctionality
-	-- Took 0.81s to decompile.
-	-- Executor: Solara (3.0)
-	
-	-- https://lua.expert/
 	local Players = game:GetService("Players")
 	
 	game:GetService("TextChatService").OnIncomingMessage = function(p1) --[[ Line: 4 | Upvalues: Players (copy) ]]
@@ -1648,7 +1656,7 @@ local script = G2L["6"];
 				local Text = p1.Text
 	
 				for k, v in pairs(string.split("abcdefghijklmnopqrstuvwxyz", "")) do
-			        TextChatMessageProperties.Text = "[LOW IQ]: " .. Text
+					TextChatMessageProperties.Text = "[LOW IQ(SPYCHAT)]: " .. Text
 				end
 	
 				TextChatMessageProperties.Text = Text
@@ -1656,7 +1664,7 @@ local script = G2L["6"];
 				local Text = p1.Text
 	
 				for k, v in pairs(string.split("abcdefghijklmnopqrstuvwxyz", "")) do
-					TextChatMessageProperties.Text = "[HIGH IQ]: " .. Text
+					TextChatMessageProperties.Text = "[HIGH IQ(SPYCHAT)]: " .. p1.Text
 				end
 	
 				TextChatMessageProperties.Text = Text
@@ -1678,7 +1686,7 @@ local script = G2L["6"];
 	
 end;
 task.spawn(C_6);
--- StarterGui.VOID WARE NEW.LocalScript
+-- StarterGui.VOID WARE NEW.anti nan
 local function C_7()
 local script = G2L["7"];
 	local Players = game:GetService("Players")
@@ -1775,7 +1783,7 @@ local script = G2L["7"];
 	
 end;
 task.spawn(C_7);
--- StarterGui.VOID WARE NEW.LocalScript
+-- StarterGui.VOID WARE NEW.anti kick
 local function C_8()
 local script = G2L["8"];
 	-- Save this file in your Solara V3 'autoexec' folder
@@ -2185,11 +2193,18 @@ local script = G2L["1d"];
 		if not plrtotpto or not plrtotpto:FindFirstChild("HumanoidRootPart") then
 			warn("[VOID WARE]: Target player or their HumanoidRootPart could not be found.")
 			print("[VOID WARE]: Trying to find PrimaryPart/Head")
-			if targetName == "Clone" then
-				print("[VOID WARE]: Clone Found")
-			else
-				warn("[VOID WARE]: Not Flinging Clone Or Player")
-			end
+			 local clone = workspace.Clones:FindFirstChild(script.Parent.Parent.Parent.Parent.Cloneparent.Value)
+			 if clone then
+				  local findclone = clone:FindFirstChild(targetName)
+				  if findclone then
+						local findclonehum = findclone:FindFirstChild("HumanoidRootPart")
+						print("")
+						else
+					warn("[VOID WARE]: STOPPED FLING BECAUSE THERE IS NO TARGET/TARGET PARTS ARE NOT FOUND")
+				  end
+			 else
+				warn("[VOID WARE]: STOPPED FLING BECAUSE THERE IS NO TARGET/TARGET PARTS ARE NOT FOUND")
+			 end
 			return
 		end
 	
@@ -2441,10 +2456,10 @@ local script = G2L["2a"];
 		local character = player.Character or player.CharacterAdded:Wait()
 		local humanoid = character:WaitForChild("Humanoid")
 		local humrootpart = character:WaitForChild("HumanoidRootPart")
-		local rapeani = Instance.new("Animation")
-		rapeani.AnimationId = "rbxassetid://5918726674"
-		rapeani.Parent = humanoid
-		local playing = humanoid:LoadAnimation(rapeani)
+		local cool = Instance.new("Animation")
+		cool.AnimationId = "rbxassetid://5918726674"
+		cool.Parent = humanoid
+		local playing = humanoid:LoadAnimation(cool)
 		if rstatus then
 			script.Parent.Frame.BackgroundColor3 = Color3.new(266,266,266)
 			playing:Play()
@@ -4663,5 +4678,165 @@ local script = G2L["93"];
 	end)
 end;
 task.spawn(C_93);
+-- StarterGui.VOID WARE NEW.Anti invis
+local function C_97()
+local script = G2L["97"];
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local Teams = game:GetService("Teams")
+	local TextChatService = game:GetService("TextChatService")
+	local LocalPlayer = Players.LocalPlayer
+	
+	local IsActive = false
+	local RenderConnection = nil
+	
+	-- Check if player owns or is holding "The Arkenstone"
+	local function hasArkenstone(player, character)
+		if character and character:FindFirstChild("The Arkenstone") then
+			return true
+		end
+		local backpack = player:FindFirstChildOfClass("Backpack")
+		if backpack and backpack:FindFirstChild("The Arkenstone") then
+			return true
+		end
+		return false
+	end
+	
+	-- Force transparency back to 0
+	local function revealPart(instance)
+		if instance:IsA("BasePart") and instance.Name ~= "HumanoidRootPart" then
+			if instance.Transparency > 0 then
+				instance.Transparency = 0
+			end
+			if instance.LocalTransparencyModifier ~= 0 then
+				instance.LocalTransparencyModifier = 0
+			end
+		elseif instance:IsA("Decal") or instance:IsA("Texture") then
+			if instance.Transparency > 0 then
+				instance.Transparency = 0
+			end
+		end
+	end
+	
+	-- Function to create or update the Name Billboard UI
+	local function updateBillboard(player, character)
+		if player == LocalPlayer then return end
+	
+		local head = character:FindFirstChild("Head")
+		if not head then return end
+	
+		local billboard = head:FindFirstChild("AntiInvisNameTag")
+		local nameLabel
+	
+		if not billboard then
+			billboard = Instance.new("BillboardGui")
+			billboard.Name = "AntiInvisNameTag"
+			billboard.Adornee = head
+			billboard.Size = UDim2.new(0, 200, 0, 40)
+			billboard.StudsOffset = Vector3.new(0, 2.5, 0)
+			billboard.AlwaysOnTop = true
+			billboard.Parent = head
+	
+			nameLabel = Instance.new("TextLabel")
+			nameLabel.Name = "Label"
+			nameLabel.Size = UDim2.new(1, 0, 1, 0)
+			nameLabel.BackgroundTransparency = 1
+			nameLabel.Text = player.DisplayName .. "\n(@" .. player.Name .. ")"
+			nameLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+			nameLabel.TextStrokeTransparency = 0
+			nameLabel.TextSize = 13
+			nameLabel.Font = Enum.Font.GothamBold
+			nameLabel.Parent = billboard
+		else
+			nameLabel = billboard:FindFirstChild("Label")
+		end
+	
+		-- Color conditions (Chosen team overrides Arkenstone)
+		if nameLabel then
+			if Teams:FindFirstChild("Chosen") and player.Team == Teams.Chosen then
+				nameLabel.TextColor3 = Color3.fromRGB(255, 255, 0) -- Yellow
+			elseif hasArkenstone(player, character) or player:GetAttribute("Arken") == true then
+				nameLabel.TextColor3 = Color3.fromRGB(0, 155, 255) -- Blue
+			else
+				nameLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- White
+			end
+		end
+	end
+	
+	-- Function to clean up all active Billboard UIs across the game
+	local function removeAllBillboards()
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player.Character then
+				local head = player.Character:FindFirstChild("Head")
+				if head then
+					local tag = head:FindFirstChild("AntiInvisNameTag")
+					if tag then
+						tag:Destroy()
+					end
+				end
+			end
+		end
+	end
+	
+	-- Starts the anti-invisibility process
+	local function StartOutline()
+		if IsActive then return end
+		IsActive = true
+	
+		RenderConnection = RunService.RenderStepped:Connect(function()
+			for _, player in ipairs(Players:GetPlayers()) do
+				if player ~= LocalPlayer and player.Character then
+					local char = player.Character
+	
+					-- Maintain Billboard UI
+					updateBillboard(player, char)
+	
+					-- Force full visibility on all parts
+					for _, child in ipairs(char:GetDescendants()) do
+						revealPart(child)
+					end
+				end
+			end
+		end)
+	end
+	
+	-- Stops the anti-invisibility process and removes tags
+	local function StopOutline()
+		if not IsActive then return end
+		IsActive = false
+	
+		if RenderConnection then
+			RenderConnection:Disconnect()
+			RenderConnection = nil
+		end
+	
+		removeAllBillboards()
+	end
+	
+	-- Chat Command Logic Execution
+	local function processCommand(msg)
+		local lowerMsg = msg:lower():gsub("%s+", "")
+		if lowerMsg == "/outline" then
+			StartOutline()
+		elseif lowerMsg == "/stop" then
+			StopOutline()
+		end
+	end
+	
+	-- TextChatService handling (New Roblox Chat System)
+	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+		TextChatService.OnIncomingMessage = function(message)
+			if message.TextSource and message.TextSource.UserId == LocalPlayer.UserId then
+				processCommand(message.Text)
+			end
+		end
+	end
+	
+	-- Legacy Chat handling fallback
+	LocalPlayer.Chatted:Connect(function(msg)
+		processCommand(msg)
+	end)
+end;
+task.spawn(C_97);
 
 return G2L["1"], require;
