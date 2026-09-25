@@ -3647,10 +3647,15 @@ local script = G2L["72"];
 		if offon then
 			script.Parent.Frame.BackgroundColor3 = Color3.new(255,255,255)
 			while offon do
-				task.wait(0.1)
+				task.wait()
 				game.Lighting.Blur.Enabled = false
-				game.Players.LocalPlayer.PlayerGui.Blind.Enabled = false
+				if game.Players.LocalPlayer.PlayerGui.Blind then
+					game.Players.LocalPlayer.PlayerGui.Blind.Enabled = false
+				else
+					game.StarterGui.Blind.Enabled = false
+				end
 				game.StarterGui.Blind.Enabled = false
+			end
 				game.Lighting.RGB.Enabled = false
 				game.Lighting.Fog.Density = 0
 				if game.Players.LocalPlayer.PlayerGui.Epic then
@@ -3659,7 +3664,6 @@ local script = G2L["72"];
 				game.StarterGui.Epic.Enabled = false
 				end
 				game.StarterGui.Epic.Enabled = false
-			end
 		else
 			script.Parent.Frame.BackgroundColor3 = Color3.new(0,0,0)
 		end
