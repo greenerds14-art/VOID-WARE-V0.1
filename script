@@ -64,7 +64,7 @@ G2L["9"]["Name"] = [[VOID WARE FRAME]];
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.UIDragDetector
 G2L["a"] = Instance.new("UIDragDetector", G2L["9"]);
-G2L["a"]["DragUDim2"] = UDim2.new(0, 241, 0, -139);
+
 
 
 -- StarterGui.VOID WARE NEW.VOID WARE FRAME.Script Tittle
@@ -2043,6 +2043,7 @@ local script = G2L["11"];
 	print(
 		"thank you for using void ware credits: Vvoid@bigjohnr2 on dc, plush@bruhp2569, @Unspecified"
 	)
+	print("grief to stop griefing and say /antinvis to see everyone thats invis and do /stop to stop it")
 	
 	script:Destroy()
 end;
@@ -3088,47 +3089,59 @@ local script = G2L["59"];
 	local mouse = game.Players.LocalPlayer:GetMouse()
 	local Griefing = false
 	
-	
 	keyboard.InputBegan:Connect(function(input)
 		if input.KeyCode == Enum.KeyCode.R then
-			Griefing = false	
+			Griefing = false
 		end
 	end)
 	
 	button.MouseButton1Click:Connect(function()
 		Griefing = true
-		local Player = script.Parent.Parent.Parent.Parent["player selected"].Value
-		if Player.Name ~= "Clone" then
-		local playersblocks = game.Workspace.Bricks:WaitForChild(Player)
-		local Dtool = game.Players.LocalPlayer.Backpack:FindFirstChild("Delete")
-		local Player = game.Players.LocalPlayer
-		local Character = Player.Character
-		local Humanoid = Character.Humanoid
-		local HumanoidRootPart = Character.HumanoidRootPart
-		local prepos = HumanoidRootPart.Position
-		while Griefing == true do
-			task.wait()
-			if Dtool.Parent == game.Players.LocalPlayer.Backpack then
-				Humanoid:EquipTool(Dtool)
-			end
-			HumanoidRootPart.Position = prepos
-			for _, part in pairs(playersblocks:GetChildren()) do
+		local SelectedPlayer = script.Parent.Parent.Parent.Parent["player selected"].Value
 	
+		if SelectedPlayer.Name ~= "Clone" then
+			local playersblocks = game.Workspace.Bricks:WaitForChild(SelectedPlayer)
+			local LocalPlayer = game.Players.LocalPlayer
+			local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+			local Humanoid = Character:WaitForChild("Humanoid")
+			local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+	
+			while Griefing == true do
 				task.wait()
 	
-				print(part.Position)
+				-- Re-fetch tool dynamically in case it moves between Backpack and Character
+				local Dtool = LocalPlayer.Backpack:FindFirstChild("Delete") or Character:FindFirstChild("Delete")
 	
+				if Dtool then
+					if Dtool.Parent == LocalPlayer.Backpack then
+						Humanoid:EquipTool(Dtool)
+					end
 	
-				HumanoidRootPart.Position = part.Position
+					for _, part in pairs(playersblocks:GetChildren()) do
+						if not Griefing then break end
 	
-				Dtool.Script.Event:FireServer(part, part.Position)
+						if part:IsA("BasePart") then
+							task.wait()
 	
-				Dtool:Activate()
-			end
+							-- Calculate distance in studs
+							local distanceInStuds = (HumanoidRootPart.Position - part.Position).Magnitude
+	
+							-- Only teleport if 25 or more studs away
+							if distanceInStuds >= 25 then
+								HumanoidRootPart.Position = part.Position
+							end
+	
+							-- Fire delete event and activate tool
+							if Dtool:FindFirstChild("Script") and Dtool.Script:FindFirstChild("Event") then
+								Dtool.Script.Event:FireServer(part, part.Position)
+							end
+							Dtool:Activate()
+						end
+					end
+				end
 			end
 		end
 	end)
-	
 end;
 task.spawn(C_59);
 -- StarterGui.VOID WARE NEW.Grief.scripts.Paint Grief.LocalScript
@@ -3139,62 +3152,95 @@ local script = G2L["5b"];
 	local mouse = game.Players.LocalPlayer:GetMouse()
 	local Griefing = false
 	
-	
-	keyboard.InputBegan:Connect(function(input)
+	-- Press 'R' to toggle off
+	keyboard.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
 		if input.KeyCode == Enum.KeyCode.R then
-			Griefing = false	
+			Griefing = false
 		end
 	end)
 	
 	button.MouseButton1Click:Connect(function()
-		Griefing = true
-		local Player = script.Parent.Parent.Parent.Parent["player selected"].Value
-		local playersblocks = game.Workspace.Bricks:WaitForChild(Player)
-		local Dtool = game.Players.LocalPlayer.Backpack:FindFirstChild("Paint")
-		local Player = game.Players.LocalPlayer
-		local Character = Player.Character
-		local Humanoid = Character.Humanoid
-		local HumanoidRootPart = Character.HumanoidRootPart
-		local prepos = HumanoidRootPart.Position
-		while Griefing == true do
-			task.wait()
-			if Dtool.Parent == game.Players.LocalPlayer.Backpack then
-				Humanoid:EquipTool(Dtool)
-			end
-			HumanoidRootPart.Position = prepos
-			for _, part in pairs(playersblocks:GetChildren()) do
-		
-				local selectedColorfortext = Color3.fromRGB(255,255,255)
-				
-				local selectedcolor = Color3.fromRGB(script.Parent.Parent["Color r"].Text, script.Parent.Parent["Color g"].Text, script.Parent.Parent["Color b"].Text)
-				
-				local sides = {
-					Enum.NormalId.Front,
-					Enum.NormalId.Right,
-					Enum.NormalId.Back,
-					Enum.NormalId.Left,
-					Enum.NormalId.Top,
-					Enum.NormalId.Bottom
-				}
-				
-				local side = sides[math.random(1, #sides)]
-				
+		-- Toggle off if already running
+		if Griefing then
+			Griefing = false
+			return
+		end
+	
+		local SelectedPlayer = script.Parent.Parent.Parent.Parent["player selected"].Value
+	
+		if tostring(SelectedPlayer) ~= "Clone" then
+			local BricksFolder = workspace:FindFirstChild("Bricks")
+			if not BricksFolder then return end
+	
+			local playersblocks = BricksFolder:FindFirstChild(tostring(SelectedPlayer)) or BricksFolder:WaitForChild(tostring(SelectedPlayer), 3)
+			if not playersblocks then return end
+	
+			local LocalPlayer = game.Players.LocalPlayer
+			local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+			local Humanoid = Character:WaitForChild("Humanoid")
+			local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+	
+			Griefing = true
+	
+			while Griefing do
 				task.wait()
 	
-				print(part.Position)
+				-- Fetch tool from either Backpack or Character safely
+				local Dtool = LocalPlayer.Backpack:FindFirstChild("Paint") or Character:FindFirstChild("Paint")
 	
+				if Dtool then
+					if Dtool.Parent == LocalPlayer.Backpack then
+						Humanoid:EquipTool(Dtool)
+					end
 	
-				HumanoidRootPart.Position = part.Position
-				
-				Dtool.Script.Event:FireServer(part, side,  part.Position, "both 🤝", selectedcolor, "", "")
+					-- Direct iteration through blocks (no array creation or sorting)
+					for _, part in pairs(playersblocks:GetChildren()) do
+						if not Griefing then break end
 	
-				
-				
-				Dtool:Activate()
+						if part:IsA("BasePart") and part.Parent then
+							task.wait()
+	
+							-- Parse color input safely from text boxes
+							local colorR = tonumber(script.Parent.Parent["Color r"].Text) or 255
+							local colorG = tonumber(script.Parent.Parent["Color g"].Text) or 255
+							local colorB = tonumber(script.Parent.Parent["Color b"].Text) or 255
+							local selectedcolor = Color3.fromRGB(colorR, colorG, colorB)
+	
+							local sides = {
+								Enum.NormalId.Front,
+								Enum.NormalId.Right,
+								Enum.NormalId.Back,
+								Enum.NormalId.Left,
+								Enum.NormalId.Top,
+								Enum.NormalId.Bottom
+							}
+							local side = sides[math.random(1, #sides)]
+	
+							-- Teleport only if 25 or more studs away
+							local distanceInStuds = (HumanoidRootPart.Position - part.Position).Magnitude
+							if distanceInStuds >= 25 then
+								HumanoidRootPart.Position = part.Position
+							end
+	
+							-- Fire event and activate
+							local eventScript = Dtool:FindFirstChild("Script")
+							local remoteEvent = eventScript and eventScript:FindFirstChild("Event")
+							if remoteEvent then
+								remoteEvent:FireServer(part, side, part.Position, "both 🤝", selectedcolor, "", "")
+							end
+	
+							Dtool:Activate()
+						end
+					end
+				else
+					warn("[Paint Script] 'Paint' tool not found in Backpack or Character!")
+					Griefing = false
+					break
+				end
 			end
 		end
 	end)
-	
 end;
 task.spawn(C_5b);
 -- StarterGui.VOID WARE NEW.Grief.scripts.Spray Grief.LocalScript
@@ -3204,69 +3250,109 @@ local script = G2L["60"];
 	local keyboard = game:GetService("UserInputService")
 	local mouse = game.Players.LocalPlayer:GetMouse()
 	local Griefing = false
-	 
+	
 	-- Generates 2 random uppercase letters
 	local function get2Letters()
 		return string.char(math.random(65, 90), math.random(65, 90))
 	end
 	
-	print(get2Letters()) -- Output: "XQ", "AB", etc.
-	
-	keyboard.InputBegan:Connect(function(input)
+	-- Press 'R' to toggle off
+	keyboard.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
 		if input.KeyCode == Enum.KeyCode.R then
-			Griefing = false	
+			Griefing = false
 		end
 	end)
 	
 	button.MouseButton1Click:Connect(function()
-		Griefing = true
-		local Player = script.Parent.Parent.Parent.Parent["player selected"].Value
-		local playersblocks = game.Workspace.Bricks:WaitForChild(Player)
-		local Dtool = game.Players.LocalPlayer.Backpack:FindFirstChild("Paint")
-		local Player = game.Players.LocalPlayer
-		local Character = Player.Character
-		local Humanoid = Character.Humanoid
-		local HumanoidRootPart = Character.HumanoidRootPart
-		local prepos = HumanoidRootPart.Position
-		while Griefing == true do
-			task.wait()
-			if Dtool.Parent == game.Players.LocalPlayer.Backpack then
-				Humanoid:EquipTool(Dtool)
-			end
-			HumanoidRootPart.Position = prepos
-			for _, part in pairs(playersblocks:GetChildren()) do
-		
-				local selectedColorfortext = Color3.fromRGB(255,255,255)
-				
-				local selectedcolor = Color3.fromRGB(script.Parent.Parent["Color r"].Text, script.Parent.Parent["Color g"].Text, script.Parent.Parent["Color b"].Text)
-				
-				local sides = {
-					Enum.NormalId.Front,
-					Enum.NormalId.Right,
-					Enum.NormalId.Back,
-					Enum.NormalId.Left,
-					Enum.NormalId.Top,
-					Enum.NormalId.Bottom
-				}
-				
-				local side = sides[math.random(1, #sides)]
-				
+		-- Toggle off if already running
+		if Griefing then
+			Griefing = false
+			return
+		end
+	
+		local SelectedPlayer = script.Parent.Parent.Parent.Parent["player selected"].Value
+	
+		if tostring(SelectedPlayer) ~= "Clone" then
+			local BricksFolder = workspace:FindFirstChild("Bricks")
+			if not BricksFolder then return end
+	
+			local playersblocks = BricksFolder:FindFirstChild(tostring(SelectedPlayer)) or BricksFolder:WaitForChild(tostring(SelectedPlayer), 3)
+			if not playersblocks then return end
+	
+			local LocalPlayer = game.Players.LocalPlayer
+			local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+			local Humanoid = Character:WaitForChild("Humanoid")
+			local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+	
+			Griefing = true
+	
+			while Griefing do
 				task.wait()
 	
-				print(part.Position)
+				-- Retrieve Paint tool safely from either Backpack or Character
+				local Dtool = LocalPlayer.Backpack:FindFirstChild("Paint") or Character:FindFirstChild("Paint")
 	
+				if Dtool then
+					if Dtool.Parent == LocalPlayer.Backpack then
+						Humanoid:EquipTool(Dtool)
+					end
 	
-				HumanoidRootPart.Position = part.Position
-				
-				Dtool.Script.Event:FireServer(part, side,  part.Position, "both 🤝", selectedcolor, "spray", "VOID WARE NEW BEST TCO SCRIPT?!?!?!?! " .. get2Letters())
+					-- Direct iteration through workspace children (unsorted for maximum speed)
+					for _, part in pairs(playersblocks:GetChildren()) do
+						if not Griefing then break end
 	
-				
-				
-				Dtool:Activate()
+						if part:IsA("BasePart") and part.Parent then
+							task.wait()
+	
+							-- Parse color input safely from text boxes
+							local colorR = tonumber(script.Parent.Parent["Color r"].Text) or 255
+							local colorG = tonumber(script.Parent.Parent["Color g"].Text) or 255
+							local colorB = tonumber(script.Parent.Parent["Color b"].Text) or 255
+							local selectedcolor = Color3.fromRGB(colorR, colorG, colorB)
+	
+							local sides = {
+								Enum.NormalId.Front,
+								Enum.NormalId.Right,
+								Enum.NormalId.Back,
+								Enum.NormalId.Left,
+								Enum.NormalId.Top,
+								Enum.NormalId.Bottom
+							}
+							local side = sides[math.random(1, #sides)]
+	
+							-- Teleport only if 25 or more studs away from HumanoidRootPart
+							local distanceInStuds = (HumanoidRootPart.Position - part.Position).Magnitude
+							if distanceInStuds >= 25 then
+								HumanoidRootPart.Position = part.Position
+							end
+	
+							-- Fire spray/text event with random string suffix and activate tool
+							local eventScript = Dtool:FindFirstChild("Script")
+							local remoteEvent = eventScript and eventScript:FindFirstChild("Event")
+							if remoteEvent then
+								remoteEvent:FireServer(
+									part,
+									side,
+									part.Position,
+									"both 🤝",
+									selectedcolor,
+									"spray",
+									"VOID WARE NEW BEST TCO SCRIPT?!?!?!?! " .. get2Letters()
+								)
+							end
+	
+							Dtool:Activate()
+						end
+					end
+				else
+					warn("[Paint Script] 'Paint' tool not found in Backpack or Character!")
+					Griefing = false
+					break
+				end
 			end
 		end
 	end)
-	
 end;
 task.spawn(C_60);
 -- StarterGui.VOID WARE NEW.Grief.scripts.Toxic grief.LocalScript
@@ -3276,70 +3362,102 @@ local script = G2L["63"];
 	local keyboard = game:GetService("UserInputService")
 	local mouse = game.Players.LocalPlayer:GetMouse()
 	local Griefing = false
-	local Player = game.Players.LocalPlayer
-	local Character = Player.Character
-	local Humanoid = Character.Humanoid
 	
-	keyboard.InputBegan:Connect(function(input)
+	-- Press 'R' to toggle off
+	keyboard.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
 		if input.KeyCode == Enum.KeyCode.R then
 			Griefing = false
 		end
 	end)
 	
 	button.MouseButton1Click:Connect(function()
-		Griefing = true
-		local Player = script.Parent.Parent.Parent.Parent["player selected"].Value
-		local playersblocks = game.Workspace.Bricks:WaitForChild(Player)
-		local Dtool = game.Players.LocalPlayer.Backpack:FindFirstChild("Paint")
-		local plr = game.Players.LocalPlayer
-		local char = plr.Character
-		local humanoid = char and char:FindFirstChildOfClass("Humanoid")
-		humanoid.MaxHealth = 99999999
-		humanoid.Health = 9999999
+		-- Toggle off if already running
+		if Griefing then
+			Griefing = false
+			return
+		end
 	
-		local HumanoidRootPart = Character.HumanoidRootPart
-		local prepos = HumanoidRootPart.Position
-		while Griefing == true do
-			task.wait()
-			if Dtool.Parent == game.Players.LocalPlayer.Backpack then
-				Humanoid:EquipTool(Dtool)
-				humanoid.MaxHealth = 99999999999999
-				humanoid.Health = 99999999999999
-			end
-			HumanoidRootPart.Position = prepos
-			for _, part in pairs(playersblocks:GetChildren()) do
-		
-				local selectedColorfortext = Color3.fromRGB(255,255,255)
-				
-				local selectedcolor = Color3.fromRGB(script.Parent.Parent["Color r"].Text, script.Parent.Parent["Color g"].Text, script.Parent.Parent["Color b"].Text)
-				
-				local sides = {
-					Enum.NormalId.Front,
-					Enum.NormalId.Right,
-					Enum.NormalId.Back,
-					Enum.NormalId.Left,
-					Enum.NormalId.Top,
-					Enum.NormalId.Bottom
-				}
-				
-				local side = sides[math.random(1, #sides)]
-				
+		local SelectedPlayer = script.Parent.Parent.Parent.Parent["player selected"].Value
+	
+		if tostring(SelectedPlayer) ~= "Clone" then
+			local BricksFolder = workspace:FindFirstChild("Bricks")
+			if not BricksFolder then return end
+	
+			local playersblocks = BricksFolder:FindFirstChild(tostring(SelectedPlayer)) or BricksFolder:WaitForChild(tostring(SelectedPlayer), 3)
+			if not playersblocks then return end
+	
+			local LocalPlayer = game.Players.LocalPlayer
+			local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+			local Humanoid = Character:WaitForChild("Humanoid")
+			local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+	
+			-- Boost health locally
+			Humanoid.MaxHealth = 99999999999999
+			Humanoid.Health = 99999999999999
+	
+			Griefing = true
+	
+			while Griefing do
 				task.wait()
 	
-				print(part.Position)
+				-- Fetch Paint tool safely from Backpack or Character
+				local Dtool = LocalPlayer.Backpack:FindFirstChild("Paint") or Character:FindFirstChild("Paint")
 	
+				if Dtool then
+					if Dtool.Parent == LocalPlayer.Backpack then
+						Humanoid:EquipTool(Dtool)
+						Humanoid.MaxHealth = 99999999999999
+						Humanoid.Health = 99999999999999
+					end
 	
-				HumanoidRootPart.Position = part.Position
-				
-				Dtool.Script.Event:FireServer(part, side,  part.Position, "both 🤝", selectedcolor, "toxic", "")
+					-- Direct iteration through workspace children (unsorted for maximum speed)
+					for _, part in pairs(playersblocks:GetChildren()) do
+						if not Griefing then break end
 	
-				
-				
-				Dtool:Activate()
+						if part:IsA("BasePart") and part.Parent then
+							task.wait()
+	
+							-- Parse color inputs safely
+							local colorR = tonumber(script.Parent.Parent["Color r"].Text) or 255
+							local colorG = tonumber(script.Parent.Parent["Color g"].Text) or 255
+							local colorB = tonumber(script.Parent.Parent["Color b"].Text) or 255
+							local selectedcolor = Color3.fromRGB(colorR, colorG, colorB)
+	
+							local sides = {
+								Enum.NormalId.Front,
+								Enum.NormalId.Right,
+								Enum.NormalId.Back,
+								Enum.NormalId.Left,
+								Enum.NormalId.Top,
+								Enum.NormalId.Bottom
+							}
+							local side = sides[math.random(1, #sides)]
+	
+							-- Teleport only if 25 or more studs away from HumanoidRootPart
+							local distanceInStuds = (HumanoidRootPart.Position - part.Position).Magnitude
+							if distanceInStuds >= 25 then
+								HumanoidRootPart.Position = part.Position
+							end
+	
+							-- Fire event and activate tool
+							local eventScript = Dtool:FindFirstChild("Script")
+							local remoteEvent = eventScript and eventScript:FindFirstChild("Event")
+							if remoteEvent then
+								remoteEvent:FireServer(part, side, part.Position, "both 🤝", selectedcolor, "toxic", "")
+							end
+	
+							Dtool:Activate()
+						end
+					end
+				else
+					warn("[Paint Script] 'Paint' tool not found in Backpack or Character!")
+					Griefing = false
+					break
+				end
 			end
 		end
 	end)
-	
 end;
 task.spawn(C_63);
 -- StarterGui.VOID WARE NEW.Grief.Selected Player.LocalScript
