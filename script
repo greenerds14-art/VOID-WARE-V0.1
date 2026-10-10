@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 150 | Scripts: 53 | Modules: 0 | Tags: 0
+-- Instances: 155 | Scripts: 58 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.VOID WARE NEW
@@ -1330,64 +1330,38 @@ G2L["89"] = Instance.new("LocalScript", G2L["88"]);
 
 
 
+-- StarterGui.VOID WARE NEW.Aura.scripts.Delete grief.LocalScript
+G2L["8a"] = Instance.new("LocalScript", G2L["88"]);
+
+
+
 -- StarterGui.VOID WARE NEW.Aura.scripts.Paint Grief
-G2L["8a"] = Instance.new("TextButton", G2L["86"]);
-G2L["8a"]["BorderSizePixel"] = 2;
-G2L["8a"]["TextSize"] = 14;
-G2L["8a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8a"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8a"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["8a"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8a"]["Text"] = [[Paint aura]];
-G2L["8a"]["Name"] = [[Paint Grief]];
-G2L["8a"]["Position"] = UDim2.new(0.24983, 0, 0.40857, 0);
+G2L["8b"] = Instance.new("TextButton", G2L["86"]);
+G2L["8b"]["BorderSizePixel"] = 2;
+G2L["8b"]["TextSize"] = 14;
+G2L["8b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8b"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8b"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["8b"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8b"]["Text"] = [[Paint aura]];
+G2L["8b"]["Name"] = [[Paint Grief]];
+G2L["8b"]["Position"] = UDim2.new(0.24983, 0, 0.40857, 0);
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Paint Grief.LocalScript
-G2L["8b"] = Instance.new("LocalScript", G2L["8a"]);
+G2L["8c"] = Instance.new("LocalScript", G2L["8b"]);
+
+
+
+-- StarterGui.VOID WARE NEW.Aura.scripts.Paint Grief.LocalScript
+G2L["8d"] = Instance.new("LocalScript", G2L["8b"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Color g
-G2L["8c"] = Instance.new("TextBox", G2L["86"]);
-G2L["8c"]["Name"] = [[Color g]];
-G2L["8c"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8c"]["BorderSizePixel"] = 2;
-G2L["8c"]["TextWrapped"] = true;
-G2L["8c"]["TextSize"] = 14;
-G2L["8c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8c"]["TextScaled"] = true;
-G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8c"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8c"]["PlaceholderText"] = [[INPUT COLOR RGB]];
-G2L["8c"]["Size"] = UDim2.new(0, 62, 0, 26);
-G2L["8c"]["Position"] = UDim2.new(0.36283, 0, 0.64089, 0);
-G2L["8c"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8c"]["Text"] = [[]];
-
-
--- StarterGui.VOID WARE NEW.Aura.scripts.Color b
-G2L["8d"] = Instance.new("TextBox", G2L["86"]);
-G2L["8d"]["Name"] = [[Color b]];
-G2L["8d"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8d"]["BorderSizePixel"] = 2;
-G2L["8d"]["TextWrapped"] = true;
-G2L["8d"]["TextSize"] = 14;
-G2L["8d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8d"]["TextScaled"] = true;
-G2L["8d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8d"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8d"]["PlaceholderText"] = [[INPUT COLOR RGB]];
-G2L["8d"]["Size"] = UDim2.new(0, 62, 0, 26);
-G2L["8d"]["Position"] = UDim2.new(0.66814, 0, 0.64089, 0);
-G2L["8d"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8d"]["Text"] = [[]];
-
-
--- StarterGui.VOID WARE NEW.Aura.scripts.Color r
 G2L["8e"] = Instance.new("TextBox", G2L["86"]);
-G2L["8e"]["Name"] = [[Color r]];
+G2L["8e"]["Name"] = [[Color g]];
 G2L["8e"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["8e"]["BorderSizePixel"] = 2;
 G2L["8e"]["TextWrapped"] = true;
@@ -1398,84 +1372,135 @@ G2L["8e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["8e"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["8e"]["PlaceholderText"] = [[INPUT COLOR RGB]];
 G2L["8e"]["Size"] = UDim2.new(0, 62, 0, 26);
-G2L["8e"]["Position"] = UDim2.new(0.06195, 0, 0.64089, 0);
+G2L["8e"]["Position"] = UDim2.new(0.36283, 0, 0.64089, 0);
 G2L["8e"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["8e"]["Text"] = [[]];
 
 
--- StarterGui.VOID WARE NEW.Aura.scripts.Spray Grief
-G2L["8f"] = Instance.new("TextButton", G2L["86"]);
+-- StarterGui.VOID WARE NEW.Aura.scripts.Color b
+G2L["8f"] = Instance.new("TextBox", G2L["86"]);
+G2L["8f"]["Name"] = [[Color b]];
+G2L["8f"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["8f"]["BorderSizePixel"] = 2;
+G2L["8f"]["TextWrapped"] = true;
 G2L["8f"]["TextSize"] = 14;
 G2L["8f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["TextScaled"] = true;
 G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["8f"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8f"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["8f"]["PlaceholderText"] = [[INPUT COLOR RGB]];
+G2L["8f"]["Size"] = UDim2.new(0, 62, 0, 26);
+G2L["8f"]["Position"] = UDim2.new(0.66814, 0, 0.64089, 0);
 G2L["8f"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8f"]["Text"] = [[Spray aura]];
-G2L["8f"]["Name"] = [[Spray Grief]];
-G2L["8f"]["Position"] = UDim2.new(0.24983, 0, 0.81673, 0);
+G2L["8f"]["Text"] = [[]];
+
+
+-- StarterGui.VOID WARE NEW.Aura.scripts.Color r
+G2L["90"] = Instance.new("TextBox", G2L["86"]);
+G2L["90"]["Name"] = [[Color r]];
+G2L["90"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["90"]["BorderSizePixel"] = 2;
+G2L["90"]["TextWrapped"] = true;
+G2L["90"]["TextSize"] = 14;
+G2L["90"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["90"]["TextScaled"] = true;
+G2L["90"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["90"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["90"]["PlaceholderText"] = [[INPUT COLOR RGB]];
+G2L["90"]["Size"] = UDim2.new(0, 62, 0, 26);
+G2L["90"]["Position"] = UDim2.new(0.06195, 0, 0.64089, 0);
+G2L["90"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["90"]["Text"] = [[]];
+
+
+-- StarterGui.VOID WARE NEW.Aura.scripts.Spray Grief
+G2L["91"] = Instance.new("TextButton", G2L["86"]);
+G2L["91"]["BorderSizePixel"] = 2;
+G2L["91"]["TextSize"] = 14;
+G2L["91"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["91"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["91"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["91"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["91"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["91"]["Text"] = [[Spray aura]];
+G2L["91"]["Name"] = [[Spray Grief]];
+G2L["91"]["Position"] = UDim2.new(0.24983, 0, 0.81673, 0);
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Spray Grief.LocalScript
-G2L["90"] = Instance.new("LocalScript", G2L["8f"]);
+G2L["92"] = Instance.new("LocalScript", G2L["91"]);
+
+
+
+-- StarterGui.VOID WARE NEW.Aura.scripts.Spray Grief.LocalScript
+G2L["93"] = Instance.new("LocalScript", G2L["91"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.TextLabel
-G2L["91"] = Instance.new("TextLabel", G2L["86"]);
-G2L["91"]["BorderSizePixel"] = 0;
-G2L["91"]["TextSize"] = 14;
-G2L["91"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["91"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["91"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["91"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["91"]["Text"] = [[COLOR(RGB)]];
-G2L["91"]["Position"] = UDim2.new(0.06195, 0, 0.50977, 0);
+G2L["94"] = Instance.new("TextLabel", G2L["86"]);
+G2L["94"]["BorderSizePixel"] = 0;
+G2L["94"]["TextSize"] = 14;
+G2L["94"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["94"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["94"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["94"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["94"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["94"]["Text"] = [[COLOR(RGB)]];
+G2L["94"]["Position"] = UDim2.new(0.06195, 0, 0.50977, 0);
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Toxic grief
-G2L["92"] = Instance.new("TextButton", G2L["86"]);
-G2L["92"]["BorderSizePixel"] = 2;
-G2L["92"]["TextSize"] = 14;
-G2L["92"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["92"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["92"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["92"]["Size"] = UDim2.new(0, 112, 0, 34);
-G2L["92"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["92"]["Text"] = [[Toxic aura]];
-G2L["92"]["Name"] = [[Toxic grief]];
-G2L["92"]["Position"] = UDim2.new(0.25426, 0, 0.28748, 0);
+G2L["95"] = Instance.new("TextButton", G2L["86"]);
+G2L["95"]["BorderSizePixel"] = 2;
+G2L["95"]["TextSize"] = 14;
+G2L["95"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["95"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["95"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["95"]["Size"] = UDim2.new(0, 112, 0, 34);
+G2L["95"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["95"]["Text"] = [[Toxic aura]];
+G2L["95"]["Name"] = [[Toxic grief]];
+G2L["95"]["Position"] = UDim2.new(0.25426, 0, 0.28748, 0);
 
 
 -- StarterGui.VOID WARE NEW.Aura.scripts.Toxic grief.LocalScript
-G2L["93"] = Instance.new("LocalScript", G2L["92"]);
+G2L["96"] = Instance.new("LocalScript", G2L["95"]);
+
+
+
+-- StarterGui.VOID WARE NEW.Aura.scripts.Toxic grief.LocalScript
+G2L["97"] = Instance.new("LocalScript", G2L["95"]);
 
 
 
 -- StarterGui.VOID WARE NEW.Aura.Aura ui
-G2L["94"] = Instance.new("TextLabel", G2L["85"]);
-G2L["94"]["BorderSizePixel"] = 0;
-G2L["94"]["TextSize"] = 29;
-G2L["94"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["94"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["94"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["94"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["94"]["Size"] = UDim2.new(0, 226, 0, 50);
-G2L["94"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["94"]["Text"] = [[AURA UI]];
-G2L["94"]["Name"] = [[Aura ui]];
+G2L["98"] = Instance.new("TextLabel", G2L["85"]);
+G2L["98"]["BorderSizePixel"] = 0;
+G2L["98"]["TextSize"] = 29;
+G2L["98"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["98"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["98"]["FontFace"] = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["98"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["98"]["Size"] = UDim2.new(0, 226, 0, 50);
+G2L["98"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["98"]["Text"] = [[AURA UI]];
+G2L["98"]["Name"] = [[Aura ui]];
 
 
 -- StarterGui.VOID WARE NEW.Aura.UIDragDetector
-G2L["95"] = Instance.new("UIDragDetector", G2L["85"]);
-G2L["95"]["DragUDim2"] = UDim2.new(0, 153, 0, 203);
+G2L["99"] = Instance.new("UIDragDetector", G2L["85"]);
+G2L["99"]["DragUDim2"] = UDim2.new(0, 153, 0, 203);
 
 
 -- StarterGui.VOID WARE NEW.Cloneparent
-G2L["96"] = Instance.new("StringValue", G2L["1"]);
-G2L["96"]["Name"] = [[Cloneparent]];
+G2L["9a"] = Instance.new("StringValue", G2L["1"]);
+G2L["9a"]["Name"] = [[Cloneparent]];
+
+
+-- StarterGui.VOID WARE NEW.LocalScript
+G2L["9b"] = Instance.new("LocalScript", G2L["1"]);
+
 
 
 -- StarterGui.VOID WARE NEW.anti vamp
@@ -4401,36 +4426,50 @@ local script = G2L["89"];
 	local keyboard = game:GetService("UserInputService")
 	local plr = game.Players.LocalPlayer
 	
-	local Griefing = false
+	-- Create a shared BoolValue inside the button if it doesn't exist yet
+	local activeValue = button:FindFirstChild("AuraActive")
+	if not activeValue then
+		activeValue = Instance.new("BoolValue")
+		activeValue.Name = "AuraActive"
+		activeValue.Value = false
+		activeValue.Parent = button
+	end
+	
 	local currentAura = nil
 	
-	-- Stop griefing and cleanup when pressing "R"
+	local function stopAura()
+		activeValue.Value = false
+		if currentAura then
+			currentAura:Destroy()
+			currentAura = nil
+		end
+	end
+	
+	-- Stop when pressing "R"
 	keyboard.InputBegan:Connect(function(input, gameProcessed)
 		if gameProcessed then return end
-	
 		if input.KeyCode == Enum.KeyCode.R then
-			Griefing = false
-	
-			-- Destroy created aura sphere
-			if currentAura then
-				currentAura:Destroy()
-				currentAura = nil
-			end
+			stopAura()
 		end
 	end)
 	
+	-- Toggle / Start when clicking the button
 	button.MouseButton1Click:Connect(function()
+		if activeValue.Value then
+			stopAura()
+			return
+		end
+	
 		local char = plr.Character or plr.CharacterAdded:Wait()
 		local hrp = char:FindFirstChild("HumanoidRootPart")
-		local hum = char:FindFirstChildOfClass("Humanoid")
 		local dtool = plr.Backpack:FindFirstChild("Delete") or char:FindFirstChild("Delete")
 	
-		if not dtool or not hrp or not hum then return end
+		if not dtool or not hrp then return end
 	
-		Griefing = true
-		print("Griefing Started")
+		activeValue.Value = true
+		print("Aura Started")
 	
-		-- Setup Visual Aura Sphere
+		-- Create Visual Aura Sphere
 		local aura = Instance.new("Part")
 		aura.Size = Vector3.new(25, 25, 25)
 		aura.Name = "DeleteAura"
@@ -4443,66 +4482,89 @@ local script = G2L["89"];
 		aura.Color = Color3.fromRGB(255, 0, 0)
 		currentAura = aura
 	
-		-- Spatial Query Overlap Parameters
-		local overlapParams = OverlapParams.new()
-		overlapParams.FilterType = Enum.RaycastFilterType.Exclude
-		overlapParams.FilterDescendantsInstances = {char, aura}
+		-- Movement Loop
+		while activeValue.Value do
+			task.wait()
 	
-		while Griefing do
-			task.wait() -- Yield to prevent freezing
-	
-			-- Re-verify character references in case of respawn
 			char = plr.Character
 			if not char then break end
 			hrp = char:FindFirstChild("HumanoidRootPart")
-			hum = char:FindFirstChildOfClass("Humanoid")
 	
 			if hrp and aura and aura.Parent then
 				aura.Position = hrp.Position
-	
-				-- Modern replacement for GetTouchingParts
-				local touchedParts = workspace:GetPartsInPart(aura, overlapParams)
-	
-				for _, v in ipairs(touchedParts) do
-					if not Griefing then break end
-	
-					-- Check if part belongs to workspace.Bricks
-					local isInBricks = (v.Parent == workspace:FindFirstChild("Bricks")) or 
-						(v.Parent and v.Parent.Parent == workspace:FindFirstChild("Bricks"))
-	
-					if isInBricks and v.Name == "Brick" then
-						local previouslyholding = char:FindFirstChildOfClass("Tool")
-	
-						-- Equip delete tool & fire remote
-						hum:EquipTool(dtool)
-						if dtool:FindFirstChild("Script") and dtool.Script:FindFirstChild("Event") then
-							dtool.Script.Event:FireServer(v, v.Position)
-							dtool:Activate()
-						end
-	
-						task.wait()
-	
-						-- Equip previous tool back if applicable
-						if previouslyholding and previouslyholding.Parent == plr.Backpack then
-							hum:EquipTool(previouslyholding)
-						end
-					end
-				end
 			else
 				break
 			end
 		end
 	
-		-- Clean up sphere when loop terminates
-		if aura then
-			aura:Destroy()
-		end
+		stopAura()
 	end)
 end;
 task.spawn(C_89);
+-- StarterGui.VOID WARE NEW.Aura.scripts.Delete grief.LocalScript
+local function C_8a()
+local script = G2L["8a"];
+	local plr = game.Players.LocalPlayer
+	local playerGui = plr:WaitForChild("PlayerGui")
+	
+	local button = script.Parent
+	local activeValue = button:WaitForChild("AuraActive")
+	
+	local function runAuraWork()
+		local char = plr.Character
+		if not char then return end
+	
+		local hum = char:FindFirstChildOfClass("Humanoid")
+		local dtool = plr.Backpack:FindFirstChild("Delete") or char:FindFirstChild("Delete")
+		local aura = workspace:FindFirstChild("DeleteAura")
+	
+		if not dtool or not hum or not aura then return end
+	
+		local overlapParams = OverlapParams.new()
+		overlapParams.FilterType = Enum.RaycastFilterType.Exclude
+		overlapParams.FilterDescendantsInstances = {char, aura}
+	
+		local touchedParts = workspace:GetPartsInPart(aura, overlapParams)
+	
+		for _, v in ipairs(touchedParts) do
+			if not activeValue.Value then break end
+	
+			local isInBricks = (v.Parent == workspace:FindFirstChild("Bricks")) or 
+				(v.Parent and v.Parent.Parent == workspace:FindFirstChild("Bricks"))
+	
+			if isInBricks and v.Name == "Brick" then
+				local previouslyholding = char:FindFirstChildOfClass("Tool")
+	
+				hum:EquipTool(dtool)
+				if dtool:FindFirstChild("Script") and dtool.Script:FindFirstChild("Event") then
+					dtool.Script.Event:FireServer(v, v.Position)
+					dtool:Activate()
+				end
+	
+				if previouslyholding and previouslyholding.Parent == plr.Backpack then
+					hum:EquipTool(previouslyholding)
+				end
+	
+				break
+			end
+		end
+	end
+	
+	activeValue.Changed:Connect(function(isRunning)
+		if isRunning then
+			task.spawn(function()
+				while activeValue.Value do
+					task.wait()
+					runAuraWork()
+				end
+			end)
+		end
+	end)
+end;
+task.spawn(C_8a);
 -- StarterGui.VOID WARE NEW.Aura.scripts.Paint Grief.LocalScript
-local function C_8b()
-local script = G2L["8b"];
+local function C_8c()
+local script = G2L["8c"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local Players = game:GetService("Players")
@@ -4611,10 +4673,17 @@ local script = G2L["8b"];
 		end
 	end)
 end;
-task.spawn(C_8b);
+task.spawn(C_8c);
+-- StarterGui.VOID WARE NEW.Aura.scripts.Paint Grief.LocalScript
+local function C_8d()
+local script = G2L["8d"];
+	print("ADV AURA UPD SOON")
+	
+end;
+task.spawn(C_8d);
 -- StarterGui.VOID WARE NEW.Aura.scripts.Spray Grief.LocalScript
-local function C_90()
-local script = G2L["90"];
+local function C_92()
+local script = G2L["92"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local Players = game:GetService("Players")
@@ -4731,10 +4800,17 @@ local script = G2L["90"];
 		end
 	end)
 end;
-task.spawn(C_90);
--- StarterGui.VOID WARE NEW.Aura.scripts.Toxic grief.LocalScript
+task.spawn(C_92);
+-- StarterGui.VOID WARE NEW.Aura.scripts.Spray Grief.LocalScript
 local function C_93()
 local script = G2L["93"];
+	print("ADV AURA UPD SOON")
+	
+end;
+task.spawn(C_93);
+-- StarterGui.VOID WARE NEW.Aura.scripts.Toxic grief.LocalScript
+local function C_96()
+local script = G2L["96"];
 	local button = script.Parent
 	local keyboard = game:GetService("UserInputService")
 	local Players = game:GetService("Players")
@@ -4848,6 +4924,26 @@ local script = G2L["93"];
 		end
 	end)
 end;
-task.spawn(C_93);
+task.spawn(C_96);
+-- StarterGui.VOID WARE NEW.Aura.scripts.Toxic grief.LocalScript
+local function C_97()
+local script = G2L["97"];
+	print("ADV AURA UPD SOON")
+	
+end;
+task.spawn(C_97);
+-- StarterGui.VOID WARE NEW.LocalScript
+local function C_9b()
+local script = G2L["9b"];
+	
+	local player = game.Players.LocalPlayer
+	local vvoidware = player.PlayerGui:FindFirstChild("VOID WARE NEW")
+	
+	if vvoidware and vvoidware ~= script.Parent then
+		vvoidware:ClearAllChildren()
+		vvoidware:Destroy()
+	end
+end;
+task.spawn(C_9b);
 
 return G2L["1"], require;
